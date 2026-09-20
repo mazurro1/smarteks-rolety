@@ -1,0 +1,97 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn svg {
+  width: 0.95em;
+  height: 0.95em;
+  flex-shrink: 0;
+}
+
+/* ── Variants ─────────────────────────────────────────────── */
+.primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  border-color: var(--color-brand-primary);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--color-brand-primary-light);
+  border-color: var(--color-brand-primary-light);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-line-strong);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: var(--color-brand-primary-light);
+  background-color: var(--color-brand-tint);
+}
+
+.ghost {
+  background-color: var(--color-white-tint);
+  color: var(--color-text-primary);
+  border-color: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--color-white-tint-strong);
+}
+
+.light {
+  background-color: var(--color-white);
+  color: var(--color-text-inverse);
+  border-color: var(--color-white);
+}
+
+.light:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 0.86);
+}
+
+/* ── Sizes ────────────────────────────────────────────────── */
+.sm {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+}
+
+.lg {
+  padding: 1.05rem 2.1rem;
+  font-size: 0.9rem;
+}
+
+.fullWidth {
+  width: 100%;
+}

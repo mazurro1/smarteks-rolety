@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(node -e \"const sharp = require\\(''sharp''\\); sharp\\(''public/images/blog/szlaban-na-osiedle-warszawa.jpeg''\\).metadata\\(\\).then\\(m => console.log\\(JSON.stringify\\(m, null, 2\\)\\)\\)\")",
+      "Bash(node -e \":*)",
+      "Bash(npx --yes sharp-cli --version)"
+    ],
+    "additionalDirectories": [
+      "c:\\Praca\\smarteks\\src\\app\\blog"
+    ]
+  }
+}

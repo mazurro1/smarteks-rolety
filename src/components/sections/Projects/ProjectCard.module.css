@@ -1,0 +1,200 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-line-brand);
+  transform: translateY(-3px);
+}
+
+/* ── Slider ───────────────────────────────────────────────── */
+.media {
+  position: relative;
+  outline-offset: -2px;
+}
+
+.frame {
+  border-radius: 0;
+}
+
+.category {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-brand-primary);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(14, 14, 16, 0.72);
+  border: 1px solid var(--color-line-strong);
+  color: var(--color-text-primary);
+  opacity: 0;
+  transition:
+    opacity var(--transition-base),
+    background-color var(--transition-fast);
+  z-index: 2;
+}
+
+.navButton svg {
+  width: 12px;
+  height: 12px;
+}
+
+.navButton:hover {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.card:hover .navButton,
+.media:focus-within .navButton {
+  opacity: 1;
+}
+
+.prev {
+  left: 0.6rem;
+}
+
+.next {
+  right: 0.6rem;
+}
+
+.dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  background-color: rgba(14, 14, 16, 0.6);
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition:
+    background-color var(--transition-fast),
+    width var(--transition-fast);
+}
+
+.dotActive {
+  width: 16px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-brand-accent);
+}
+
+.counter {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  background-color: rgba(14, 14, 16, 0.6);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* ── Body ─────────────────────────────────────────────────── */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+  padding: 1.35rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.meta svg {
+  width: 0.75em;
+  height: 0.75em;
+  color: var(--color-brand-accent);
+}
+
+.metaDivider {
+  opacity: 0.5;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.titleLink {
+  transition: color var(--transition-fast);
+}
+
+.titleLink:hover {
+  color: var(--color-brand-accent);
+}
+
+.summary {
+  margin: 0;
+  font-size: 0.89rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .navButton {
+    opacity: 1;
+  }
+}

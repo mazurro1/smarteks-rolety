@@ -1,0 +1,157 @@
+.section {
+  background-color: var(--color-bg-base);
+}
+
+.empty {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-lg);
+}
+
+/* ── Wyrozniony wpis ──────────────────────────────────────── */
+.featured {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2.25rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-base);
+}
+
+.featured:hover {
+  border-color: var(--color-line-brand);
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.featuredMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.featuredTag {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-brand-primary);
+  border-radius: 2px;
+}
+
+.featuredCategory {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.featuredTitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: 24ch;
+}
+
+.featuredTitle a {
+  transition: color var(--transition-fast);
+}
+
+.featuredTitle a:hover {
+  color: var(--color-brand-accent);
+}
+
+.featuredExcerpt {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+}
+
+.featuredFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.featuredLink {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.featuredDecor {
+  position: relative;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(
+      120% 100% at 100% 0%,
+      rgba(var(--color-brand-rgb), 0.35) 0%,
+      transparent 65%
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    var(--color-bg-elevated);
+}
+
+/* ── Siatka ───────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.grid > * {
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .featured {
+    grid-template-columns: 1fr;
+    padding: 1.75rem;
+  }
+  .featuredDecor {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .featuredLink {
+    margin-left: 0;
+    width: 100%;
+  }
+}

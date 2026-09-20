@@ -1,0 +1,322 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-base);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.glow {
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 70vw;
+  height: 70vw;
+  max-width: 900px;
+  max-height: 900px;
+  background: radial-gradient(
+    circle,
+    rgba(var(--color-brand-rgb), 0.3) 0%,
+    transparent 62%
+  );
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 4rem;
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+/* ── Content ──────────────────────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  background-color: var(--color-white-tint);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-full);
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 4px rgba(var(--color-brand-rgb), 0.25);
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2.4rem, 5.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.headingAccent {
+  display: block;
+  color: var(--color-brand-accent);
+}
+
+.lead {
+  margin: 0;
+  max-width: 54ch;
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.trustItem {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.trustItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-brand-primary-light);
+}
+
+/* ── Visual ───────────────────────────────────────────────── */
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 5;
+  padding: 14px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #1b1b22 0%, #121216 100%);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.glass {
+  position: absolute;
+  inset: 14px;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(
+      200deg,
+      rgba(120, 150, 190, 0.28) 0%,
+      rgba(40, 50, 70, 0.22) 45%,
+      rgba(var(--color-brand-rgb), 0.24) 100%
+    );
+}
+
+.slats {
+  position: absolute;
+  inset: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.slat {
+  display: block;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #34343e 0%, #22222a 55%, #1a1a20 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform-origin: top center;
+  animation: slatDrop 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Dolne lamele pozostaja uchylone — czytelny znak rolety adaptacyjnej. */
+.slat:nth-last-child(-n + 4) {
+  height: 18px;
+  background: linear-gradient(180deg, #2c2c35 0%, #1d1d24 100%);
+  opacity: 0.82;
+}
+
+.rail {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  height: 10px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  background: linear-gradient(
+    180deg,
+    var(--color-brand-primary-light) 0%,
+    var(--color-brand-primary-dark) 100%
+  );
+}
+
+.floatCard {
+  position: absolute;
+  left: -1.5rem;
+  bottom: 2rem;
+  width: min(250px, 72%);
+  padding: 1.1rem 1.25rem;
+  background-color: rgba(23, 23, 28, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-line-strong);
+  border-left: 3px solid var(--color-brand-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.floatCardLabel {
+  margin: 0 0 0.3rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.floatCardValue {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.floatCardText {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ── Stats band ───────────────────────────────────────────── */
+.statsBand {
+  position: relative;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  background-color: rgba(18, 18, 22, 0.6);
+}
+
+.statsInner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.75rem 1rem;
+  text-align: center;
+  border-left: 1px solid var(--color-line);
+}
+
+.stat:first-child {
+  border-left: none;
+}
+
+.statValue {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-brand-accent);
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+@keyframes slatDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-14px) scaleY(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@media (max-width: 1023px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .visual {
+    order: -1;
+  }
+  .frame {
+    max-width: 360px;
+    aspect-ratio: 5 / 4;
+  }
+  .floatCard {
+    left: auto;
+    right: -0.5rem;
+    bottom: -1.25rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .statsInner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stat:nth-child(odd) {
+    border-left: none;
+  }
+  .stat:nth-child(n + 3) {
+    border-top: 1px solid var(--color-line);
+  }
+  .floatCard {
+    position: static;
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+  .visual {
+    flex-direction: column;
+    align-items: center;
+  }
+}

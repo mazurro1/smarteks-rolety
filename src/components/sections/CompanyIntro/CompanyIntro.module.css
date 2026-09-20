@@ -1,0 +1,173 @@
+.section {
+  background-color: var(--color-bg-base);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* ── Media ────────────────────────────────────────────────── */
+.media {
+  position: relative;
+}
+
+.mediaBadge {
+  position: absolute;
+  right: -1.25rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 1.15rem 1.4rem;
+  background-color: var(--color-brand-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brand);
+}
+
+.mediaBadgeValue {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-white);
+}
+
+.mediaBadgeLabel {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+/* ── Content ──────────────────────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-brand-primary-light);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+.paragraph {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 64ch;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.pointIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-brand-tint);
+  color: var(--color-brand-accent);
+}
+
+.pointIcon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.pointTitle {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.pointText {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.link {
+  margin-top: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 1023px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .media {
+    max-width: 420px;
+  }
+  .mediaBadge {
+    right: 1rem;
+    bottom: -1.25rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .media {
+    max-width: 100%;
+  }
+  .mediaBadge {
+    right: 0.75rem;
+    padding: 0.9rem 1.1rem;
+  }
+}
