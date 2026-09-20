@@ -65,35 +65,6 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-}
-
-.logoMark {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-  width: 26px;
-  height: 26px;
-  padding: 4px 3px;
-  border: 1px solid var(--color-line-brand);
-  border-radius: 3px;
-  background-color: var(--color-brand-tint);
-}
-
-.logoSlat {
-  display: block;
-  height: 2px;
-  border-radius: 1px;
-  background-color: var(--color-brand-accent);
-}
-
-.logoSlat:nth-child(2) {
-  opacity: 0.6;
-}
-
-.logoSlat:nth-child(3) {
-  opacity: 0.35;
 }
 
 .logoText {
@@ -187,15 +158,6 @@
   color: var(--color-brand-accent);
 }
 
-.address {
-  font-style: normal;
-  line-height: 1.6;
-}
-
-.hours {
-  white-space: pre-line;
-  line-height: 1.6;
-}
 
 /* ── Cities ───────────────────────────────────────────────── */
 .cities {

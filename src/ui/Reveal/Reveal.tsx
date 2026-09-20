@@ -14,7 +14,11 @@ interface RevealProps {
  * Delikatne pojawienie sie elementu po wejsciu w viewport.
  * Przy `prefers-reduced-motion` CSS wylacza animacje, a tresc pozostaje widoczna.
  */
-export default function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+export default function Reveal({
+  children,
+  delay = 0,
+  className = "",
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -23,7 +27,7 @@ export default function Reveal({ children, delay = 0, className = "" }: RevealPr
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
+      node.classList.add(styles.visible);
       return;
     }
 

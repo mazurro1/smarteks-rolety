@@ -114,12 +114,6 @@
   line-height: 1.6;
 }
 
-.hours {
-  white-space: pre-line;
-  line-height: 1.6;
-  font-size: 0.9rem;
-}
-
 .areaCard {
   padding: 1.15rem;
   border: 1px dashed var(--color-line-strong);

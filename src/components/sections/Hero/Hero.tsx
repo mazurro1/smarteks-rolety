@@ -33,7 +33,12 @@ export async function Hero() {
               <FontAwesomeIcon icon={faFileLines} />
               {t("ctaPrimary")}
             </Button>
-            <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline" size="lg">
+            <Button
+              as="a"
+              href={CONTACT_INFO.PHONE_HREF}
+              variant="outline"
+              size="lg"
+            >
               <FontAwesomeIcon icon={faPhone} />
               {CONTACT_INFO.PHONE}
             </Button>
@@ -48,20 +53,21 @@ export async function Hero() {
           </ul>
         </div>
 
-        {/* Motyw rolety rysowany w CSS — nie wymaga zdjecia i skaluje sie bez strat. */}
         <div className={styles.visual} aria-hidden="true">
           <div className={styles.frame}>
             <div className={styles.glass} />
-            <div className={styles.slats}>
-              {Array.from({ length: 14 }, (_, index) => (
-                <span
-                  key={index}
-                  className={styles.slat}
-                  style={{ animationDelay: `${index * 45}ms` }}
-                />
-              ))}
+            <div className={styles.curtain}>
+              <div className={styles.slats}>
+                {Array.from({ length: 18 }, (_, index) => (
+                  <span
+                    key={index}
+                    className={styles.slat}
+                    style={{ animationDelay: `${index * 45}ms` }}
+                  />
+                ))}
+              </div>
+              <div className={styles.rail} />
             </div>
-            <div className={styles.rail} />
           </div>
           <div className={styles.floatCard}>
             <p className={styles.floatCardLabel}>{t("cardLabel")}</p>

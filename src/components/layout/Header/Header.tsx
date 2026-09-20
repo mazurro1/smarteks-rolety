@@ -9,7 +9,6 @@ import {
   faPhone,
   faFileLines,
   faEnvelope,
-  faClock,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
@@ -22,7 +21,6 @@ import styles from "./Header.module.css";
 
 export function Header() {
   const t = useTranslations(NAMESPACES.NAV);
-  const tCommon = useTranslations(NAMESPACES.COMMON);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,9 +52,7 @@ export function Header() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMenuOpen(false);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOfferOpen(false);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileOfferOpen(false);
   }, [pathname]);
 
@@ -82,7 +78,10 @@ export function Header() {
   useEffect(() => {
     if (!offerOpen) return;
     const onPointerDown = (event: MouseEvent) => {
-      if (offerRef.current && !offerRef.current.contains(event.target as Node)) {
+      if (
+        offerRef.current &&
+        !offerRef.current.contains(event.target as Node)
+      ) {
         setOfferOpen(false);
       }
     };
@@ -109,12 +108,11 @@ export function Header() {
   }, [cancelClose]);
 
   const logo = (
-    <Link href={ROUTES.HOME} className={styles.logo} aria-label={t("logoAriaLabel")}>
-      <span className={styles.logoMark} aria-hidden="true">
-        <span className={styles.logoSlat} />
-        <span className={styles.logoSlat} />
-        <span className={styles.logoSlat} />
-      </span>
+    <Link
+      href={ROUTES.HOME}
+      className={styles.logo}
+      aria-label={t("logoAriaLabel")}
+    >
       <span className={styles.logoText}>
         Smarteks<span className={styles.logoAccent}>Rolety</span>
       </span>
@@ -123,30 +121,26 @@ export function Header() {
 
   return (
     <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-        <div className={styles.topbar}>
-          <div className={`container ${styles.topbarInner}`}>
-            <p className={styles.topbarTagline}>{t("topbarTagline")}</p>
-            <div className={styles.topbarMeta}>
-              <span className={styles.topbarItem}>
-                <FontAwesomeIcon icon={faClock} aria-hidden="true" />
-                {tCommon("contact.workingHoursShort")}
-              </span>
-              <a className={styles.topbarItem} href={CONTACT_INFO.EMAIL_HREF}>
-                <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
-                {CONTACT_INFO.EMAIL}
-              </a>
-              <a
-                className={`${styles.topbarItem} ${styles.topbarPhone}`}
-                href={CONTACT_INFO.PHONE_HREF}
-              >
-                <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
-                {CONTACT_INFO.PHONE}
-              </a>
-            </div>
+      <div className={styles.topbar}>
+        <div className={`container ${styles.topbarInner}`}>
+          <p className={styles.topbarTagline}>{t("topbarTagline")}</p>
+          <div className={styles.topbarMeta}>
+            <a className={styles.topbarItem} href={CONTACT_INFO.EMAIL_HREF}>
+              <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
+              {CONTACT_INFO.EMAIL}
+            </a>
+            <a
+              className={`${styles.topbarItem} ${styles.topbarPhone}`}
+              href={CONTACT_INFO.PHONE_HREF}
+            >
+              <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
+              {CONTACT_INFO.PHONE}
+            </a>
           </div>
         </div>
+      </div>
 
+      <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.inner}`}>
           {logo}
 
@@ -202,7 +196,9 @@ export function Header() {
                         <span className={styles.megaTitle}>
                           {product.navLabel}
                           {product.badge && (
-                            <span className={styles.megaBadge}>{product.badge}</span>
+                            <span className={styles.megaBadge}>
+                              {product.badge}
+                            </span>
                           )}
                         </span>
                         <span className={styles.megaDescription}>
@@ -233,7 +229,12 @@ export function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline" size="sm">
+            <Button
+              as="a"
+              href={CONTACT_INFO.PHONE_HREF}
+              variant="outline"
+              size="sm"
+            >
               <FontAwesomeIcon icon={faPhone} />
               {CONTACT_INFO.PHONE}
             </Button>
@@ -255,79 +256,89 @@ export function Header() {
             <span className={styles.bar} />
           </button>
         </div>
-      </header>
 
-      {menuOpen && (
-        <nav
-          id="mobile-menu"
-          className={`${styles.mobileMenu} ${scrolled ? styles.mobileMenuScrolled : ""}`}
-          aria-label={t("mobileMenuAriaLabel")}
-        >
-          <Link
-            href={ROUTES.HOME}
-            className={`${styles.mobileNavLink} ${isActive(ROUTES.HOME) ? styles.active : ""}`}
+        {menuOpen && (
+          <nav
+            id="mobile-menu"
+            className={styles.mobileMenu}
+            aria-label={t("mobileMenuAriaLabel")}
           >
-            {t("home")}
-          </Link>
-
-          <div className={styles.mobileGroup}>
-            <button
-              type="button"
-              className={`${styles.mobileNavLink} ${styles.mobileGroupTrigger} ${isOfferActive ? styles.active : ""}`}
-              aria-expanded={mobileOfferOpen}
-              aria-controls="mobile-offer-menu"
-              onClick={() => setMobileOfferOpen((open) => !open)}
+            <Link
+              href={ROUTES.HOME}
+              className={`${styles.mobileNavLink} ${isActive(ROUTES.HOME) ? styles.active : ""}`}
             >
-              {t("offer")}
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className={`${styles.chevron} ${mobileOfferOpen ? styles.chevronOpen : ""}`}
-                aria-hidden="true"
-              />
-            </button>
-            <div id="mobile-offer-menu" hidden={!mobileOfferOpen}>
-              <div className={styles.mobileSubmenu}>
-                {OFFER_PRODUCTS.map((product) => (
-                  <Link
-                    key={product.slug}
-                    href={offerPath(product.slug)}
-                    className={styles.mobileSubLink}
-                  >
-                    <Icon name={product.icon} />
-                    {product.navLabel}
+              {t("home")}
+            </Link>
+
+            <div className={styles.mobileGroup}>
+              <button
+                type="button"
+                className={`${styles.mobileNavLink} ${styles.mobileGroupTrigger} ${isOfferActive ? styles.active : ""}`}
+                aria-expanded={mobileOfferOpen}
+                aria-controls="mobile-offer-menu"
+                onClick={() => setMobileOfferOpen((open) => !open)}
+              >
+                {t("offer")}
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`${styles.chevron} ${mobileOfferOpen ? styles.chevronOpen : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              <div id="mobile-offer-menu" hidden={!mobileOfferOpen}>
+                <div className={styles.mobileSubmenu}>
+                  {OFFER_PRODUCTS.map((product) => (
+                    <Link
+                      key={product.slug}
+                      href={offerPath(product.slug)}
+                      className={styles.mobileSubLink}
+                    >
+                      <Icon name={product.icon} />
+                      {product.navLabel}
+                    </Link>
+                  ))}
+                  <Link href={ROUTES.OFFER} className={styles.mobileSubLinkAll}>
+                    {t("allOffer")} &rarr;
                   </Link>
-                ))}
-                <Link href={ROUTES.OFFER} className={styles.mobileSubLinkAll}>
-                  {t("allOffer")} &rarr;
-                </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          {navLinks.slice(1).map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.mobileNavLink} ${isActive(link.href) ? styles.active : ""}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+            {navLinks.slice(1).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`${styles.mobileNavLink} ${isActive(link.href) ? styles.active : ""}`}
+              >
+                {link.label}
+              </Link>
+            ))}
 
-          <div className={styles.mobileDivider} />
+            <div className={styles.mobileDivider} />
 
-          <div className={styles.mobileActions}>
-            <Button as="link" href={ROUTES.CONTACT} variant="primary" fullWidth>
-              <FontAwesomeIcon icon={faFileLines} />
-              {t("freeEstimate")}
-            </Button>
-            <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline" fullWidth>
-              <FontAwesomeIcon icon={faPhone} />
-              {CONTACT_INFO.PHONE}
-            </Button>
-          </div>
-        </nav>
-      )}
+            <div className={styles.mobileActions}>
+              <Button
+                as="link"
+                href={ROUTES.CONTACT}
+                variant="primary"
+                fullWidth
+              >
+                <FontAwesomeIcon icon={faFileLines} />
+                {t("freeEstimate")}
+              </Button>
+              <Button
+                as="a"
+                href={CONTACT_INFO.PHONE_HREF}
+                variant="outline"
+                fullWidth
+              >
+                <FontAwesomeIcon icon={faPhone} />
+                {CONTACT_INFO.PHONE}
+              </Button>
+            </div>
+          </nav>
+        )}
+      </header>
     </>
   );
 }

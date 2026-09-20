@@ -27,10 +27,7 @@
       "phoneLabel": "Telefon",
       "emailLabel": "E-mail",
       "addressLabel": "Adres",
-      "serviceAreaLabel": "Obszar działania",
-      "workingHoursLabel": "Godziny pracy",
-      "workingHoursValue": "Pon–Pt: 8:00–18:00\nSob: 9:00–14:00",
-      "workingHoursShort": "Pon–Pt 8:00–18:00"
+      "serviceAreaLabel": "Obszar działania"
     }
   },
 
@@ -244,7 +241,7 @@
 
     "infoEyebrow": "Dane kontaktowe",
     "infoTitle": "Zadzwoń, napisz albo wypełnij formularz",
-    "infoLead": "Najszybciej odpowiadamy telefonicznie w godzinach pracy. Wiadomości z formularza obsługujemy w ciągu jednego dnia roboczego.",
+    "infoLead": "Najszybciej odezwiemy się, gdy zadzwonisz. Wiadomości z formularza obsługujemy w ciągu jednego dnia roboczego.",
     "areaTitle": "Dojeżdżamy do",
 
     "formTitle": "Bezpłatna wycena",

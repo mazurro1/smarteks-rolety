@@ -4,12 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faLocationDot,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO, CONTACT_TOPICS, SERVICE_CITIES } from "@/constants/contact";
@@ -231,22 +226,6 @@ export function ContactForm() {
       icon: faEnvelope,
       label: tCommon("contact.emailLabel"),
       value: <a href={CONTACT_INFO.EMAIL_HREF}>{CONTACT_INFO.EMAIL}</a>,
-    },
-    {
-      icon: faLocationDot,
-      label: tCommon("contact.addressLabel"),
-      value: (
-        <address className={styles.address}>{CONTACT_INFO.ADDRESS_FULL}</address>
-      ),
-    },
-    {
-      icon: faClock,
-      label: tCommon("contact.workingHoursLabel"),
-      value: (
-        <span className={styles.hours}>
-          {tCommon("contact.workingHoursValue")}
-        </span>
-      ),
     },
   ];
 

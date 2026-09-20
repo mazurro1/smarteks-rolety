@@ -110,9 +110,7 @@ const localBusinessSchema = {
   email: CONTACT_INFO.EMAIL,
   address: {
     "@type": "PostalAddress",
-    streetAddress: CONTACT_INFO.ADDRESS_STREET,
     addressLocality: "Warszawa",
-    postalCode: "03-228",
     addressCountry: "PL",
   },
   geo: {
@@ -132,20 +130,6 @@ const localBusinessSchema = {
     "Montaz i serwis bram rolowanych",
   ],
   priceRange: "$$",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday"],
-      opens: "09:00",
-      closes: "14:00",
-    },
-  ],
   sameAs: [],
 };
 
@@ -158,7 +142,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang={locale}
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"

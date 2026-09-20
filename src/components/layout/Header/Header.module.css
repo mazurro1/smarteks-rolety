@@ -1,3 +1,5 @@
+/* Sticky jest wylacznie pasek nawigacji. Jego wysokosc nigdy sie nie zmienia,
+   wiec przewijanie o kilka pikseli nie powoduje przeskoku ukladu. */
 .header {
   position: sticky;
   top: 0;
@@ -7,30 +9,22 @@
   border-bottom: 1px solid var(--color-line);
   transition:
     background-color var(--transition-base),
-    border-color var(--transition-base);
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .scrolled {
   background-color: rgba(12, 12, 14, 0.97);
   border-bottom-color: var(--color-line-strong);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* ── Topbar ───────────────────────────────────────────────── */
 .topbar {
+  background-color: var(--color-bg-base);
   border-bottom: 1px solid var(--color-line);
   font-size: 0.75rem;
   color: var(--color-text-muted);
-  overflow: hidden;
-  max-height: var(--topbar-height);
-  transition:
-    max-height var(--transition-base),
-    opacity var(--transition-base);
-}
-
-.scrolled .topbar {
-  max-height: 0;
-  opacity: 0;
-  border-bottom-color: transparent;
 }
 
 .topbarInner {
@@ -86,37 +80,7 @@ a.topbarItem:hover {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   flex-shrink: 0;
-}
-
-.logoMark {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-  width: 26px;
-  height: 26px;
-  padding: 4px 3px;
-  border: 1px solid var(--color-line-brand);
-  border-radius: 3px;
-  background-color: var(--color-brand-tint);
-}
-
-.logoSlat {
-  display: block;
-  height: 2px;
-  border-radius: 1px;
-  background-color: var(--color-brand-accent);
-  opacity: 0.9;
-}
-
-.logoSlat:nth-child(2) {
-  opacity: 0.6;
-}
-
-.logoSlat:nth-child(3) {
-  opacity: 0.35;
 }
 
 .logoText {
@@ -357,22 +321,24 @@ a.topbarItem:hover {
 }
 
 /* ── Mobile menu ──────────────────────────────────────────── */
+/* Panel kotwiczony do dolnej krawedzi sticky naglowka — bez przeliczania offsetow. */
 .mobileMenu {
-  position: fixed;
-  inset: calc(var(--header-height) + var(--topbar-height)) 0 0 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   z-index: var(--z-overlay);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   padding: 1.25rem;
+  max-height: calc(100dvh - var(--header-height));
   background-color: var(--color-bg-base);
+  border-bottom: 1px solid var(--color-line-strong);
+  box-shadow: var(--shadow-lg);
   overflow-y: auto;
+  overscroll-behavior: contain;
   animation: slideDown var(--transition-base) both;
-}
-
-/* Po przewinieciu topbar jest zwiniety — menu zaczyna sie wyzej. */
-.mobileMenuScrolled {
-  inset: var(--header-height) 0 0 0;
 }
 
 .mobileNavLink {

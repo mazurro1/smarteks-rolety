@@ -17,15 +17,15 @@ export const CONTACT_INFO = {
 export const SERVICE_CITIES = [
   "Warszawa",
   "Piaseczno",
-  "Pruszkow",
+  "Pruszków",
   "Legionowo",
   "Marki",
-  "Jozefow",
+  "Józefów",
   "Konstancin-Jeziorna",
   "Otwock",
   "Nadarzyn",
-  "Lomianki",
-  "Zabki",
+  "Łomianki",
+  "Ząbki",
   "Raszyn",
 ] as const;
 

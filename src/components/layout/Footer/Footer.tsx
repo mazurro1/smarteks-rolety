@@ -5,7 +5,6 @@ import {
   faPhone,
   faEnvelope,
   faLocationDot,
-  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO, SERVICE_CITIES } from "@/constants/contact";
@@ -52,11 +51,6 @@ export async function Footer() {
               className={styles.logo}
               aria-label={tFooter("logoAriaLabel")}
             >
-              <span className={styles.logoMark} aria-hidden="true">
-                <span className={styles.logoSlat} />
-                <span className={styles.logoSlat} />
-                <span className={styles.logoSlat} />
-              </span>
               <span className={styles.logoText}>
                 Smarteks<span className={styles.logoAccent}>Rolety</span>
               </span>
@@ -104,20 +98,6 @@ export async function Footer() {
               <li className={styles.contactItem}>
                 <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
                 <a href={CONTACT_INFO.EMAIL_HREF}>{CONTACT_INFO.EMAIL}</a>
-              </li>
-              <li className={styles.contactItem}>
-                <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" />
-                <address className={styles.address}>
-                  {CONTACT_INFO.ADDRESS_STREET}
-                  <br />
-                  {CONTACT_INFO.ADDRESS_CITY}
-                </address>
-              </li>
-              <li className={styles.contactItem}>
-                <FontAwesomeIcon icon={faClock} aria-hidden="true" />
-                <span className={styles.hours}>
-                  {tCommon("contact.workingHoursValue")}
-                </span>
               </li>
             </ul>
           </div>
