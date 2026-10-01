@@ -1,0 +1,95 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(360px, 40vw, 540px);
+  background-color: var(--color-bg-raised);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.inner {
+  position: relative;
+  padding-block: 3rem;
+}
+
+.panel {
+  max-width: 460px;
+  padding: 2rem 2.1rem;
+  background-color: rgba(14, 14, 16, 0.86);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-line-strong);
+  border-left: 3px solid var(--color-brand-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.title {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #c9c9d0;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+/* Telefon: zdjecie nad panelem, zeby tekst nie zaslanial calego kadru. */
+@media (max-width: 767px) {
+  .band {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .media {
+    position: relative;
+    aspect-ratio: 3 / 2;
+  }
+  .inner {
+    padding-block: 0;
+    margin-top: -2rem;
+    padding-bottom: 2.5rem;
+  }
+  .panel {
+    max-width: none;
+    padding: 1.6rem 1.4rem;
+    background-color: rgba(18, 18, 22, 0.97);
+  }
+}

@@ -136,8 +136,10 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
 
           <aside className={styles.sidebar}>
             <MediaFrame
+              src={product.image.src}
+              alt={product.image.alt}
+              position={product.image.position}
               ratio="4/3"
-              alt={`${product.title} — zdjęcie poglądowe`}
               label={product.cardTitle}
               sizes="(max-width: 1023px) 100vw, 38vw"
               className={styles.sidebarMedia}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
@@ -5,6 +6,7 @@ import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";
 import { STATS, TRUST_POINTS } from "@/data/site";
+import { HERO_IMAGE } from "@/data/media";
 import Button from "@/ui/Button";
 import styles from "./Hero.module.css";
 
@@ -13,7 +15,19 @@ export async function Hero() {
 
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
-      <div className={styles.glow} aria-hidden="true" />
+      <div className={styles.backdrop}>
+        <Image
+          src={HERO_IMAGE.src}
+          alt={HERO_IMAGE.alt}
+          fill
+          priority
+          sizes="100vw"
+          quality={90}
+          className={styles.backdropImage}
+          style={{ objectPosition: HERO_IMAGE.position }}
+        />
+      </div>
+      <div className={styles.shade} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <p className={styles.badge}>

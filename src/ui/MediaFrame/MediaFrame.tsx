@@ -10,6 +10,8 @@ interface MediaFrameProps {
   ratio?: Ratio;
   /** Krotka etykieta widoczna w placeholderze (np. typ ujecia). */
   label?: string;
+  /** Kadr zdjecia (CSS object-position), np. "center 30%". */
+  position?: string;
   priority?: boolean;
   sizes?: string;
   className?: string;
@@ -26,7 +28,7 @@ const RATIO_CLASS: Record<Ratio, string> = {
 
 /**
  * Ramka na zdjecie. Dopoki w danych nie ma sciezki `src`, renderuje placeholder
- * w stylistyce strony — zamiana na prawdziwe zdjecie nie wymaga zmian w kodzie,
+ * w stylistyce strony - zamiana na prawdziwe zdjecie nie wymaga zmian w kodzie,
  * wystarczy dopisac `src` w pliku danych.
  */
 export default function MediaFrame({
@@ -34,6 +36,7 @@ export default function MediaFrame({
   alt,
   ratio = "4/3",
   label,
+  position,
   priority = false,
   sizes = "(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 33vw",
   className = "",
@@ -52,6 +55,7 @@ export default function MediaFrame({
           sizes={sizes}
           priority={priority}
           className={styles.image}
+          style={position ? { objectPosition: position } : undefined}
         />
       </div>
     );

@@ -3,7 +3,7 @@ import { COLORS } from "@/constants/colors";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Smarteks Rolety — rolety zewnętrzne i bramy rolowane",
+    name: "Smarteks Rolety - rolety zewnętrzne i bramy rolowane",
     short_name: "Smarteks Rolety",
     description:
       "Montaż i serwis rolet antywłamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych w Warszawie i okolicach.",

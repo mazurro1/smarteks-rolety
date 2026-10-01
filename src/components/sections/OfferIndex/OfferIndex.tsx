@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { ROUTES, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS } from "@/data/offer";
 import SectionHeader from "@/ui/SectionHeader";
-import Icon from "@/ui/Icon";
 import Reveal from "@/ui/Reveal";
 import styles from "./OfferIndex.module.css";
 
@@ -32,8 +32,20 @@ export async function OfferIndex() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className={styles.icon}>
-                    <Icon name={product.icon} />
+                  {/* Miniatura dekoracyjna - nazwa produktu jest w tekscie linku. */}
+                  <span className={styles.thumb}>
+                    <Image
+                      src={product.image.src}
+                      alt=""
+                      fill
+                      sizes="(max-width: 599px) 88px, 144px"
+                      className={styles.thumbImage}
+                      style={
+                        product.image.position
+                          ? { objectPosition: product.image.position }
+                          : undefined
+                      }
+                    />
                   </span>
 
                   <span className={styles.body}>

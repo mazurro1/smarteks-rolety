@@ -14,7 +14,7 @@ interface FAQProps {
   title?: string;
   lead?: string;
   idPrefix?: string;
-  /** Dane strukturalne FAQPage — wylaczamy, gdy na stronie jest juz inny blok FAQ. */
+  /** Dane strukturalne FAQPage - wylaczamy, gdy na stronie jest juz inny blok FAQ. */
   withSchema?: boolean;
   columns?: 1 | 2;
 }

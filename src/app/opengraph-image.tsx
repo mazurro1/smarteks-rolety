@@ -4,7 +4,7 @@ import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { COLORS } from "@/constants/colors";
 
-export const alt = "Smarteks Rolety — rolety zewnętrzne i antywłamaniowe, Warszawa";
+export const alt = "Smarteks Rolety - rolety zewnętrzne i antywłamaniowe, Warszawa";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

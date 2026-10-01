@@ -179,6 +179,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     height={630}
                     priority
                     className={styles.heroImg}
+                    style={
+                      post.imagePosition
+                        ? { objectPosition: post.imagePosition }
+                        : undefined
+                    }
                   />
                 </div>
               )}

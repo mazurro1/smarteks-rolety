@@ -321,7 +321,7 @@ a.topbarItem:hover {
 }
 
 /* ── Mobile menu ──────────────────────────────────────────── */
-/* Panel kotwiczony do dolnej krawedzi sticky naglowka — bez przeliczania offsetow. */
+/* Panel kotwiczony do dolnej krawedzi sticky naglowka - bez przeliczania offsetow. */
 .mobileMenu {
   position: absolute;
   top: 100%;

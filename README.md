@@ -19,7 +19,7 @@ npm run lint
 | Zmienna | Do czego służy |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Bazowy adres w metadanych, sitemapie, RSS i danych strukturalnych |
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | Klucz [web3forms](https://web3forms.com) — bez niego formularz kontaktowy zwróci błąd |
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Klucz [web3forms](https://web3forms.com) - bez niego formularz kontaktowy zwróci błąd |
 
 ## Struktura
 
@@ -76,11 +76,17 @@ faq:
 Treść w markdown (obsługiwane tabele, listy, cytaty).
 ```
 
-Slug = nazwa pliku. Wpis pojawia się automatycznie na liście, w sitemapie i w RSS. Opcjonalne pola: `updatedAt`, `image`, `imageAlt`, `readingTime` (domyślnie liczony z treści).
+Slug = nazwa pliku. Wpis pojawia się automatycznie na liście, w sitemapie i w RSS. Opcjonalne pola: `updatedAt`, `image`, `imageAlt`, `imagePosition` (kadr, np. `"center 40%"`), `readingTime` (domyślnie liczony z treści).
 
 ### Zdjęcia
 
-Wszystkie miejsca na zdjęcia renderują na razie stylowany placeholder. Aby podpiąć prawdziwe zdjęcie:
+Zdjęcia produktów Somfy leżą w `public/images/somfy`, a ich ścieżki, opisy i kadry w `src/data/media.ts`. Wykorzystane są w miniaturach listy oferty na stronie głównej, w kartach i na podstronach oferty, w sekcji „O firmie”, w pasie zdjęciowym „Sterowanie” (`PhotoBand`), w tle sekcji CTA, we wpisach bloga (pole `image` we frontmatterze) oraz jako przykładowe zdjęcia w galeriach realizacji.
+
+Tło nagłówków (strona główna i podstrony) to zdjęcie domu z Unsplash: `public/images/dom/nowoczesny-dom-z-zaslonami.jpg`, fot. Meri Vasilevski, [licencja Unsplash](https://unsplash.com/license) - użycie komercyjne bez opłat i bez obowiązku podpisu. Aby podmienić je na zdjęcie z własnej realizacji, wystarczy zmienić `HOUSE` w `src/data/media.ts`.
+
+Każde zdjęcie ma `alt` opisujący scenę, a przy zdjęciach Somfy także nazwę pokazanego produktu (np. „…sterowane pilotem Somfy Situo 5”). Dotyczy to też zdjęć w tle - dlatego tła są renderowane przez `next/image`, a nie CSS `background-image`.
+
+Galerie realizacji pokazują przykładowe zdjęcia Somfy. Aby podpiąć zdjęcie z własnego montażu:
 
 1. wrzuć plik do `public/images/…`,
 2. dopisz ścieżkę w danych, np. w `src/data/projects.ts`:
@@ -91,7 +97,7 @@ gallery: [
 ]
 ```
 
-Komponent `MediaFrame` sam przełączy się na `next/image` — nie trzeba zmieniać kodu widoków.
+Komponent `MediaFrame` sam przełączy się na `next/image` - nie trzeba zmieniać kodu widoków.
 
 ## Kolorystyka
 

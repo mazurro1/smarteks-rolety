@@ -4,13 +4,13 @@
     "logoName": "Smarteks Rolety",
     "tagline": "Rolety zewnętrzne, antywłamaniowe i bramy rolowane",
     "description": "Montaż i serwis rolet zewnętrznych, antywłamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych w Warszawie i okolicach.",
-    "metaTitle": "Smarteks Rolety — rolety zewnętrzne i antywłamaniowe, Warszawa",
+    "metaTitle": "Smarteks Rolety - rolety zewnętrzne i antywłamaniowe, Warszawa",
     "metaTitleTemplate": "%s | Smarteks Rolety",
     "metaDescription": "Rolety antywłamaniowe RC2 i RC3, adaptacyjne, podtynkowe oraz bramy rolowane. Montaż, serwis i przeglądy w Warszawie i okolicach. Bezpłatny pomiar i wycena.",
     "ogTitle": "Rolety zewnętrzne i antywłamaniowe",
-    "ogDescription": "Certyfikowane rolety RC2 i RC3, adaptacyjne, podtynkowe i bramy rolowane. Montaż i serwis — Warszawa i okolice.",
-    "ogImageAlt": "Smarteks Rolety — rolety zewnętrzne i antywłamaniowe, Warszawa",
-    "twitterTitle": "Smarteks Rolety — Warszawa i okolice",
+    "ogDescription": "Certyfikowane rolety RC2 i RC3, adaptacyjne, podtynkowe i bramy rolowane. Montaż i serwis - Warszawa i okolice.",
+    "ogImageAlt": "Smarteks Rolety - rolety zewnętrzne i antywłamaniowe, Warszawa",
+    "twitterTitle": "Smarteks Rolety - Warszawa i okolice",
     "twitterDescription": "Rolety antywłamaniowe RC2 i RC3, adaptacyjne, podtynkowe, bramy rolowane. Montaż i serwis.",
     "rssFeedTitle": "Blog Smarteks Rolety"
   },
@@ -41,8 +41,8 @@
     "freeEstimate": "Bezpłatna wycena",
     "allOffer": "Zobacz całą ofertę",
     "offerMenuNote": "W każdej kategorii: pomiar, montaż i serwis.",
-    "topbarTagline": "Rolety zewnętrzne i bramy rolowane — Warszawa i okolice",
-    "logoAriaLabel": "Smarteks Rolety — strona główna",
+    "topbarTagline": "Rolety zewnętrzne i bramy rolowane - Warszawa i okolice",
+    "logoAriaLabel": "Smarteks Rolety - strona główna",
     "mainNavigationAriaLabel": "Nawigacja główna",
     "mobileMenuAriaLabel": "Menu mobilne",
     "mobileBottomBarAriaLabel": "Szybki kontakt",
@@ -54,15 +54,15 @@
     "badge": "Warszawa i okolice",
     "headingLine1": "Rolety, które robią różnicę.",
     "headingAccent": "Bezpieczeństwo, cisza, komfort.",
-    "lead": "Certyfikowane rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne, podtynkowe i bramy rolowane. Mierzymy, montujemy i serwisujemy — od pierwszego pomiaru po przegląd w piątym roku.",
+    "lead": "Certyfikowane rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne, podtynkowe i bramy rolowane. Mierzymy, montujemy i serwisujemy - od pierwszego pomiaru po przegląd w piątym roku.",
     "ctaPrimary": "Zamów bezpłatną wycenę",
     "cardLabel": "Klasa odporności",
     "cardValue": "RC2 / RC3",
-    "cardText": "Certyfikat wydany dla całego zestawu wg PN-EN 1627 — z protokołem montażu."
+    "cardText": "Certyfikat wydany dla całego zestawu wg PN-EN 1627 - z protokołem montażu."
   },
 
   "home": {
-    "pageTitle": "Rolety zewnętrzne i antywłamaniowe — Warszawa i okolice",
+    "pageTitle": "Rolety zewnętrzne i antywłamaniowe - Warszawa i okolice",
     "pageDescription": "Montaż i serwis rolet antywłamaniowych RC2 i RC3, rolet adaptacyjnych, podtynkowych oraz bram rolowanych. Bezpłatny pomiar, 5 lat gwarancji, własna ekipa montażowa.",
     "benefits": {
       "eyebrow": "Dlaczego my",
@@ -72,11 +72,17 @@
     "process": {
       "eyebrow": "Jak pracujemy",
       "title": "Pięć kroków od telefonu do odbioru",
-      "lead": "Wiesz, co się wydarzy na każdym etapie — łącznie z tym, ile to potrwa i ile będzie kosztować."
+      "lead": "Wiesz, co się wydarzy na każdym etapie - łącznie z tym, ile to potrwa i ile będzie kosztować."
     },
     "company": {
       "yearsLabel": "lat doświadczenia",
       "cta": "Zobacz nasze realizacje"
+    },
+    "controlBand": {
+      "eyebrow": "Sterowanie",
+      "title": "Pilot, przycisk na ścianie albo telefon",
+      "text": "Rolety z napędem obsłużysz tak, jak Ci wygodnie - pojedynczo albo całą grupą okien naraz. Konfigurujemy sceny i harmonogramy, a potem uczymy, jak z nich korzystać.",
+      "cta": "Zobacz ofertę"
     }
   },
 
@@ -87,7 +93,7 @@
     "sectionNote": "Nie wiesz, co wybrać? Podczas bezpłatnego pomiaru podpowiemy, co ma sens w Twoim budynku.",
     "sectionCta": "Zobacz całą ofertę",
 
-    "pageTitle": "Oferta — rolety zewnętrzne, antywłamaniowe i bramy rolowane",
+    "pageTitle": "Oferta - rolety zewnętrzne, antywłamaniowe i bramy rolowane",
     "pageDescription": "Rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne, podtynkowe oraz bramy rolowane. Montaż, serwis i przeglądy w Warszawie i okolicach.",
     "heroEyebrow": "Nasza oferta",
     "heroTitle": "Osłony zewnętrzne dobrane do budynku, nie do katalogu",
@@ -106,19 +112,19 @@
     "quickFactsTitle": "W skrócie",
     "allSpecs": "Wszystkie parametry",
     "featuresEyebrow": "Co dostajesz",
-    "featuresTitle": "{product} — najważniejsze cechy",
+    "featuresTitle": "{product} - najważniejsze cechy",
     "specsEyebrow": "Dane techniczne",
     "specsTitle": "Parametry",
     "variantsEyebrow": "Warianty",
     "variantsTitle": "Wersje do wyboru",
     "faqEyebrow": "Pytania i odpowiedzi",
-    "faqTitle": "{product} — najczęstsze pytania",
+    "faqTitle": "{product} - najczęstsze pytania",
     "faqLead": "Odpowiedzi na pytania, które słyszymy podczas pomiarów.",
     "otherProducts": "Pozostałe kategorie",
 
     "installService": {
       "eyebrow": "Montaż i serwis",
-      "title": "Montujemy i serwisujemy — ta sama ekipa",
+      "title": "Montujemy i serwisujemy - ta sama ekipa",
       "lead": "Instalacja to początek współpracy, nie jej koniec. Za montaż i za późniejszy serwis odpowiadają u nas ci sami ludzie.",
       "installationLabel": "Etap pierwszy",
       "installationTitle": "Montaż",
@@ -128,11 +134,11 @@
   },
 
   "projects": {
-    "pageTitle": "Realizacje — rolety i bramy rolowane w Warszawie i okolicach",
+    "pageTitle": "Realizacje - rolety i bramy rolowane w Warszawie i okolicach",
     "pageDescription": "Zrealizowane montaże rolet antywłamaniowych RC2 i RC3, rolet adaptacyjnych, podtynkowych oraz bram rolowanych. Zakres prac, parametry i zdjęcia z realizacji.",
     "heroEyebrow": "Nasze realizacje",
     "heroTitle": "Zrobione, odebrane, działa",
-    "heroLead": "Wybrane projekty z ostatnich lat — z zakresem prac, parametrami i tym, co realnie zmieniły w budynku.",
+    "heroLead": "Wybrane projekty z ostatnich lat - z zakresem prac, parametrami i tym, co realnie zmieniły w budynku.",
     "breadcrumb": "Realizacje",
     "listAriaLabel": "Lista realizacji",
     "filtersAriaLabel": "Filtruj realizacje według kategorii",
@@ -180,7 +186,7 @@
   },
 
   "blog": {
-    "pageTitle": "Blog — poradniki o roletach zewnętrznych i bramach rolowanych",
+    "pageTitle": "Blog - poradniki o roletach zewnętrznych i bramach rolowanych",
     "pageDescription": "Praktyczne poradniki o roletach antywłamaniowych, adaptacyjnych i podtynkowych oraz bramach rolowanych. Klasy RC, ceny, montaż, serwis i eksploatacja.",
     "heroEyebrow": "Blog",
     "heroTitle": "Wiedza, która przydaje się przed decyzją",
@@ -195,9 +201,9 @@
     "updatedAt": "Aktualizacja",
     "faqHeading": "Najczęstsze pytania",
     "ctaTitle": "Masz pytanie o swój budynek?",
-    "ctaText": "Zadzwoń albo napisz — doradzimy bez zobowiązań, a pomiar wykonujemy bezpłatnie.",
+    "ctaText": "Zadzwoń albo napisz - doradzimy bez zobowiązań, a pomiar wykonujemy bezpłatnie.",
     "aboutAuthorTitle": "O autorze",
-    "aboutAuthorText": "Smarteks Rolety — montaż i serwis osłon zewnętrznych w Warszawie i okolicach. Piszemy na podstawie realizacji, nie katalogów producentów.",
+    "aboutAuthorText": "Smarteks Rolety - montaż i serwis osłon zewnętrznych w Warszawie i okolicach. Piszemy na podstawie realizacji, nie katalogów producentów.",
     "aboutAuthorCta": "Zobacz ofertę",
     "tagsTitle": "Tematy",
     "relatedTitle": "Przeczytaj również",
@@ -213,24 +219,24 @@
   "faq": {
     "eyebrow": "FAQ",
     "title": "Najczęstsze pytania",
-    "lead": "Zebraliśmy pytania, które słyszymy najczęściej — razem z uczciwymi odpowiedziami.",
+    "lead": "Zebraliśmy pytania, które słyszymy najczęściej - razem z uczciwymi odpowiedziami.",
     "noteText": "Nie znalazłeś odpowiedzi?",
     "noteLink": "Napisz do nas"
   },
 
   "cta": {
     "eyebrow": "Bezpłatny pomiar",
-    "title": "Zacznijmy od pomiaru — reszta wyjdzie w praniu",
+    "title": "Zacznijmy od pomiaru - reszta wyjdzie w praniu",
     "text": "Przyjeżdżamy, mierzymy, sprawdzamy nadproże i dostęp do zasilania. Dopiero potem rozmawiamy o cenie. Bez zaliczek za wycenę i bez zobowiązań.",
     "ctaPrimary": "Zamów bezpłatną wycenę"
   },
 
   "contact": {
-    "pageTitle": "Kontakt — bezpłatna wycena rolet i bram rolowanych",
+    "pageTitle": "Kontakt - bezpłatna wycena rolet i bram rolowanych",
     "pageDescription": "Skontaktuj się z Smarteks Rolety: telefon, e-mail, formularz wyceny. Bezpłatny pomiar w Warszawie i okolicach, odpowiedź w ciągu 24 godzin.",
     "heroEyebrow": "Kontakt",
     "heroTitle": "Porozmawiajmy o Twoim projekcie",
-    "heroLead": "Niezależnie od skali — jedno okno czy cały budynek. Odpowiadamy w ciągu 24 godzin w dni robocze.",
+    "heroLead": "Niezależnie od skali - jedno okno czy cały budynek. Odpowiadamy w ciągu 24 godzin w dni robocze.",
     "breadcrumb": "Kontakt",
     "chips": {
       "freeEstimate": "Bezpłatny pomiar",
@@ -245,7 +251,7 @@
     "areaTitle": "Dojeżdżamy do",
 
     "formTitle": "Bezpłatna wycena",
-    "formSubtitle": "Wypełnij formularz — odpiszemy lub oddzwonimy w ciągu 24 godzin.",
+    "formSubtitle": "Wypełnij formularz - odpiszemy lub oddzwonimy w ciągu 24 godzin.",
     "formAriaLabel": "Formularz kontaktowy",
     "privacyNote": "Wysyłając formularz akceptujesz",
     "privacyLinkLabel": "politykę prywatności",
@@ -257,7 +263,7 @@
       "recessed": "Rolety podtynkowe",
       "rollerGates": "Bramy rolowane",
       "service": "Serwis lub naprawa",
-      "estimate": "Wycena — jeszcze nie wiem czego",
+      "estimate": "Wycena - jeszcze nie wiem czego",
       "other": "Inna sprawa"
     },
 
@@ -269,7 +275,7 @@
       "email": "Adres e-mail",
       "emailPlaceholder": "jan@example.com",
       "topic": "Czego dotyczy zapytanie",
-      "topicPlaceholder": "— wybierz temat —",
+      "topicPlaceholder": "- wybierz temat -",
       "message": "Opis projektu",
       "messagePlaceholder": "Liczba okien, wymiary, etap budowy, preferencje sterowania…",
       "messageCounter": "{count}/{max} znaków",
@@ -283,7 +289,7 @@
       "messageMin": "Opisz sprawę w co najmniej 10 znakach",
       "messageMax": "Wiadomość jest za długa",
       "successTitle": "Dziękujemy za wiadomość!",
-      "successMessage": "Odezwiemy się w ciągu 24 godzin w dni robocze. Jeśli sprawa jest pilna, zadzwoń — odbierzemy od razu.",
+      "successMessage": "Odezwiemy się w ciągu 24 godzin w dni robocze. Jeśli sprawa jest pilna, zadzwoń - odbierzemy od razu.",
       "errorTitle": "Nie udało się wysłać wiadomości",
       "errorMessage": "Spróbuj ponownie za chwilę albo zadzwoń do nas bezpośrednio."
     },
@@ -307,7 +313,7 @@
     "ctaTitle": "Bezpłatny pomiar w Warszawie i okolicach",
     "ctaText": "Przyjedziemy, zmierzymy i przygotujemy wycenę z rozbiciem na pozycje. Bez zobowiązań.",
     "tagline": "Montaż i serwis rolet zewnętrznych: antywłamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych.",
-    "logoAriaLabel": "Smarteks Rolety — strona główna",
+    "logoAriaLabel": "Smarteks Rolety - strona główna",
     "offer": "Oferta",
     "company": "Firma",
     "contact": "Kontakt",
@@ -332,7 +338,7 @@
 
   "privacyPolicy": {
     "pageTitle": "Polityka prywatności",
-    "pageDescription": "Polityka prywatności serwisu Smarteks Rolety — informacje o przetwarzaniu danych osobowych.",
+    "pageDescription": "Polityka prywatności serwisu Smarteks Rolety - informacje o przetwarzaniu danych osobowych.",
     "breadcrumbAriaLabel": "Nawigacja okruszkowa",
     "breadcrumbHome": "Start",
     "title": "Polityka prywatności",

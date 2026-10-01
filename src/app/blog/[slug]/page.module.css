@@ -30,9 +30,12 @@
   border: 1px solid var(--color-line);
 }
 
+/* Staly kadr - pionowe zdjecia nie rozciagaja naglowka wpisu. */
 .heroImg {
   width: 100%;
   height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
 }
 
 /* ── Tresc markdown ───────────────────────────────────────── */

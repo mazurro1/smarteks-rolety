@@ -15,6 +15,8 @@ export interface BlogPostMeta {
   keywords?: string[];
   image?: string;
   imageAlt?: string;
+  /** Kadr zdjecia (CSS object-position). */
+  imagePosition?: string;
 }
 
 export interface BlogPostFull extends BlogPostMeta {
@@ -45,6 +47,7 @@ const toMeta = (
   keywords: data.keywords as string[] | undefined,
   image: data.image as string | undefined,
   imageAlt: data.imageAlt as string | undefined,
+  imagePosition: data.imagePosition as string | undefined,
 });
 
 export function getAllPosts(): BlogPostMeta[] {
@@ -88,7 +91,7 @@ export function getLatestPosts(limit: number): BlogPostMeta[] {
   return getAllPosts().slice(0, limit);
 }
 
-/** Wpisy powiazane — ta sama kategoria, z pominieciem biezacego wpisu. */
+/** Wpisy powiazane - ta sama kategoria, z pominieciem biezacego wpisu. */
 export function getRelatedPosts(slug: string, limit = 3): BlogPostMeta[] {
   const posts = getAllPosts();
   const current = posts.find((post) => post.slug === slug);

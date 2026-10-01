@@ -69,6 +69,7 @@ export default function ProjectCard({
         <MediaFrame
           src={current.src}
           alt={current.alt}
+          position={current.position}
           ratio="4/3"
           label={current.caption}
           priority={priority && index === 0}

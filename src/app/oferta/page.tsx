@@ -65,9 +65,12 @@ export default async function OfferPage() {
                 <article className={styles.card}>
                   <div className={styles.media}>
                     <MediaFrame
+                      src={product.image.src}
+                      alt={product.image.alt}
+                      position={product.image.position}
                       ratio={index < 2 ? "16/9" : "4/3"}
-                      alt={`${product.title} — przykładowa realizacja`}
                       label={product.cardTitle}
+                      priority={index < 2}
                       sizes="(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 40vw"
                       className={styles.mediaFrame}
                     />

@@ -18,7 +18,7 @@ interface BreadcrumbsProps {
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 /**
- * Sciezka nawigacyjna wraz z danymi strukturalnymi BreadcrumbList —
+ * Sciezka nawigacyjna wraz z danymi strukturalnymi BreadcrumbList -
  * dzieki temu podstrony nie musza powtarzac tego samego schematu JSON-LD.
  */
 export default function Breadcrumbs({

@@ -39,6 +39,16 @@ export type IconKey =
   | "house"
   | "certificate";
 
+// ── Zdjecia ───────────────────────────────────────────────────────────────────
+export interface MediaImage {
+  /** Sciezka do pliku w /public. */
+  src: string;
+  /** Opis sceny; przy zdjeciach Somfy z nazwa pokazanego produktu. */
+  alt: string;
+  /** Wartosc CSS object-position - kadr przy object-fit: cover. */
+  position?: string;
+}
+
 // ── Oferta ────────────────────────────────────────────────────────────────────
 export interface OfferFeature {
   icon: IconKey;
@@ -73,6 +83,8 @@ export interface OfferProduct {
   eyebrow: string;
   badge?: string;
   icon: IconKey;
+  /** Zdjecie pogladowe w karcie oferty i na podstronie produktu. */
+  image: MediaImage;
   tagline: string;
   excerpt: string;
   highlights: string[];
@@ -111,6 +123,8 @@ export interface ProjectImage {
   src?: string;
   alt: string;
   caption?: string;
+  /** Kadr zdjecia (CSS object-position). */
+  position?: string;
 }
 
 export interface Project {

@@ -8,7 +8,7 @@ export const ROUTES = {
   COOKIE_POLICY: "/polityka-cookies",
 } as const;
 
-/** Slugi podstron ofertowych — jedno zrodlo prawdy dla nawigacji, sitemapy i danych. */
+/** Slugi podstron ofertowych - jedno zrodlo prawdy dla nawigacji, sitemapy i danych. */
 export const OFFER_SLUGS = {
   RC2: "rolety-antywlamaniowe-rc2",
   RC3: "rolety-antywlamaniowe-rc3",

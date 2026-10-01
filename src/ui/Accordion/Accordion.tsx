@@ -6,7 +6,7 @@ import styles from "./Accordion.module.css";
 
 interface AccordionProps {
   items: FaqItem[];
-  /** Prefiks identyfikatorow — pozwala uzyc kilku akordeonow na jednej stronie. */
+  /** Prefiks identyfikatorow - pozwala uzyc kilku akordeonow na jednej stronie. */
   idPrefix?: string;
   columns?: 1 | 2;
 }

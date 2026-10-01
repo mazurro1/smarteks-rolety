@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";
+import { CTA_IMAGE } from "@/data/media";
 import Button from "@/ui/Button";
 import styles from "./CTA.module.css";
 
@@ -17,6 +19,17 @@ export async function CTA({ title, text }: CTAProps) {
 
   return (
     <section className={styles.section} aria-labelledby="cta-heading">
+      <div className={styles.backdrop}>
+        <Image
+          src={CTA_IMAGE.src}
+          alt={CTA_IMAGE.alt}
+          fill
+          sizes="100vw"
+          className={styles.backdropImage}
+          style={{ objectPosition: CTA_IMAGE.position }}
+        />
+      </div>
+      <div className={styles.shade} aria-hidden="true" />
       <div className={styles.pattern} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>

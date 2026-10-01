@@ -22,7 +22,7 @@ export function GET() {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Smarteks Rolety — blog o roletach zewnętrznych</title>
+    <title>Smarteks Rolety - blog o roletach zewnętrznych</title>
     <link>${BASE_URL}${ROUTES.BLOG}</link>
     <description>Poradniki o roletach antywłamaniowych RC2 i RC3, roletach adaptacyjnych, podtynkowych oraz bramach rolowanych.</description>
     <language>pl</language>

@@ -1,4 +1,5 @@
 import { OFFER_SLUGS } from "@/constants/routes";
+import { SOMFY_IMAGES } from "@/data/media";
 import type { OfferProduct } from "@/types";
 
 /**
@@ -14,6 +15,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     eyebrow: "Klasa odporności RC2",
     badge: "Najczęściej wybierane",
     icon: "shield",
+    image: { ...SOMFY_IMAGES.shuttersCornerRemote, position: "center 35%" },
     tagline: "Certyfikowana ochrona dla domów i mieszkań",
     excerpt:
       "Certyfikowana bariera przed włamaniem przez okno. Wzmocnione pancerze, blokady antypodnoszeniowe i prowadnice, które nie ustępują pod naporem łomu.",
@@ -23,7 +25,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       "Akceptowane przez towarzystwa ubezpieczeniowe",
     ],
     intro: [
-      "Rolety antywłamaniowe klasy RC2 to najczęściej wybierane zabezpieczenie okien w domach jednorodzinnych i mieszkaniach na parterze. Klasa RC2 oznacza, że konstrukcja przez co najmniej trzy minuty opiera się próbie sforsowania prostymi narzędziami — śrubokrętem, klinem czy niewielkim łomem. W praktyce to czas, po którym zdecydowana większość włamywaczy rezygnuje i szuka łatwiejszego celu.",
+      "Rolety antywłamaniowe klasy RC2 to najczęściej wybierane zabezpieczenie okien w domach jednorodzinnych i mieszkaniach na parterze. Klasa RC2 oznacza, że konstrukcja przez co najmniej trzy minuty opiera się próbie sforsowania prostymi narzędziami - śrubokrętem, klinem czy niewielkim łomem. W praktyce to czas, po którym zdecydowana większość włamywaczy rezygnuje i szuka łatwiejszego celu.",
       "Odporność nie bierze się z samego pancerza. Składa się na nią pięć elementów: profil wypełniony pianką o wysokiej gęstości, wzmocnione prowadnice z zagłębieniem bocznym, blokady antypodnoszeniowe uniemożliwiające ręczne podniesienie pancerza, sztywna listwa dolna oraz prawidłowe zakotwienie całego zestawu w murze. Pominięcie któregokolwiek z nich sprawia, że roleta traci deklarowaną klasę.",
       "Montujemy wyłącznie kompletne zestawy certyfikowane jako całość, wraz z protokołem montażu. To dokument, o który pyta ubezpieczyciel przy negocjowaniu składki i przy likwidacji szkody.",
     ],
@@ -38,7 +40,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "lock",
         title: "Blokady antypodnoszeniowe",
         description:
-          "Mechaniczne rygle blokują pancerz w pozycji zamkniętej — rolety nie da się podnieść od zewnątrz.",
+          "Mechaniczne rygle blokują pancerz w pozycji zamkniętej - rolety nie da się podnieść od zewnątrz.",
       },
       {
         icon: "layers",
@@ -62,17 +64,17 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "house",
         title: "Dopasowanie do elewacji",
         description:
-          "Pełna paleta RAL, struktury drewnopodobne i skrzynki w kilku kształtach — również do montażu po zakończeniu budowy.",
+          "Pełna paleta RAL, struktury drewnopodobne i skrzynki w kilku kształtach - również do montażu po zakończeniu budowy.",
       },
     ],
     specs: [
       { label: "Klasa odporności", value: "RC2 wg PN-EN 1627/1630" },
       { label: "Czas oporu", value: "min. 3 minuty (narzędzia kat. A2)" },
-      { label: "Profil pancerza", value: "Aluminium wypełnione pianką PU, 39–55 mm" },
+      { label: "Profil pancerza", value: "Aluminium wypełnione pianką PU, 39-55 mm" },
       { label: "Prowadnice", value: "Wzmocnione, z uszczelką i głębokim zagłębieniem" },
       { label: "Blokady", value: "Antypodnoszeniowe, min. 2 na pancerz" },
       { label: "Napęd", value: "Silnik rurowy z hamulcem, sterowanie radiowe" },
-      { label: "Zasilanie awaryjne", value: "Opcjonalne — korba lub akumulator" },
+      { label: "Zasilanie awaryjne", value: "Opcjonalne - korba lub akumulator" },
       { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
     ],
     variants: [
@@ -99,7 +101,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "RC2 z siatką przeciwowadową",
         description:
-          "Prowadnica zintegrowana z moskitierą rolowaną — jedna rama, dwa niezależne pancerze.",
+          "Prowadnica zintegrowana z moskitierą rolowaną - jedna rama, dwa niezależne pancerze.",
         points: [
           "Wspólna prowadnica dla rolety i moskitiery",
           "Brak dodatkowych otworów w elewacji",
@@ -108,13 +110,13 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     installation: {
-      lead: "Montaż rolety antywłamaniowej różni się od montażu rolety zwykłej — o klasie RC2 decyduje sposób zakotwienia w murze, nie sam produkt.",
+      lead: "Montaż rolety antywłamaniowej różni się od montażu rolety zwykłej - o klasie RC2 decyduje sposób zakotwienia w murze, nie sam produkt.",
       points: [
         "Bezpłatny pomiar i ocena nadproża oraz warstwy ocieplenia przed wyceną",
         "Dobór kotew do rodzaju muru: beton, pustak ceramiczny, silikat, beton komórkowy",
         "Montaż prowadnic w rozstawie i z liczbą punktów mocowania wymaganą przez certyfikat",
         "Podłączenie elektryczne z zabezpieczeniem i konfiguracja krańcówek napędu",
-        "Protokół montażu z numerem certyfikatu — dokument dla ubezpieczyciela",
+        "Protokół montażu z numerem certyfikatu - dokument dla ubezpieczyciela",
       ],
     },
     service: {
@@ -122,7 +124,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       points: [
         "Przegląd raz w roku: kontrola blokad, prowadnic, naciągu i krańcówek",
         "Regulacja i wymiana zużytych elementów pancerza bez demontażu skrzynki",
-        "Naprawy napędów rurowych i sterowników — najczęściej w jednej wizycie",
+        "Naprawy napędów rurowych i sterowników - najczęściej w jednej wizycie",
         "Wymiana rolet zwykłych na antywłamaniowe w istniejących prowadnicach, gdy pozwala na to konstrukcja",
         "Serwis pogwarancyjny również dla rolet montowanych przez inne firmy",
       ],
@@ -130,7 +132,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     faq: [
       {
         q: "Czy rolety RC2 obniżają składkę ubezpieczenia?",
-        a: "W większości towarzystw tak — certyfikowane zabezpieczenia przeciwwłamaniowe są uwzględniane przy wyliczaniu składki i podnoszą limit odpowiedzialności za kradzież z włamaniem. Warunkiem jest przedstawienie protokołu montażu z numerem certyfikatu, który przekazujemy po zakończeniu prac.",
+        a: "W większości towarzystw tak - certyfikowane zabezpieczenia przeciwwłamaniowe są uwzględniane przy wyliczaniu składki i podnoszą limit odpowiedzialności za kradzież z włamaniem. Warunkiem jest przedstawienie protokołu montażu z numerem certyfikatu, który przekazujemy po zakończeniu prac.",
       },
       {
         q: "Czym różni się roleta RC2 od zwykłej rolety zewnętrznej?",
@@ -138,7 +140,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy rolety RC2 można zamontować w gotowym domu?",
-        a: "Tak. W budynkach oddanych do użytku montujemy wersję nakładaną — skrzynka trafia na elewację lub do wnęki okiennej. Prace przy jednym oknie zajmują zwykle 2–3 godziny i nie wymagają robót murarskich.",
+        a: "Tak. W budynkach oddanych do użytku montujemy wersję nakładaną - skrzynka trafia na elewację lub do wnęki okiennej. Prace przy jednym oknie zajmują zwykle 2-3 godziny i nie wymagają robót murarskich.",
       },
       {
         q: "Jak roleta zachowa się przy braku prądu?",
@@ -146,7 +148,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety antywłamaniowe RC2 — montaż i serwis Warszawa",
+      title: "Rolety antywłamaniowe RC2 - montaż i serwis Warszawa",
       description:
         "Certyfikowane rolety antywłamaniowe klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach. Protokół montażu dla ubezpieczyciela.",
       keywords: [
@@ -167,6 +169,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     eyebrow: "Klasa odporności RC3",
     badge: "Najwyższa ochrona",
     icon: "shieldCheck",
+    image: { ...SOMFY_IMAGES.remoteShutterSlats, position: "center 30%" },
     tagline: "Maksymalna klasa dla willi i obiektów o podwyższonym ryzyku",
     excerpt:
       "Pancerz z profili ekstrudowanych, podwójne ryglowanie i prowadnice kotwione w konstrukcji. Ochrona tam, gdzie RC2 to za mało.",
@@ -177,15 +180,15 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     ],
     intro: [
       "Klasa RC3 to wyższy poziom odporności: konstrukcja musi wytrzymać co najmniej pięć minut ataku prowadzonego dodatkowym łomem i narzędziami umożliwiającymi podważanie z dużą siłą. To standard stosowany w willach, domach z dużymi przeszkleniami, kancelariach, gabinetach lekarskich i obiektach, w których przechowywane są wartościowe przedmioty.",
-      "Różnica względem RC2 jest konstrukcyjna, nie kosmetyczna. Pancerz wykonany jest z profili ekstrudowanych — pełnych, walcowanych profili aluminiowych bez rdzenia z pianki. Prowadnice mają większy przekrój i są kotwione bezpośrednio w konstrukcji nośnej, a nie w warstwie ocieplenia. Pancerz ryglowany jest wielopunktowo, a listwa dolna wzmocniona stalowym wkładem.",
-      "Rolety RC3 są cięższe i wymagają mocniejszych napędów, dlatego każdy projekt liczymy indywidualnie — od nośności nadproża po dobór momentu silnika. Przy dużych przeszkleniach tarasowych stosujemy pancerze dzielone lub podwójne prowadnice.",
+      "Różnica względem RC2 jest konstrukcyjna, nie kosmetyczna. Pancerz wykonany jest z profili ekstrudowanych - pełnych, walcowanych profili aluminiowych bez rdzenia z pianki. Prowadnice mają większy przekrój i są kotwione bezpośrednio w konstrukcji nośnej, a nie w warstwie ocieplenia. Pancerz ryglowany jest wielopunktowo, a listwa dolna wzmocniona stalowym wkładem.",
+      "Rolety RC3 są cięższe i wymagają mocniejszych napędów, dlatego każdy projekt liczymy indywidualnie - od nośności nadproża po dobór momentu silnika. Przy dużych przeszkleniach tarasowych stosujemy pancerze dzielone lub podwójne prowadnice.",
     ],
     features: [
       {
         icon: "shieldCheck",
         title: "Pięć minut oporu",
         description:
-          "Badanie wg PN-EN 1630 z narzędziami kategorii A3 — łom, dłuto, młotek. Klasa potwierdzona certyfikatem.",
+          "Badanie wg PN-EN 1630 z narzędziami kategorii A3 - łom, dłuto, młotek. Klasa potwierdzona certyfikatem.",
       },
       {
         icon: "layers",
@@ -203,7 +206,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "ruler",
         title: "Kotwienie w konstrukcji",
         description:
-          "Prowadnice mocowane do nadproża i muru nośnego, z pominięciem warstwy ocieplenia — zgodnie z wytycznymi certyfikatu.",
+          "Prowadnice mocowane do nadproża i muru nośnego, z pominięciem warstwy ocieplenia - zgodnie z wytycznymi certyfikatu.",
       },
       {
         icon: "gauge",
@@ -222,7 +225,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       { label: "Klasa odporności", value: "RC3 wg PN-EN 1627/1630" },
       { label: "Czas oporu", value: "min. 5 minut (narzędzia kat. A3)" },
       { label: "Profil pancerza", value: "Ekstrudowane aluminium, ścianka do 3 mm" },
-      { label: "Masa pancerza", value: "12–17 kg/m² zależnie od profilu" },
+      { label: "Masa pancerza", value: "12-17 kg/m² zależnie od profilu" },
       { label: "Prowadnice", value: "Wzmocnione, kotwione w konstrukcji nośnej" },
       { label: "Ryglowanie", value: "Wielopunktowe, pancerz + listwa dolna" },
       { label: "Maks. szerokość", value: "do 4,5 m w jednym pancerzu" },
@@ -252,7 +255,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "RC3 dla obiektów",
         description:
-          "Gabinety, kancelarie, lombardy, apteki i punkty handlowe — z rejestracją stanu pancerza w systemie alarmowym.",
+          "Gabinety, kancelarie, lombardy, apteki i punkty handlowe - z rejestracją stanu pancerza w systemie alarmowym.",
         points: [
           "Styki kontrolne położenia",
           "Sterowanie grupowe całą fasadą",
@@ -261,11 +264,11 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     installation: {
-      lead: "Rolety RC3 ważą nawet trzykrotnie więcej niż rolety standardowe — montaż zaczynamy od weryfikacji, czy budynek jest na nie przygotowany.",
+      lead: "Rolety RC3 ważą nawet trzykrotnie więcej niż rolety standardowe - montaż zaczynamy od weryfikacji, czy budynek jest na nie przygotowany.",
       points: [
         "Ocena nośności nadproża i sposobu kotwienia przed przyjęciem zlecenia",
         "Dobór kotew i punktów mocowania zgodny z dokumentacją certyfikacyjną zestawu",
-        "Montaż z pominięciem warstwy ocieplenia — prowadnice zawsze w konstrukcji nośnej",
+        "Montaż z pominięciem warstwy ocieplenia - prowadnice zawsze w konstrukcji nośnej",
         "Dobór napędu do rzeczywistej masy pancerza, z zapasem momentu obrotowego",
         "Protokół odbioru z numerem certyfikatu i dokumentacją fotograficzną kotwienia",
       ],
@@ -277,7 +280,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         "Kontrola i regulacja ryglowania wielopunktowego",
         "Wymiana rolek, zawieszek i uszczelek prowadnic",
         "Diagnostyka napędów i sterowników, z wymianą na kompatybilne modele",
-        "Serwis awaryjny dla obiektów komercyjnych — priorytetowy termin",
+        "Serwis awaryjny dla obiektów komercyjnych - priorytetowy termin",
       ],
     },
     faq: [
@@ -287,7 +290,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy roletę RC3 można zamontować w istniejącym budynku?",
-        a: "Zwykle tak, ale wymaga to sprawdzenia nadproża i sposobu kotwienia. Prowadnice muszą trafić w konstrukcję nośną — sama warstwa ocieplenia lub tynku nie przeniesie obciążeń. Ocenę wykonujemy bezpłatnie podczas pomiaru.",
+        a: "Zwykle tak, ale wymaga to sprawdzenia nadproża i sposobu kotwienia. Prowadnice muszą trafić w konstrukcję nośną - sama warstwa ocieplenia lub tynku nie przeniesie obciążeń. Ocenę wykonujemy bezpłatnie podczas pomiaru.",
       },
       {
         q: "Czy rolety RC3 są głośniejsze w pracy?",
@@ -299,7 +302,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety antywłamaniowe RC3 — najwyższa klasa ochrony, Warszawa",
+      title: "Rolety antywłamaniowe RC3 - najwyższa klasa ochrony, Warszawa",
       description:
         "Rolety antywłamaniowe klasy RC3 z profili ekstrudowanych. Certyfikat PN-EN 1627, ryglowanie wielopunktowe, montaż i serwis w Warszawie i okolicach.",
       keywords: [
@@ -319,6 +322,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     cardTitle: "Rolety adaptacyjne",
     eyebrow: "Światło pod kontrolą",
     icon: "sun",
+    image: { ...SOMFY_IMAGES.louvresRoom, position: "right center" },
     tagline: "Roleta i żaluzja fasadowa w jednym pancerzu",
     excerpt:
       "Uchylne lamele pozwalają wpuścić światło przy opuszczonym pancerzu. Prywatność bez ciemności i bez rezygnacji z widoku.",
@@ -337,7 +341,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "sun",
         title: "Regulacja kąta lameli",
         description:
-          "Od pełnego zaciemnienia do prześwitu — ustawienie zapamiętywane i przywoływane jednym przyciskiem.",
+          "Od pełnego zaciemnienia do prześwitu - ustawienie zapamiętywane i przywoływane jednym przyciskiem.",
       },
       {
         icon: "thermometer",
@@ -355,13 +359,13 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "volume",
         title: "Cicha praca",
         description:
-          "Lamele prowadzone na taśmach i rolkach z tworzywa — bez metalicznego klekotu przy zmianie położenia.",
+          "Lamele prowadzone na taśmach i rolkach z tworzywa - bez metalicznego klekotu przy zmianie położenia.",
       },
       {
         icon: "layers",
         title: "Smukły pancerz",
         description:
-          "Lamele o wysokości 65–90 mm zwijane w kompaktową skrzynkę, również w wersji ukrytej w elewacji.",
+          "Lamele o wysokości 65-90 mm zwijane w kompaktową skrzynkę, również w wersji ukrytej w elewacji.",
       },
       {
         icon: "house",
@@ -396,7 +400,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         description:
           "Wersja do dużych przeszkleń i elewacji biurowych, z prowadnicami linkowymi lub szynowymi.",
         points: [
-          "Lamele 80–90 mm",
+          "Lamele 80-90 mm",
           "Sterowanie grupowe całą fasadą",
           "Czujniki nasłonecznienia i wiatru",
         ],
@@ -404,7 +408,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "Adaptacyjna w wersji podtynkowej",
         description:
-          "Skrzynka ukryta w warstwie ocieplenia — z zewnątrz widoczne pozostają tylko lamele i prowadnice.",
+          "Skrzynka ukryta w warstwie ocieplenia - z zewnątrz widoczne pozostają tylko lamele i prowadnice.",
         points: [
           "Planowana na etapie budowy",
           "Rewizja od strony wnętrza",
@@ -423,7 +427,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       ],
     },
     service: {
-      lead: "Mechanizm uchylania lameli wymaga innej obsługi niż zwykła roleta — serwisujemy go u każdego klienta, także po latach.",
+      lead: "Mechanizm uchylania lameli wymaga innej obsługi niż zwykła roleta - serwisujemy go u każdego klienta, także po latach.",
       points: [
         "Przegląd naciągu taśm i stanu zawieszek lameli",
         "Kalibracja położeń pośrednich po wymianie napędu lub baterii w czujnikach",
@@ -443,7 +447,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Jak zachowują się przy silnym wietrze?",
-        a: "Czujnik wiatru automatycznie zwija pancerz po przekroczeniu ustawionego progu. Bez czujnika osłona pozostaje w miejscu do granicy odporności deklarowanej dla danego wymiaru — dlatego przy dużych powierzchniach montujemy czujnik standardowo.",
+        a: "Czujnik wiatru automatycznie zwija pancerz po przekroczeniu ustawionego progu. Bez czujnika osłona pozostaje w miejscu do granicy odporności deklarowanej dla danego wymiaru - dlatego przy dużych powierzchniach montujemy czujnik standardowo.",
       },
       {
         q: "Czy mogą zastąpić rolety antywłamaniowe?",
@@ -451,7 +455,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety adaptacyjne — regulacja światła, montaż Warszawa",
+      title: "Rolety adaptacyjne - regulacja światła, montaż Warszawa",
       description:
         "Rolety adaptacyjne z uchylnymi lamelami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
       keywords: [
@@ -471,6 +475,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     cardTitle: "Rolety podtynkowe",
     eyebrow: "Ukryte w elewacji",
     icon: "layers",
+    image: { ...SOMFY_IMAGES.shutterTahoma, position: "center 55%" },
     tagline: "Czysta bryła budynku bez widocznej skrzynki",
     excerpt:
       "Skrzynka schowana w warstwie ocieplenia lub nadprożu. Z zewnątrz widać wyłącznie prowadnice, a ciepło nie ucieka mostkiem termicznym.",
@@ -480,8 +485,8 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       "Rewizja serwisowa od wnętrza",
     ],
     intro: [
-      "Roleta podtynkowa to rozwiązanie dla inwestorów, którzy planują osłony na etapie budowy. Skrzynka trafia w warstwę ocieplenia lub w przygotowane nadproże, zanim położony zostanie tynk. Po zakończeniu prac elewacja pozostaje gładka — widoczne są tylko prowadnice przy ościeżu i listwa dolna pancerza.",
-      "Poza estetyką liczy się energetyka. Skrzynka nakładana zawsze tworzy pewien mostek termiczny nad oknem. Wersja podtynkowa, poprawnie ocieplona i uszczelniona, tego problemu nie ma — izolacja przebiega nad nią bez przerwy, a rewizja otwierana jest od wewnątrz pomieszczenia, nie od strony elewacji.",
+      "Roleta podtynkowa to rozwiązanie dla inwestorów, którzy planują osłony na etapie budowy. Skrzynka trafia w warstwę ocieplenia lub w przygotowane nadproże, zanim położony zostanie tynk. Po zakończeniu prac elewacja pozostaje gładka - widoczne są tylko prowadnice przy ościeżu i listwa dolna pancerza.",
+      "Poza estetyką liczy się energetyka. Skrzynka nakładana zawsze tworzy pewien mostek termiczny nad oknem. Wersja podtynkowa, poprawnie ocieplona i uszczelniona, tego problemu nie ma - izolacja przebiega nad nią bez przerwy, a rewizja otwierana jest od wewnątrz pomieszczenia, nie od strony elewacji.",
       "Podtynkowo montujemy zarówno rolety standardowe, jak i pancerze antywłamaniowe RC2 oraz rolety adaptacyjne. Warunkiem jest wcześniejsze uzgodnienie wymiarów nadproża, bo skrzynka musi być wpisana w projekt, zanim powstanie stan surowy.",
     ],
     features: [
@@ -489,7 +494,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "layers",
         title: "Zabudowa w ociepleniu",
         description:
-          "Skrzynka ze styropianu lub kompozytu wtapiana w warstwę izolacji — elewacja zostaje równa.",
+          "Skrzynka ze styropianu lub kompozytu wtapiana w warstwę izolacji - elewacja zostaje równa.",
       },
       {
         icon: "thermometer",
@@ -501,7 +506,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "wrench",
         title: "Rewizja od wewnątrz",
         description:
-          "Dostęp serwisowy przez klapę w nadprożu — naprawa nie wymaga rusztowania ani ingerencji w tynk.",
+          "Dostęp serwisowy przez klapę w nadprożu - naprawa nie wymaga rusztowania ani ingerencji w tynk.",
       },
       {
         icon: "volume",
@@ -513,7 +518,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "shield",
         title: "Również w wersji RC2",
         description:
-          "Ukryta skrzynka nie wyklucza certyfikowanej ochrony — pancerz antywłamaniowy montujemy podtynkowo.",
+          "Ukryta skrzynka nie wyklucza certyfikowanej ochrony - pancerz antywłamaniowy montujemy podtynkowo.",
       },
       {
         icon: "ruler",
@@ -528,7 +533,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       { label: "Materiał skrzynki", value: "Styropian EPS z wzmocnieniem, kompozyt" },
       { label: "Rewizja", value: "Od strony wnętrza, klapa w nadprożu" },
       { label: "Dostępne pancerze", value: "Standardowy, RC2, adaptacyjny" },
-      { label: "Etap montażu", value: "Stan surowy — przed tynkowaniem" },
+      { label: "Etap montażu", value: "Stan surowy - przed tynkowaniem" },
       { label: "Sterowanie", value: "Radiowe, przewodowe lub automatyka budynku" },
       { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
     ],
@@ -536,7 +541,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "W warstwie ocieplenia",
         description:
-          "Najczęstsze rozwiązanie w domach jednorodzinnych — skrzynka wtapiana w styropian elewacyjny.",
+          "Najczęstsze rozwiązanie w domach jednorodzinnych - skrzynka wtapiana w styropian elewacyjny.",
         points: [
           "Montaż po wykonaniu stanu surowego",
           "Ocieplenie prowadzone bez przerwy",
@@ -546,7 +551,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "Nadprożowa",
         description:
-          "Skrzynka stanowi element nadproża i przenosi obciążenia — wymaga uzgodnienia z konstruktorem.",
+          "Skrzynka stanowi element nadproża i przenosi obciążenia - wymaga uzgodnienia z konstruktorem.",
         points: [
           "Pełna integracja z murem",
           "Największa oszczędność miejsca",
@@ -556,7 +561,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "Renowacyjna",
         description:
-          "Wersja do budynków docieplanych — skrzynkę ukrywamy przy okazji termomodernizacji elewacji.",
+          "Wersja do budynków docieplanych - skrzynkę ukrywamy przy okazji termomodernizacji elewacji.",
         points: [
           "Montaż podczas docieplania budynku",
           "Wymiana starych rolet natynkowych",
@@ -565,7 +570,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     installation: {
-      lead: "Roleta podtynkowa to element budynku, nie dodatek — im wcześniej wejdziemy w projekt, tym mniej kosztownych korekt.",
+      lead: "Roleta podtynkowa to element budynku, nie dodatek - im wcześniej wejdziemy w projekt, tym mniej kosztownych korekt.",
       points: [
         "Konsultacja wymiarów nadproży i rozstawu prowadnic przed stanem surowym",
         "Dostarczenie skrzynek i rur na budowę w ustalonym terminie",
@@ -575,7 +580,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       ],
     },
     service: {
-      lead: "Ukryta skrzynka nie oznacza utrudnionego serwisu — dostęp prowadzimy przez rewizję od wewnątrz.",
+      lead: "Ukryta skrzynka nie oznacza utrudnionego serwisu - dostęp prowadzimy przez rewizję od wewnątrz.",
       points: [
         "Przeglądy z kontrolą naciągu pancerza i stanu prowadnic",
         "Wymiana napędu bez naruszania elewacji i tynku",
@@ -603,7 +608,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety podtynkowe — skrzynka ukryta w elewacji, Warszawa",
+      title: "Rolety podtynkowe - skrzynka ukryta w elewacji, Warszawa",
       description:
         "Rolety podtynkowe montowane w warstwie ocieplenia i nadprożu. Bez mostka termicznego, z rewizją od wewnątrz. Doradztwo na etapie budowy, montaż i serwis.",
       keywords: [
@@ -623,6 +628,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     cardTitle: "Bramy rolowane",
     eyebrow: "Garaże i obiekty",
     icon: "warehouse",
+    image: SOMFY_IMAGES.garageTransmitter,
     tagline: "Zero miejsca pod sufitem, pełna automatyka wjazdu",
     excerpt:
       "Pancerz zwijany do skrzynki nad wjazdem zamiast prowadnic pod stropem. Rozwiązanie do niskich garaży, hal i punktów usługowych.",
@@ -632,7 +638,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       "Automatyka z awaryjnym otwieraniem",
     ],
     intro: [
-      "Brama rolowana zwija się na wał umieszczony w skrzynce nad wjazdem, zamiast odjeżdżać pod strop jak brama segmentowa. Dzięki temu cała przestrzeń garażu pozostaje wolna — można pod sufitem poprowadzić instalacje, zawiesić regały czy zamontować oświetlenie bez kolidowania z prowadnicami.",
+      "Brama rolowana zwija się na wał umieszczony w skrzynce nad wjazdem, zamiast odjeżdżać pod strop jak brama segmentowa. Dzięki temu cała przestrzeń garażu pozostaje wolna - można pod sufitem poprowadzić instalacje, zawiesić regały czy zamontować oświetlenie bez kolidowania z prowadnicami.",
       "To rozwiązanie sprawdza się przede wszystkim w garażach o niskim nadprożu, w zabudowie szeregowej, przy wjazdach do hal oraz w punktach handlowych i usługowych, gdzie brama pełni jednocześnie funkcję zabezpieczenia witryny po godzinach pracy.",
       "Każdą bramę wyposażamy w napęd z awaryjnym otwieraniem, fotokomórki i listwę krawędziową. W obiektach komercyjnych dokładamy sterowanie grupowe, pętlę indukcyjną lub integrację z systemem kontroli dostępu.",
     ],
@@ -641,7 +647,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "warehouse",
         title: "Oszczędność przestrzeni",
         description:
-          "Pancerz zwijany nad otworem — strop i ściany boczne garażu pozostają w pełni dostępne.",
+          "Pancerz zwijany nad otworem - strop i ściany boczne garażu pozostają w pełni dostępne.",
       },
       {
         icon: "bolt",
@@ -659,7 +665,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "ruler",
         title: "Praca przy niskim nadprożu",
         description:
-          "Skrzynka wymaga zwykle 30–40 cm nad otworem — mniej niż prowadnice bramy segmentowej.",
+          "Skrzynka wymaga zwykle 30-40 cm nad otworem - mniej niż prowadnice bramy segmentowej.",
       },
       {
         icon: "remote",
@@ -698,7 +704,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "Wzmocniona",
         description:
-          "Profile ekstrudowane i ryglowanie pancerza — tam, gdzie brama chroni magazyn lub wartościowe wyposażenie.",
+          "Profile ekstrudowane i ryglowanie pancerza - tam, gdzie brama chroni magazyn lub wartościowe wyposażenie.",
         points: [
           "Sztywniejszy pancerz",
           "Rygle boczne pancerza",
@@ -717,7 +723,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     installation: {
-      lead: "Montaż zaczynamy od pomiaru nadproża i ościeży — to one decydują, czy brama rolowana w ogóle zmieści się w otworze.",
+      lead: "Montaż zaczynamy od pomiaru nadproża i ościeży - to one decydują, czy brama rolowana w ogóle zmieści się w otworze.",
       points: [
         "Pomiar otworu, nadproża i przestrzeni bocznych przed wyceną",
         "Dobór średnicy wału i typu skrzynki do dostępnej wysokości",
@@ -727,13 +733,13 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       ],
     },
     service: {
-      lead: "Brama pracuje kilka razy dziennie przez cały rok — to najbardziej eksploatowany element wyposażenia budynku.",
+      lead: "Brama pracuje kilka razy dziennie przez cały rok - to najbardziej eksploatowany element wyposażenia budynku.",
       points: [
         "Przeglądy okresowe: naciąg, prowadnice, zabezpieczenia, stan pancerza",
         "Wymiana napędów i sterowników, także w bramach innych producentów",
         "Naprawa uszkodzonych profili bez wymiany całego pancerza",
         "Dorabianie pilotów, wymiana klawiatur i czytników",
-        "Serwis awaryjny przy zablokowanej bramie — priorytet dla obiektów komercyjnych",
+        "Serwis awaryjny przy zablokowanej bramie - priorytet dla obiektów komercyjnych",
       ],
     },
     faq: [
@@ -743,7 +749,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Co się stanie przy braku prądu?",
-        a: "Każdą bramę wyposażamy w otwieranie awaryjne. W wersji podstawowej jest to mechanizm ręczny odblokowujący napęd, w rozbudowanej — zasilanie akumulatorowe pozwalające na kilkanaście cykli pracy.",
+        a: "Każdą bramę wyposażamy w otwieranie awaryjne. W wersji podstawowej jest to mechanizm ręczny odblokowujący napęd, w rozbudowanej - zasilanie akumulatorowe pozwalające na kilkanaście cykli pracy.",
       },
       {
         q: "Czy brama rolowana zabezpiecza przed włamaniem?",
@@ -751,11 +757,11 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy serwisujecie bramy zamontowane przez inną firmę?",
-        a: "Tak. Naprawiamy i przeglądamy bramy rolowane niezależnie od tego, kto je montował — o ile dostępne są części zamienne lub możliwa jest wymiana napędu na kompatybilny model.",
+        a: "Tak. Naprawiamy i przeglądamy bramy rolowane niezależnie od tego, kto je montował - o ile dostępne są części zamienne lub możliwa jest wymiana napędu na kompatybilny model.",
       },
     ],
     meta: {
-      title: "Bramy rolowane — montaż i serwis, Warszawa i okolice",
+      title: "Bramy rolowane - montaż i serwis, Warszawa i okolice",
       description:
         "Bramy rolowane garażowe i obiektowe: praca przy niskim nadprożu, napęd z otwieraniem awaryjnym, fotokomórki i listwa krawędziowa. Montaż, serwis, naprawy.",
       keywords: [

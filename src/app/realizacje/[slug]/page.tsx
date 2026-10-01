@@ -40,7 +40,7 @@ export async function generateMetadata({
 
   const tSite = await getTranslations(NAMESPACES.SITE);
   const url = `${BASE_URL}${projectPath(slug)}`;
-  const title = `${project.title} — ${project.location}`;
+  const title = `${project.title} - ${project.location}`;
 
   return {
     title,

@@ -2,14 +2,15 @@
 title: "Rolety RC2 czy RC3? Jak wybrać klasę odporności na włamanie"
 metaDescription: "Czym różnią się rolety antywłamaniowe RC2 od RC3, ile realnie dają czasu i kiedy dopłata do wyższej klasy ma sens. Praktyczny przewodnik po PN-EN 1627."
 publishedAt: "2026-09-02"
-excerpt: "RC2 wytrzymuje trzy minuty, RC3 — pięć. Brzmi jak drobiazg, ale różnica decyduje o tym, czy włamywacz zrezygnuje. Sprawdź, która klasa pasuje do Twojego domu."
+excerpt: "RC2 wytrzymuje trzy minuty, RC3 - pięć. Brzmi jak drobiazg, ale różnica decyduje o tym, czy włamywacz zrezygnuje. Sprawdź, która klasa pasuje do Twojego domu."
 category: "Bezpieczeństwo"
 keywords:
   - rolety antywlamaniowe RC2
   - rolety antywlamaniowe RC3
   - klasa odpornosci PN-EN 1627
   - jakie rolety antywlamaniowe wybrac
-imageAlt: "Rolety antywłamaniowe zamontowane na oknach parteru domu jednorodzinnego"
+image: "/images/somfy/rolety-zewnetrzne-pilot-somfy-situo-5.jpg"
+imageAlt: "Rolety zewnętrzne w narożnym przeszkleniu sterowane pilotem Somfy Situo 5"
 faq:
   - q: "Czy rolety RC2 wystarczą w domu jednorodzinnym?"
     a: "W typowej zabudowie jednorodzinnej z sąsiadami w zasięgu wzroku RC2 jest rozwiązaniem wystarczającym dla większości inwestorów. RC3 warto rozważyć, gdy budynek stoi na osłoniętej działce, przechowywane są w nim wartościowe przedmioty albo wymaga tego ubezpieczyciel przy wysokiej sumie ubezpieczenia."
@@ -19,11 +20,11 @@ faq:
     a: "W większości towarzystw certyfikowane zabezpieczenia przeciwwłamaniowe wpływają na wycenę polisy i na limit odpowiedzialności za kradzież z włamaniem. Warunkiem jest okazanie protokołu montażu z numerem certyfikatu."
 ---
 
-Pytanie o wybór między RC2 a RC3 pada w niemal każdej rozmowie o roletach antywłamaniowych. Odpowiedź „weź mocniejsze, będzie bezpieczniej" jest prawdziwa, ale mało pomocna — różnica w cenie potrafi sięgnąć kilkudziesięciu procent. Warto wiedzieć, za co się dopłaca.
+Pytanie o wybór między RC2 a RC3 pada w niemal każdej rozmowie o roletach antywłamaniowych. Odpowiedź „weź mocniejsze, będzie bezpieczniej" jest prawdziwa, ale mało pomocna - różnica w cenie potrafi sięgnąć kilkudziesięciu procent. Warto wiedzieć, za co się dopłaca.
 
 ## Co właściwie oznacza klasa RC
 
-Klasy odporności na włamanie definiuje norma PN-EN 1627. Badanie polega na tym, że wykwalifikowany „włamywacz" z określonym zestawem narzędzi próbuje sforsować konstrukcję, a mierzony jest czas oporu — czyli ile minut aktywnej pracy zajmuje pokonanie zabezpieczenia.
+Klasy odporności na włamanie definiuje norma PN-EN 1627. Badanie polega na tym, że wykwalifikowany „włamywacz" z określonym zestawem narzędzi próbuje sforsować konstrukcję, a mierzony jest czas oporu - czyli ile minut aktywnej pracy zajmuje pokonanie zabezpieczenia.
 
 | Klasa | Czas oporu | Narzędzia | Typowe zastosowanie |
 | --- | --- | --- | --- |
@@ -38,8 +39,8 @@ Trzy minuty brzmią niepozornie, dopóki nie zestawi się ich z realiami. Włamy
 
 Różnica między RC2 a RC3 nie polega na grubszej farbie. To inna konstrukcja pancerza:
 
-- **RC2** — profile aluminiowe wypełnione twardą pianką poliuretanową. Pianka usztywnia profil i tłumi dźwięk, ale sam profil jest stosunkowo lekki.
-- **RC3** — profile ekstrudowane, czyli pełne profile aluminiowe o ściance dochodzącej do 3 mm, bez rdzenia z pianki. Pancerz waży nawet trzy razy więcej i jest nieporównanie sztywniejszy.
+- **RC2** - profile aluminiowe wypełnione twardą pianką poliuretanową. Pianka usztywnia profil i tłumi dźwięk, ale sam profil jest stosunkowo lekki.
+- **RC3** - profile ekstrudowane, czyli pełne profile aluminiowe o ściance dochodzącej do 3 mm, bez rdzenia z pianki. Pancerz waży nawet trzy razy więcej i jest nieporównanie sztywniejszy.
 
 Za tym idą kolejne elementy: w RC3 prowadnice mają większy przekrój i muszą być kotwione bezpośrednio w konstrukcji nośnej, ryglowanie jest wielopunktowe, a listwa dolna dostaje stalowy wkład. Każdy z tych elementów jest częścią certyfikatu.
 
@@ -48,12 +49,12 @@ Za tym idą kolejne elementy: w RC3 prowadnice mają większy przekrój i muszą
 Certyfikat obejmuje **cały zestaw**, nie pojedynczy element. O utrzymaniu klasy decydują:
 
 1. Profil pancerza o potwierdzonych parametrach.
-2. Prowadnice z odpowiednim zagłębieniem bocznym — pancerz nie może dać się wyciągnąć.
+2. Prowadnice z odpowiednim zagłębieniem bocznym - pancerz nie może dać się wyciągnąć.
 3. Blokady antypodnoszeniowe uniemożliwiające ręczne podniesienie pancerza.
 4. Sztywna, wzmocniona listwa dolna.
-5. Zakotwienie w murze zgodne z dokumentacją — z pominięciem warstwy ocieplenia.
+5. Zakotwienie w murze zgodne z dokumentacją - z pominięciem warstwy ocieplenia.
 
-Punkt piąty jest najczęściej lekceważony. Prowadnica przykręcona do styropianu wygląda tak samo jak prowadnica zakotwiona w betonie — do pierwszej próby wyrwania. Dlatego przy montażu robimy dokumentację fotograficzną kotwienia.
+Punkt piąty jest najczęściej lekceważony. Prowadnica przykręcona do styropianu wygląda tak samo jak prowadnica zakotwiona w betonie - do pierwszej próby wyrwania. Dlatego przy montażu robimy dokumentację fotograficzną kotwienia.
 
 ## Kiedy RC2 wystarczy
 
@@ -70,7 +71,7 @@ W takiej sytuacji dopłata do RC3 jest kosztem, który nie przekłada się na re
 
 RC3 ma sens, gdy:
 
-- działka jest duża, zadrzewiona albo osłonięta od ulicy — włamywacz ma spokój,
+- działka jest duża, zadrzewiona albo osłonięta od ulicy - włamywacz ma spokój,
 - w budynku znajduje się gabinet, kancelaria, sprzęt lub kolekcja o dużej wartości,
 - ubezpieczyciel wymaga wyższej klasy przy danej sumie ubezpieczenia,
 - okna parteru są łatwo dostępne z tarasu, dachu garażu lub ogrodzenia.
@@ -85,6 +86,6 @@ Dobrą praktyką jest też podłączenie styków kontrolnych położenia pancerz
 
 ## Podsumowanie
 
-Dla większości domów jednorodzinnych RC2 jest właściwym punktem startu — pod warunkiem, że mówimy o certyfikowanym zestawie zamontowanym zgodnie z dokumentacją, a nie o „rolecie wzmocnionej" bez papierów. RC3 to rozwiązanie dla sytuacji, w których włamywacz ma czas i spokój: osłonięte działki, wartościowe wyposażenie, wymagania ubezpieczyciela.
+Dla większości domów jednorodzinnych RC2 jest właściwym punktem startu - pod warunkiem, że mówimy o certyfikowanym zestawie zamontowanym zgodnie z dokumentacją, a nie o „rolecie wzmocnionej" bez papierów. RC3 to rozwiązanie dla sytuacji, w których włamywacz ma czas i spokój: osłonięte działki, wartościowe wyposażenie, wymagania ubezpieczyciela.
 
 Jeśli nie masz pewności, która klasa odpowiada Twojej sytuacji, najprościej umówić bezpłatny pomiar. Na miejscu widać to, czego nie widać przez telefon: jak wygląda dostęp do okien, co zastaniemy w nadprożu i czy budynek w ogóle jest przygotowany pod cięższe pancerze.

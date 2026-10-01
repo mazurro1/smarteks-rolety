@@ -27,7 +27,7 @@ export const BENEFITS: Benefit[] = [
     icon: "shieldCheck",
     title: "Certyfikat, nie deklaracja",
     description:
-      "Montujemy zestawy badane jako całość wg PN-EN 1627. Po pracach zostaje protokół z numerem certyfikatu — dokument, o który pyta ubezpieczyciel.",
+      "Montujemy zestawy badane jako całość wg PN-EN 1627. Po pracach zostaje protokół z numerem certyfikatu - dokument, o który pyta ubezpieczyciel.",
   },
   {
     icon: "ruler",
@@ -39,7 +39,7 @@ export const BENEFITS: Benefit[] = [
     icon: "wrench",
     title: "Serwis od tej samej ekipy",
     description:
-      "Nie znikamy po montażu. Przeglądy, regulacje i naprawy prowadzą ci sami ludzie, którzy zakładali instalację — i znają ją na pamięć.",
+      "Nie znikamy po montażu. Przeglądy, regulacje i naprawy prowadzą ci sami ludzie, którzy zakładali instalację - i znają ją na pamięć.",
   },
   {
     icon: "thermometer",
@@ -84,7 +84,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "04",
     title: "Montaż i uruchomienie",
     description:
-      "Montujemy, podłączamy, programujemy krańcówki i sceny. Po sobie sprzątamy — to nie powinno być wyróżnikiem, ale bywa.",
+      "Montujemy, podłączamy, programujemy krańcówki i sceny. Po sobie sprzątamy - to nie powinno być wyróżnikiem, ale bywa.",
   },
   {
     number: "05",
@@ -97,11 +97,11 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const HOME_FAQ: FaqItem[] = [
   {
     q: "Ile kosztuje montaż rolet zewnętrznych?",
-    a: "Cena zależy od wymiaru osłony, typu pancerza i sposobu montażu. Roleta standardowa na typowe okno to zwykle kilkaset złotych za sztukę wraz z montażem, certyfikowana roleta RC2 kosztuje wyraźnie więcej ze względu na konstrukcję pancerza i prowadnic. Dokładną kwotę podajemy po bezpłatnym pomiarze — bez niego każda wycena jest zgadywaniem.",
+    a: "Cena zależy od wymiaru osłony, typu pancerza i sposobu montażu. Roleta standardowa na typowe okno to zwykle kilkaset złotych za sztukę wraz z montażem, certyfikowana roleta RC2 kosztuje wyraźnie więcej ze względu na konstrukcję pancerza i prowadnic. Dokładną kwotę podajemy po bezpłatnym pomiarze - bez niego każda wycena jest zgadywaniem.",
   },
   {
     q: "Czy montujecie rolety w gotowych, wykończonych domach?",
-    a: "Tak. W budynkach oddanych do użytku montujemy rolety nakładane — skrzynka trafia na elewację lub do wnęki okiennej. Prace przy jednym oknie zajmują 2–3 godziny i nie wymagają robót murarskich. Wersję podtynkową można ukryć w elewacji tylko przy okazji docieplania budynku.",
+    a: "Tak. W budynkach oddanych do użytku montujemy rolety nakładane - skrzynka trafia na elewację lub do wnęki okiennej. Prace przy jednym oknie zajmują 2-3 godziny i nie wymagają robót murarskich. Wersję podtynkową można ukryć w elewacji tylko przy okazji docieplania budynku.",
   },
   {
     q: "Jak długo trwa realizacja od podpisania umowy?",
@@ -109,7 +109,7 @@ export const HOME_FAQ: FaqItem[] = [
   },
   {
     q: "Czym różnią się rolety RC2 od RC3?",
-    a: "Klasą odporności potwierdzoną badaniem. RC2 wytrzymuje co najmniej 3 minuty ataku prostymi narzędziami, RC3 — 5 minut z użyciem łomu. RC3 ma pancerz z pełnych profili ekstrudowanych, mocniejsze prowadnice kotwione w konstrukcji nośnej i ryglowanie wielopunktowe.",
+    a: "Klasą odporności potwierdzoną badaniem. RC2 wytrzymuje co najmniej 3 minuty ataku prostymi narzędziami, RC3 - 5 minut z użyciem łomu. RC3 ma pancerz z pełnych profili ekstrudowanych, mocniejsze prowadnice kotwione w konstrukcji nośnej i ryglowanie wielopunktowe.",
   },
   {
     q: "Co obejmuje gwarancja?",
@@ -123,18 +123,18 @@ export const HOME_FAQ: FaqItem[] = [
 
 /** Ogolny blok montaz + serwis dla strony /oferta (bez wiazania z produktem). */
 export const GENERIC_INSTALLATION = {
-  lead: "Montaż prowadzi nasza własna ekipa — bez podwykonawców dobieranych na zlecenie. Każde zlecenie zaczyna się od pomiaru na miejscu, bo o trwałości instalacji decyduje to, w czym zakotwimy prowadnice.",
+  lead: "Montaż prowadzi nasza własna ekipa - bez podwykonawców dobieranych na zlecenie. Każde zlecenie zaczyna się od pomiaru na miejscu, bo o trwałości instalacji decyduje to, w czym zakotwimy prowadnice.",
   points: [
     "Bezpłatny pomiar i ocena nadproża, ocieplenia oraz dostępu do zasilania",
     "Dobór kotew do rodzaju muru: beton, pustak, silikat, beton komórkowy",
     "Podłączenie elektryczne, programowanie krańcówek i sterowania",
     "Uprzątnięcie miejsca pracy i instruktaż obsługi po zakończeniu montażu",
-    "Protokół odbioru, a przy zestawach certyfikowanych — numer certyfikatu",
+    "Protokół odbioru, a przy zestawach certyfikowanych - numer certyfikatu",
   ],
 };
 
 export const GENERIC_SERVICE = {
-  lead: "Serwisujemy wszystko, co montujemy — i sporo tego, co zamontował ktoś inny. Jeden numer telefonu, ta sama ekipa, która zna instalację od środka.",
+  lead: "Serwisujemy wszystko, co montujemy - i sporo tego, co zamontował ktoś inny. Jeden numer telefonu, ta sama ekipa, która zna instalację od środka.",
   points: [
     "Przeglądy okresowe: prowadnice, naciąg pancerza, blokady, napęd",
     "Naprawy napędów rurowych, sterowników i uszkodzonych profili",
@@ -144,18 +144,18 @@ export const GENERIC_SERVICE = {
   ],
 };
 
-/** Skrocony opis firmy — sekcja na stronie glownej i dane do schema.org. */
+/** Skrocony opis firmy - sekcja na stronie glownej i dane do schema.org. */
 export const COMPANY_INTRO = {
   eyebrow: "Kim jesteśmy",
   title: "Rolety zewnętrzne to cała nasza robota",
   paragraphs: [
-    "Smarteks Rolety to zespół montażowy z Warszawy, który zajmuje się wyłącznie osłonami zewnętrznymi: roletami antywłamaniowymi, adaptacyjnymi, podtynkowymi i bramami rolowanymi. Nie rozmieniamy się na dziesięć branż — dzięki temu wiemy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.",
-    "Pracujemy w Warszawie i okolicach — w promieniu, w którym jesteśmy w stanie przyjechać na serwis szybko, a nie „kiedyś w przyszłym miesiącu”. To świadome ograniczenie zasięgu: wolimy obsłużyć mniejszy obszar porządnie niż pół kraju byle jak.",
+    "Smarteks Rolety to zespół montażowy z Warszawy, który zajmuje się wyłącznie osłonami zewnętrznymi: roletami antywłamaniowymi, adaptacyjnymi, podtynkowymi i bramami rolowanymi. Nie rozmieniamy się na dziesięć branż - dzięki temu wiemy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.",
+    "Pracujemy w Warszawie i okolicach - w promieniu, w którym jesteśmy w stanie przyjechać na serwis szybko, a nie „kiedyś w przyszłym miesiącu”. To świadome ograniczenie zasięgu: wolimy obsłużyć mniejszy obszar porządnie niż pół kraju byle jak.",
   ],
   points: [
     {
       title: "Jedna specjalizacja",
-      description: "Tylko osłony zewnętrzne — od pomiaru po serwis po latach.",
+      description: "Tylko osłony zewnętrzne - od pomiaru po serwis po latach.",
     },
     {
       title: "Własna ekipa montażowa",
@@ -163,7 +163,7 @@ export const COMPANY_INTRO = {
     },
     {
       title: "Krótki dojazd",
-      description: "Warszawa i okolice — serwis w rozsądnym czasie reakcji.",
+      description: "Warszawa i okolice - serwis w rozsądnym czasie reakcji.",
     },
   ],
 };

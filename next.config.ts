@@ -29,8 +29,11 @@ const nextConfig: NextConfig = {
   // Image optimization
   images: {
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // 2560 — tla na pelna szerokosc na ekranach Retina i szerszych niz 1920 px.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2560],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    // 90 — zdjecia w tle naglowkow; przy 75 widac artefakty pod przyciemnieniem.
+    qualities: [75, 90],
   },
 
   // Logging

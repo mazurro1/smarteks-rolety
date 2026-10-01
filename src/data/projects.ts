@@ -1,9 +1,10 @@
+import { SOMFY_IMAGES } from "@/data/media";
 import type { Project, ProjectCategory } from "@/types";
 
 /**
- * Realizacje. Galerie celowo nie maja pola `src` — dopoki zdjecie nie zostanie
- * wgrane do /public/images/realizacje, komponent renderuje stylowany placeholder.
- * Aby podpiac zdjecie, wystarczy dopisac `src: "/images/realizacje/<plik>.jpg"`.
+ * Realizacje. Galerie pokazuja na razie przykladowe zdjecia Somfy z src/data/media.ts.
+ * Zdjecia z wlasnego montazu: plik do /public/images/realizacje i wpis
+ * `{ src: "/images/realizacje/<plik>.jpg", alt: "…", caption: "…" }`.
  */
 export const PROJECT_CATEGORY_LABELS: Record<ProjectCategory, string> = {
   rc2: "Rolety RC2",
@@ -24,7 +25,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Jedenaście okien parteru i piętra zabezpieczonych certyfikowanymi roletami RC2 z jednolitym sterowaniem centralnym.",
     description: [
-      "Inwestor zgłosił się po włamaniu u sąsiada — zależało mu na zabezpieczeniu, które będzie realną barierą, a nie tylko osłoną przeciwsłoneczną. Po pomiarze zaproponowaliśmy rolety RC2 na wszystkie okna parteru oraz na okna piętra dostępne z dachu garażu.",
+      "Inwestor zgłosił się po włamaniu u sąsiada - zależało mu na zabezpieczeniu, które będzie realną barierą, a nie tylko osłoną przeciwsłoneczną. Po pomiarze zaproponowaliśmy rolety RC2 na wszystkie okna parteru oraz na okna piętra dostępne z dachu garażu.",
       "Budynek był wykończony, więc zastosowaliśmy skrzynki nakładane montowane we wnękach okiennych. Dzięki temu prace obyły się bez naruszania elewacji, a całość zamknęła się w dwóch dniach roboczych.",
       "Sterowanie połączyliśmy w grupy: parter, piętro i scena „wszystko zamknięte” uruchamiana jednym przyciskiem przy drzwiach wejściowych oraz z telefonu.",
     ],
@@ -43,22 +44,10 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "2 dni robocze" },
     ],
     gallery: [
-      {
-        alt: "Elewacja frontowa domu jednorodzinnego z zamontowanymi roletami antywłamaniowymi RC2",
-        caption: "Elewacja frontowa po montażu — skrzynki ukryte we wnękach okiennych",
-      },
-      {
-        alt: "Zbliżenie na prowadnicę rolety antywłamaniowej RC2 zamontowanej we wnęce okiennej",
-        caption: "Wzmocniona prowadnica z głębokim zagłębieniem bocznym",
-      },
-      {
-        alt: "Pancerz rolety RC2 w pozycji zamkniętej widziany od strony ogrodu",
-        caption: "Pancerz zamknięty — widoczna sztywna listwa dolna",
-      },
-      {
-        alt: "Panel sterowania roletami przy drzwiach wejściowych domu",
-        caption: "Sterownik centralny ze sceną zamknięcia całego domu",
-      },
+      { ...SOMFY_IMAGES.shuttersCornerRemote, caption: "Rolety w narożnym przeszkleniu sterowane pilotem Somfy Situo 5", position: "center 40%" },
+      { ...SOMFY_IMAGES.livingRoomShutter, caption: "Salon z roletą opuszczoną do połowy i nadajnikiem Somfy Smoove przy oknie" },
+      { ...SOMFY_IMAGES.remoteTerraceWindow, caption: "Roleta okna tarasowego sterowana pilotem Somfy Situo 5", position: "center 35%" },
+      { ...SOMFY_IMAGES.smooveTerrace, caption: "Nadajnik Somfy Smoove przy wyjściu na taras" },
     ],
     outcome:
       "Ubezpieczyciel uwzględnił certyfikowane zabezpieczenia przy odnowieniu polisy, a dom zyskał pełne zaciemnienie sypialni bez dodatkowych zasłon.",
@@ -73,7 +62,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Najwyższa klasa odporności na przeszkleniach parteru, z kontrolą położenia pancerza raportowaną do centrali alarmowej.",
     description: [
-      "Willa stoi na dużej, zadrzewionej działce, osłonięta od ulicy — sytuacja, w której włamywacz ma komfort pracy. Ubezpieczyciel przy tej sumie ubezpieczenia wymagał zabezpieczeń klasy RC3.",
+      "Willa stoi na dużej, zadrzewionej działce, osłonięta od ulicy - sytuacja, w której włamywacz ma komfort pracy. Ubezpieczyciel przy tej sumie ubezpieczenia wymagał zabezpieczeń klasy RC3.",
       "Największym wyzwaniem były dwa przeszklenia tarasowe o szerokości ponad trzech metrów. Zastosowaliśmy pancerze ekstrudowane ze wzmocnioną listwą dolną i napędami o podwyższonym momencie, a prowadnice zakotwiliśmy bezpośrednio w konstrukcji nośnej, z pominięciem warstwy ocieplenia.",
       "Każda roleta otrzymała styk kontrolny położenia. Centrala alarmowa wie, czy pancerz jest opuszczony, i uwzględnia to przy uzbrajaniu systemu na noc.",
     ],
@@ -92,22 +81,10 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "4 dni robocze" },
     ],
     gallery: [
-      {
-        alt: "Willa z dużymi przeszkleniami i roletami antywłamaniowymi RC3 na parterze",
-        caption: "Przeszklenia parteru osłonięte pancerzami RC3",
-      },
-      {
-        alt: "Zbliżenie na pancerz z profili ekstrudowanych rolety RC3",
-        caption: "Profil ekstrudowany — pełne aluminium bez wypełnienia pianką",
-      },
-      {
-        alt: "Prowadnica rolety RC3 kotwiona w konstrukcji nośnej budynku",
-        caption: "Kotwienie prowadnicy w murze nośnym, z pominięciem ocieplenia",
-      },
-      {
-        alt: "Centrala alarmowa z podglądem stanu rolet antywłamaniowych",
-        caption: "Stan pancerzy raportowany do systemu alarmowego",
-      },
+      { ...SOMFY_IMAGES.remoteShutterSlats, caption: "Zamknięty pancerz rolety i pilot Somfy Situo 5", position: "center 35%" },
+      { ...SOMFY_IMAGES.shutterTahoma, caption: "Centrala Somfy TaHoma switch obok rolety opuszczonej do połowy", position: "center 55%" },
+      { ...SOMFY_IMAGES.tahomaHallway, caption: "Centrala Somfy TaHoma switch i nadajnik Somfy Smoove w przedpokoju", position: "center 45%" },
+      { ...SOMFY_IMAGES.roundTransmitterTable, caption: "Nadajnik Somfy na stole przy oknie z roletą", position: "center 70%" },
     ],
     outcome:
       "Obiekt spełnił wymagania ubezpieczyciela dla najwyższej sumy ubezpieczenia, a domownicy uzbrajają alarm z pewnością, że wszystkie osłony są zamknięte.",
@@ -120,11 +97,11 @@ export const PROJECTS: Project[] = [
     year: 2025,
     buildingType: "Apartament z tarasem",
     summary:
-      "Przeszklenia południowo-zachodnie z regulacją kąta lameli i automatyką słoneczną — koniec z wyborem między upałem a ciemnością.",
+      "Przeszklenia południowo-zachodnie z regulacją kąta lameli i automatyką słoneczną - koniec z wyborem między upałem a ciemnością.",
     description: [
       "Salon z przeszkleniem na południowy zachód nagrzewał się latem do granic wytrzymałości, a klasyczne rolety zewnętrzne oznaczały pracę przy sztucznym świetle przez pół dnia.",
       "Zamontowaliśmy rolety adaptacyjne z lamelami 80 mm. Po opuszczeniu pancerza lamele odchylają się o zadany kąt: światło wpada do wnętrza, powietrze przepływa, a z zewnątrz nie widać, co dzieje się w mieszkaniu.",
-      "Automatyka steruje osłonami bez udziału mieszkańców — czujnik nasłonecznienia przymyka lamele, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz przed nadejściem silniejszych podmuchów.",
+      "Automatyka steruje osłonami bez udziału mieszkańców - czujnik nasłonecznienia przymyka lamele, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz przed nadejściem silniejszych podmuchów.",
     ],
     scope: [
       "Analiza nasłonecznienia elewacji i dobór wysokości lameli",
@@ -141,29 +118,17 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "2 dni robocze" },
     ],
     gallery: [
-      {
-        alt: "Taras apartamentu z roletami adaptacyjnymi o częściowo uchylonych lamelach",
-        caption: "Lamele uchylone — światło dzienne przy opuszczonym pancerzu",
-      },
-      {
-        alt: "Wnętrze salonu oświetlone rozproszonym światłem przez uchylone lamele rolety",
-        caption: "Rozproszone światło we wnętrzu, bez oślepiania przy monitorze",
-      },
-      {
-        alt: "Zbliżenie na mechanizm uchylania lameli rolety adaptacyjnej",
-        caption: "Mechanizm uchylania lameli prowadzonych na taśmach",
-      },
-      {
-        alt: "Czujnik nasłonecznienia zamontowany na elewacji budynku",
-        caption: "Czujnik nasłonecznienia sterujący kątem lameli",
-      },
+      { ...SOMFY_IMAGES.louvresBalcony, caption: "Zewnętrzne lamele przy wyjściu na balkon, pilot Somfy Situo", position: "center 40%" },
+      { ...SOMFY_IMAGES.louvresRoom, caption: "Lamele uchylone - rozproszone światło dzienne w pokoju", position: "right center" },
+      { ...SOMFY_IMAGES.bedroomSunProtect, caption: "Nadajnik Somfy Smoove z funkcją Sun Protect w sypialni", position: "center 50%" },
+      { ...SOMFY_IMAGES.sunSensorWindow, caption: "Czujnik nasłonecznienia Somfy przy oknie" },
     ],
     outcome:
       "Temperatura w salonie w szczycie upałów spadła o kilka stopni, a klimatyzacja pracuje wyraźnie krócej w ciągu dnia.",
   },
   {
     slug: "dom-piaseczno-rolety-podtynkowe",
-    title: "Dom w budowie — rolety podtynkowe w ociepleniu",
+    title: "Dom w budowie - rolety podtynkowe w ociepleniu",
     category: "recessed",
     location: "Piaseczno",
     year: 2026,
@@ -171,7 +136,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Skrzynki wtopione w warstwę ocieplenia na etapie stanu surowego. Po tynkach elewacja pozostała całkowicie gładka.",
     description: [
-      "Inwestor skontaktował się z nami na etapie stanu surowego otwartego — czyli w najlepszym możliwym momencie. Uzgodniliśmy wymiary nadproży i rozstaw prowadnic, zanim ekipa murarska dotarła do otworów okiennych.",
+      "Inwestor skontaktował się z nami na etapie stanu surowego otwartego - czyli w najlepszym możliwym momencie. Uzgodniliśmy wymiary nadproży i rozstaw prowadnic, zanim ekipa murarska dotarła do otworów okiennych.",
       "Skrzynki podtynkowe trafiły w warstwę ocieplenia przed tynkowaniem, wraz z przygotowanymi przepustami elektrycznymi. Izolacja przebiega nad nimi bez przerwy, więc nad oknami nie powstał mostek termiczny.",
       "Po wykonaniu elewacji wróciliśmy na budowę, żeby zamontować pancerze, prowadnice i napędy. Z zewnątrz widoczne są wyłącznie prowadnice przy ościeżach.",
     ],
@@ -190,22 +155,9 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "2 wizyty, łącznie 4 dni" },
     ],
     gallery: [
-      {
-        alt: "Skrzynka rolety podtynkowej osadzona w warstwie ocieplenia na budowie",
-        caption: "Skrzynka wtapiana w ocieplenie przed tynkowaniem",
-      },
-      {
-        alt: "Nadproże z przygotowanym przepustem elektrycznym pod napęd rolety",
-        caption: "Przepusty elektryczne przygotowane przed zamknięciem nadproża",
-      },
-      {
-        alt: "Gotowa elewacja domu bez widocznych skrzynek rolet",
-        caption: "Elewacja po tynkach — skrzynki całkowicie niewidoczne",
-      },
-      {
-        alt: "Rewizja serwisowa rolety podtynkowej widoczna od strony pomieszczenia",
-        caption: "Rewizja serwisowa dostępna od wnętrza",
-      },
+      { ...SOMFY_IMAGES.shutterGarden, caption: "Roleta uchylona nad przeszkleniem z widokiem na ogród" },
+      { ...SOMFY_IMAGES.smooveShutter, caption: "Nadajnik Somfy Smoove przy oknie z roletą", position: "center 45%" },
+      { ...SOMFY_IMAGES.roundTransmitterBook, caption: "Nadajnik Somfy w świetle przechodzącym przez lamele rolety", position: "center 60%" },
     ],
     outcome:
       "Budynek zyskał osłony bez kompromisu w bryle elewacji i bez przerwania ciągłości izolacji nad oknami.",
@@ -221,7 +173,7 @@ export const PROJECTS: Project[] = [
       "Garaż, w którym brama segmentowa nie miała gdzie odjechać. Pancerz rolowany zwolnił całą przestrzeń pod stropem.",
     description: [
       "W garażu szeregowca zostało niespełna 35 cm nad otworem wjazdowym, a pod stropem biegły instalacje. Brama segmentowa z prowadnicami odpadała już na etapie pomiaru.",
-      "Zamontowaliśmy bramę rolowaną z pancerzem zwijanym na wał w skrzynce nad wjazdem. Strop pozostał wolny — właściciel zawiesił pod nim regały i oświetlenie warsztatowe.",
+      "Zamontowaliśmy bramę rolowaną z pancerzem zwijanym na wał w skrzynce nad wjazdem. Strop pozostał wolny - właściciel zawiesił pod nim regały i oświetlenie warsztatowe.",
       "Napęd wyposażyliśmy w mechanizm awaryjnego otwierania, fotokomórki i listwę krawędziową. Sterowanie odbywa się pilotem oraz klawiaturą kodową przy wjeździe.",
     ],
     scope: [
@@ -239,29 +191,15 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "1 dzień roboczy" },
     ],
     gallery: [
-      {
-        alt: "Brama rolowana zamontowana w garażu domu w zabudowie szeregowej",
-        caption: "Brama rolowana w otworze wjazdowym o niskim nadprożu",
-      },
-      {
-        alt: "Skrzynka bramy rolowanej nad wjazdem do garażu",
-        caption: "Skrzynka z wałem — 35 cm nad otworem",
-      },
-      {
-        alt: "Wolna przestrzeń pod stropem garażu bez prowadnic bramy segmentowej",
-        caption: "Strop bez prowadnic — miejsce na regały i instalacje",
-      },
-      {
-        alt: "Klawiatura kodowa do sterowania bramą rolowaną przy wjeździe",
-        caption: "Klawiatura kodowa i piloty dla domowników",
-      },
+      { ...SOMFY_IMAGES.garageTransmitter, caption: "Nadajnik Somfy przy wjeździe na posesję" },
+      { ...SOMFY_IMAGES.keyfobGate, caption: "Brelok Somfy przed bramą wjazdową", position: "center 65%" },
     ],
     outcome:
       "Wjazd zautomatyzowany mimo skrajnie niskiego nadproża, a garaż zyskał pełną przestrzeń magazynową pod stropem.",
   },
   {
     slug: "biuro-wola-rolety-adaptacyjne",
-    title: "Biuro na Woli — fasada z automatyką słoneczną",
+    title: "Biuro na Woli - fasada z automatyką słoneczną",
     category: "adaptive",
     location: "Warszawa, Wola",
     year: 2025,
@@ -269,7 +207,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Dwadzieścia dwie osłony adaptacyjne sterowane grupowo, z harmonogramem dopasowanym do godzin pracy zespołu.",
     description: [
-      "Open space z przeszkleniami na dwie strony świata oznaczał codzienną wojnę o rolety — jedni chcieli światła, inni uciekali przed odblaskiem na monitorach.",
+      "Open space z przeszkleniami na dwie strony świata oznaczał codzienną wojnę o rolety - jedni chcieli światła, inni uciekali przed odblaskiem na monitorach.",
       "Rolety adaptacyjne rozwiązały spór technicznie: lamele przepuszczają światło dzienne, jednocześnie odcinając bezpośrednie promieniowanie. Sterowanie podzieliliśmy na strefy odpowiadające układowi stanowisk.",
       "Harmonogram uruchamia osłony przed przyjściem zespołu i otwiera je po godzinach pracy, żeby serwis sprzątający miał pełne światło dzienne.",
     ],
@@ -288,22 +226,11 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "5 dni roboczych" },
     ],
     gallery: [
-      {
-        alt: "Elewacja biurowa z rzędem rolet adaptacyjnych o uchylonych lamelach",
-        caption: "Fasada biura z osłonami w pozycji roboczej",
-      },
-      {
-        alt: "Open space z roletami adaptacyjnymi ograniczającymi odblask na monitorach",
-        caption: "Światło dzienne bez odblasków na stanowiskach pracy",
-      },
-      {
-        alt: "Panel sterowania strefami rolet w biurze",
-        caption: "Panel sterowania strefą — jedno dotknięcie na cały rząd okien",
-      },
-      {
-        alt: "Zbliżenie na lamele rolety adaptacyjnej na elewacji biurowca",
-        caption: "Lamele 90 mm w wersji fasadowej",
-      },
+      { ...SOMFY_IMAGES.sensorsPergolaHouse, caption: "Czujniki wiatru i nasłonecznienia Somfy na narożniku konstrukcji", position: "center 40%" },
+      { ...SOMFY_IMAGES.sunSensorPergola, caption: "Czujnik nasłonecznienia Somfy na belce konstrukcji" },
+      { ...SOMFY_IMAGES.windSensorPergola, caption: "Czujnik wiatru Somfy na krawędzi konstrukcji", position: "center 45%" },
+      { ...SOMFY_IMAGES.rainSensor, caption: "Czujnik deszczu Somfy w czasie opadów" },
+      { ...SOMFY_IMAGES.facadeScreenSensor, caption: "Osłona w kasecie i czujnik Somfy na elewacji" },
     ],
     outcome:
       "Zespół przestał ręcznie regulować osłony, a pomiary wykazały niższe zużycie energii na chłodzenie w miesiącach letnich.",
@@ -317,11 +244,11 @@ export const PROJECTS: Project[] = [
     year: 2026,
     buildingType: "Dom jednorodzinny",
     summary:
-      "Certyfikowana ochrona RC2 w skrzynkach podtynkowych — bezpieczeństwo bez widocznych elementów na elewacji.",
+      "Certyfikowana ochrona RC2 w skrzynkach podtynkowych - bezpieczeństwo bez widocznych elementów na elewacji.",
     description: [
       "Inwestor nie chciał rezygnować z ochrony antywłamaniowej, ale nie zgadzał się na skrzynki widoczne na świeżo wykończonej, minimalistycznej elewacji.",
       "Połączyliśmy oba wymagania: pancerze certyfikowane w klasie RC2 trafiły do skrzynek podtynkowych przewidzianych przez producenta dla tego zestawu. Prowadnice zakotwiliśmy w konstrukcji nośnej, co było warunkiem utrzymania klasy odporności.",
-      "Rezultatem jest dom, w którym nic nie zdradza obecności zabezpieczeń — poza smukłymi prowadnicami przy ościeżach.",
+      "Rezultatem jest dom, w którym nic nie zdradza obecności zabezpieczeń - poza smukłymi prowadnicami przy ościeżach.",
     ],
     scope: [
       "Dobór zestawu RC2 dopuszczonego do zabudowy podtynkowej",
@@ -338,29 +265,16 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "3 dni robocze" },
     ],
     gallery: [
-      {
-        alt: "Minimalistyczna elewacja domu bez widocznych skrzynek rolet antywłamaniowych",
-        caption: "Elewacja bez widocznych skrzynek — pancerze RC2 w środku",
-      },
-      {
-        alt: "Prowadnica rolety antywłamaniowej licowana z ościeżem okna",
-        caption: "Smukła prowadnica licowana z ościeżem",
-      },
-      {
-        alt: "Skrzynka podtynkowa z pancerzem antywłamaniowym w trakcie montażu",
-        caption: "Zestaw RC2 przygotowany do zabudowy podtynkowej",
-      },
-      {
-        alt: "Zamknięte rolety antywłamaniowe RC2 na elewacji domu wieczorem",
-        caption: "Scena nocna — wszystkie pancerze zamknięte jednym poleceniem",
-      },
+      { ...SOMFY_IMAGES.situoWallHolder, caption: "Pilot Somfy Situo 5 w uchwycie ściennym przy oknie" },
+      { ...SOMFY_IMAGES.remoteWindow, caption: "Pilot Somfy Situo 5 skierowany na okno", position: "center 40%" },
+      { ...SOMFY_IMAGES.smooveWhiteWall, caption: "Naścienny nadajnik Somfy Smoove" },
     ],
     outcome:
       "Dom uzyskał certyfikowaną ochronę okien parteru bez żadnego kompromisu w wyglądzie elewacji.",
   },
   {
     slug: "hala-marki-bramy-rolowane",
-    title: "Hala magazynowa — trzy bramy rolowane z automatyką",
+    title: "Hala magazynowa - trzy bramy rolowane z automatyką",
     category: "rollerGates",
     location: "Marki",
     year: 2024,
@@ -370,7 +284,7 @@ export const PROJECTS: Project[] = [
     description: [
       "Hala obsługuje kilkadziesiąt dostaw dziennie. Poprzednie bramy otwierane ręcznie generowały kolejki i nieustanne wezwania do obsługi.",
       "Zamontowaliśmy trzy bramy rolowane z napędami przemysłowymi, pętlą indukcyjną wykrywającą pojazd oraz fotokomórkami i listwami krawędziowymi na każdym wjeździe.",
-      "Sterowanie zintegrowaliśmy z systemem kontroli dostępu — kierowca z uprawnieniem otwiera bramę identyfikatorem, a wszystkie zdarzenia trafiają do rejestru obiektu.",
+      "Sterowanie zintegrowaliśmy z systemem kontroli dostępu - kierowca z uprawnieniem otwiera bramę identyfikatorem, a wszystkie zdarzenia trafiają do rejestru obiektu.",
     ],
     scope: [
       "Demontaż starych bram i przygotowanie otworów",
@@ -387,22 +301,8 @@ export const PROJECTS: Project[] = [
       { label: "Czas realizacji", value: "6 dni roboczych" },
     ],
     gallery: [
-      {
-        alt: "Trzy bramy rolowane na elewacji hali magazynowej",
-        caption: "Wjazdy dostawcze po wymianie bram",
-      },
-      {
-        alt: "Napęd przemysłowy bramy rolowanej zamontowany nad wjazdem do hali",
-        caption: "Napęd przemysłowy z otwieraniem awaryjnym",
-      },
-      {
-        alt: "Pętla indukcyjna w posadzce przed bramą rolowaną hali",
-        caption: "Pętla indukcyjna wykrywająca nadjeżdżający pojazd",
-      },
-      {
-        alt: "Czytnik kontroli dostępu sterujący bramą rolowaną w obiekcie magazynowym",
-        caption: "Otwieranie identyfikatorem, z rejestrem zdarzeń",
-      },
+      { ...SOMFY_IMAGES.blackSwitchFacade, caption: "Nadajnik naścienny Somfy na elewacji obiektu", position: "center 60%" },
+      { ...SOMFY_IMAGES.wallSwitchGate, caption: "Obsługa nadajnika Somfy przy wjeździe" },
     ],
     outcome:
       "Obsługa dostaw przyspieszyła, a rejestr zdarzeń dał kierownikowi obiektu pełny wgląd w ruch na wjazdach.",

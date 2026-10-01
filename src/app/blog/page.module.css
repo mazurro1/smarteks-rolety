@@ -122,6 +122,17 @@
     var(--color-bg-elevated);
 }
 
+.featuredMedia {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.featuredImage {
+  object-fit: cover;
+}
+
 /* ── Siatka ───────────────────────────────────────────────── */
 .grid {
   display: grid;
@@ -143,6 +154,11 @@
   }
   .featuredDecor {
     display: none;
+  }
+  .featuredMedia {
+    order: -1;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 }
 

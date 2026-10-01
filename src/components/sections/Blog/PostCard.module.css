@@ -2,9 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
   height: 100%;
-  padding: 1.6rem;
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
@@ -37,6 +35,18 @@
 
 .card:hover::before {
   opacity: 1;
+}
+
+.media {
+  border-radius: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.7rem;
+  padding: 1.6rem;
 }
 
 .head {

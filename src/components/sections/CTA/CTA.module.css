@@ -1,15 +1,40 @@
 .section {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.backdropImage {
+  object-fit: cover;
+}
+
+/* Bordowa poswiata marki po prawej, ciemno pod tekstem po lewej. */
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background:
     radial-gradient(
       120% 180% at 100% 0%,
-      rgba(var(--color-brand-rgb), 0.55) 0%,
-      transparent 60%
+      rgba(var(--color-brand-rgb), 0.32) 0%,
+      transparent 55%
     ),
-    linear-gradient(135deg, #1a1016 0%, #0e0e10 55%);
-  border-top: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+    linear-gradient(
+      90deg,
+      rgba(14, 14, 16, 0.92) 0%,
+      rgba(14, 14, 16, 0.8) 45%,
+      rgba(14, 14, 16, 0.38) 100%
+    );
 }
 
 .pattern {
@@ -58,7 +83,7 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--color-text-secondary);
+  color: #c9c9d0;
 }
 
 .actions {
@@ -68,6 +93,9 @@
 }
 
 @media (max-width: 767px) {
+  .shade {
+    background: rgba(14, 14, 16, 0.85);
+  }
   .actions {
     width: 100%;
     flex-direction: column;

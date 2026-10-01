@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
 import { COMPANY_INTRO } from "@/data/site";
+import { COMPANY_IMAGE } from "@/data/media";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import MediaFrame from "@/ui/MediaFrame";
@@ -18,9 +19,9 @@ export async function CompanyIntro() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.media}>
           <MediaFrame
+            src={COMPANY_IMAGE.src}
+            alt={COMPANY_IMAGE.alt}
             ratio="3/4"
-            alt="Zespół montażowy Smarteks Rolety podczas pracy przy elewacji budynku"
-            label="Zdjęcie zespołu / realizacji"
             sizes="(max-width: 1023px) 100vw, 45vw"
           />
           <div className={styles.mediaBadge}>

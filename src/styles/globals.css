@@ -1,5 +1,5 @@
 /* ============================================================
-   Smarteks Rolety — dark design system
+   Smarteks Rolety - dark design system
    Tokens mapped from constants/colors.ts
    ============================================================ */
 :root {
@@ -7,7 +7,7 @@
   --color-brand-primary: #8e1f3f;
   --color-brand-primary-dark: #6c1730;
   --color-brand-primary-light: #a6254a;
-  --color-brand-accent: #e0527a; /* small accent text on dark — 5.1:1 */
+  --color-brand-accent: #e0527a; /* small accent text on dark - 5.1:1 */
   --color-brand-rgb: 142, 31, 63;
 
   /* Surfaces (darkest → lightest) */
@@ -217,7 +217,7 @@ p {
   }
 }
 
-/* Link pomijajacy nawigacje — widoczny dopiero po sfokusowaniu klawiatura. */
+/* Link pomijajacy nawigacje - widoczny dopiero po sfokusowaniu klawiatura. */
 .skipLink {
   position: absolute;
   top: -100%;

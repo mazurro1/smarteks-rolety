@@ -58,6 +58,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
         <MediaFrame
           src={current.src}
           alt={current.alt}
+          position={current.position}
           ratio="16/9"
           label={current.caption}
           priority
@@ -116,6 +117,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
               <MediaFrame
                 src={image.src}
                 alt=""
+                position={image.position}
                 ratio="4/3"
                 sizes="120px"
                 className={styles.thumbFrame}
@@ -130,7 +132,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
           className={styles.lightbox}
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} — ${t("dialogLabel")}`}
+          aria-label={`${title} - ${t("dialogLabel")}`}
         >
           <button
             type="button"
@@ -146,6 +148,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
             <MediaFrame
               src={current.src}
               alt={current.alt}
+              position={current.position}
               ratio="16/9"
               label={current.caption}
               sizes="90vw"

@@ -13,7 +13,7 @@ export const CONTACT_INFO = {
   GOOGLE_MAPS_URL: "https://maps.google.com/?q=Marywilska+17A,+Warszawa",
 } as const;
 
-/** Miejscowosci obslugiwane w promieniu dojazdu — uzywane w stopce i na kontakcie. */
+/** Miejscowosci obslugiwane w promieniu dojazdu - uzywane w stopce i na kontakcie. */
 export const SERVICE_CITIES = [
   "Warszawa",
   "Piaseczno",

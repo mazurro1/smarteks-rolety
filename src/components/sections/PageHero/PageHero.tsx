@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
+import { PAGE_HERO_IMAGE } from "@/data/media";
+import type { MediaImage } from "@/types";
 import Breadcrumbs, { type Crumb } from "@/ui/Breadcrumbs";
 import styles from "./PageHero.module.css";
 
@@ -9,6 +12,8 @@ interface PageHeroProps {
   crumbs: Crumb[];
   /** Krotkie wyrozniki pod naglowkiem (np. klasa odpornosci, zasieg). */
   chips?: string[];
+  /** Zdjecie w tle naglowka. Domyslnie wspolne tlo podstron. */
+  image?: MediaImage;
   children?: ReactNode;
 }
 
@@ -18,11 +23,24 @@ export function PageHero({
   lead,
   crumbs,
   chips,
+  image = PAGE_HERO_IMAGE,
   children,
 }: PageHeroProps) {
   return (
     <section className={styles.hero}>
-      <div className={styles.glow} aria-hidden="true" />
+      <div className={styles.backdrop}>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          priority
+          sizes="100vw"
+          quality={90}
+          className={styles.backdropImage}
+          style={image.position ? { objectPosition: image.position } : undefined}
+        />
+      </div>
+      <div className={styles.shade} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <Breadcrumbs items={crumbs} className={styles.crumbs} />
 

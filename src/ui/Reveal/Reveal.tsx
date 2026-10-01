@@ -5,7 +5,7 @@ import styles from "./Reveal.module.css";
 
 interface RevealProps {
   children: ReactNode;
-  /** Opoznienie w ms — do kaskadowego pojawiania sie kart w siatce. */
+  /** Opoznienie w ms - do kaskadowego pojawiania sie kart w siatce. */
   delay?: number;
   className?: string;
 }

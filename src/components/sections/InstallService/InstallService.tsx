@@ -12,7 +12,7 @@ interface InstallServiceProps {
 }
 
 /**
- * Powtarzalny blok „montaz + serwis" — obecny na kazdej podstronie ofertowej.
+ * Powtarzalny blok „montaz + serwis" - obecny na kazdej podstronie ofertowej.
  */
 export async function InstallService({
   installation,

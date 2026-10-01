@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
@@ -87,7 +88,25 @@ export default async function BlogPage() {
                   </div>
                 </div>
 
-                <div className={styles.featuredDecor} aria-hidden="true" />
+                {featured.image ? (
+                  <div className={styles.featuredMedia}>
+                    <Image
+                      src={featured.image}
+                      alt={featured.imageAlt ?? featured.title}
+                      fill
+                      priority
+                      sizes="(max-width: 1023px) 100vw, 420px"
+                      className={styles.featuredImage}
+                      style={
+                        featured.imagePosition
+                          ? { objectPosition: featured.imagePosition }
+                          : undefined
+                      }
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.featuredDecor} aria-hidden="true" />
+                )}
               </article>
 
               <div className={styles.grid}>

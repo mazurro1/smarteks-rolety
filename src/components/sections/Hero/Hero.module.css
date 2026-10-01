@@ -1,27 +1,42 @@
 .hero {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   background-color: var(--color-bg-base);
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 72px 72px;
 }
 
-.glow {
+/* ── Tlo: zdjecie domu z roleta ───────────────────────────── */
+.backdrop {
   position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 70vw;
-  height: 70vw;
-  max-width: 900px;
-  max-height: 900px;
-  background: radial-gradient(
-    circle,
-    rgba(var(--color-brand-rgb), 0.3) 0%,
-    transparent 62%
-  );
+  inset: 0;
+  z-index: -2;
+}
+
+.backdropImage {
+  object-fit: cover;
+}
+
+/* Przyciemnienie tylko pod kolumna tekstu - prawa czesc zdjecia zostaje jasna. */
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(14, 14, 16, 0.45) 0%,
+      transparent 16%,
+      transparent 74%,
+      rgba(14, 14, 16, 0.6) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(14, 14, 16, 0.86) 0%,
+      rgba(14, 14, 16, 0.74) 38%,
+      rgba(14, 14, 16, 0.24) 62%,
+      rgba(14, 14, 16, 0) 100%
+    );
 }
 
 .inner {
@@ -53,8 +68,9 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  background-color: var(--color-white-tint);
-  border: 1px solid var(--color-line);
+  background-color: rgba(14, 14, 16, 0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--color-line-strong);
   border-radius: var(--radius-full);
 }
 
@@ -83,7 +99,7 @@
   max-width: 54ch;
   font-size: clamp(1rem, 1.4vw, 1.1rem);
   line-height: 1.75;
-  color: var(--color-text-secondary);
+  color: #c9c9d0;
 }
 
 .actions {
@@ -103,7 +119,7 @@
   position: relative;
   padding-left: 1.1rem;
   font-size: 0.82rem;
-  color: var(--color-text-muted);
+  color: #b4b4bc;
 }
 
 .trustItem::before {
@@ -131,9 +147,10 @@
   max-width: 440px;
   aspect-ratio: 4 / 5;
   padding: 14px;
-  border: 1px solid var(--color-line-strong);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, #1b1b22 0%, #121216 100%);
+  /* Przezroczysta ramka - przez szybe widac dom w tle. */
+  background: rgba(18, 18, 24, 0.18);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
@@ -142,11 +159,12 @@
   position: absolute;
   inset: 14px;
   border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(
     200deg,
-    rgba(120, 150, 190, 0.28) 0%,
-    rgba(40, 50, 70, 0.22) 45%,
-    rgba(var(--color-brand-rgb), 0.24) 100%
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.02) 45%,
+    rgba(var(--color-brand-rgb), 0.1) 100%
   );
 }
 
@@ -183,7 +201,7 @@
   animation: slatDrop 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Dolne lamele pozostaja uchylone — czytelny znak rolety adaptacyjnej. */
+/* Dolne lamele pozostaja uchylone - czytelny znak rolety adaptacyjnej. */
 .slat:nth-last-child(-n + 4) {
   flex: 0 0 16px;
   background: linear-gradient(180deg, #2c2c35 0%, #1d1d24 100%);
@@ -247,7 +265,8 @@
   position: relative;
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
-  background-color: rgba(18, 18, 22, 0.6);
+  background-color: rgba(14, 14, 16, 0.82);
+  backdrop-filter: blur(10px);
 }
 
 .statsInner {
@@ -308,26 +327,26 @@
   }
 }
 
+/* Telefon i tablet: bez animowanej rolety - naglowek od gory, karta pod trescia. */
 @media (max-width: 1023px) {
+  .shade {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 14, 16, 0.6) 0%,
+      rgba(14, 14, 16, 0.78) 45%,
+      rgba(14, 14, 16, 0.92) 100%
+    );
+  }
   .inner {
     grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .visual {
-    order: -1;
+    gap: 2rem;
   }
   .frame {
-    max-width: min(360px, 100%);
-    aspect-ratio: 5 / 4;
-  }
-  /* Rama zmienia proporcje — pancerz musi isc za nia. */
-  .slats {
-    aspect-ratio: 5 / 4;
+    display: none;
   }
   .floatCard {
-    left: auto;
-    right: -0.5rem;
-    bottom: -1.25rem;
+    position: static;
+    width: 100%;
   }
 }
 
@@ -346,14 +365,5 @@
   }
   .stat:nth-child(n + 3) {
     border-top: 1px solid var(--color-line);
-  }
-  .floatCard {
-    position: static;
-    width: 100%;
-    margin-top: 1.25rem;
-  }
-  .visual {
-    flex-direction: column;
-    align-items: center;
   }
 }
