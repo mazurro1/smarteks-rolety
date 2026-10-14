@@ -332,3 +332,28 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Karty pochylane kursorem (InteractiveEffects) ─────────── */
+:has(> [data-tilt]) {
+  perspective: 1100px;
+}
+
+[data-tilt] {
+  rotate: var(--tilt-axis, 0 0 1) var(--tilt-angle, 0deg);
+}
+
+[data-tilt]::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    420px circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 55%
+  );
+  opacity: var(--glare-opacity, 0);
+  transition: opacity 300ms ease;
+}

@@ -258,7 +258,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
           "Gabinety, kancelarie, lombardy, apteki i punkty handlowe - z rejestracją stanu pancerza w systemie alarmowym.",
         points: [
           "Styki kontrolne położenia",
-          "Sterowanie grupowe całą fasadą",
+          "Sterowanie grupowe całą elewacją",
           "Harmonogramy otwierania i zamykania",
         ],
       },
@@ -298,7 +298,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy można łączyć RC3 z automatyką i alarmem?",
-        a: "Tak. Standardowo montujemy sterowanie radiowe, a na życzenie dokładamy styki kontrolne informujące centralę alarmową o pozycji pancerza oraz integrację ze sterowaniem całą fasadą.",
+        a: "Tak. Standardowo montujemy sterowanie radiowe, a na życzenie dokładamy styki kontrolne informujące centralę alarmową o pozycji pancerza oraz integrację ze sterowaniem całą elewacją.",
       },
     ],
     meta: {
@@ -322,24 +322,24 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     cardTitle: "Rolety adaptacyjne",
     eyebrow: "Światło pod kontrolą",
     icon: "sun",
-    image: { ...SOMFY_IMAGES.louvresRoom, position: "right center" },
-    tagline: "Roleta i żaluzja fasadowa w jednym pancerzu",
+    image: { ...SOMFY_IMAGES.shutterGarden, position: "center 30%" },
+    tagline: "Światło dzienne przy opuszczonej rolecie",
     excerpt:
-      "Uchylne lamele pozwalają wpuścić światło przy opuszczonym pancerzu. Prywatność bez ciemności i bez rezygnacji z widoku.",
+      "Uchylne profile pancerza wpuszczają światło przy opuszczonej rolecie. Prywatność bez ciemności i bez rezygnacji z widoku.",
     highlights: [
-      "Płynna regulacja kąta lameli",
+      "Płynna regulacja prześwitu pancerza",
       "Światło dzienne przy zamkniętej rolecie",
       "Automatyka pogodowa w standardzie",
     ],
     intro: [
-      "Roleta adaptacyjna rozwiązuje problem, który ma każda klasyczna roleta zewnętrzna: opuszczona zasłania wszystko. Tutaj po osiągnięciu dolnego położenia pancerz rozsuwa się, a lamele odchylają się o zadany kąt. Do wnętrza wpada rozproszone światło dzienne, powietrze swobodnie przepływa, a z zewnątrz nadal nie widać, co dzieje się w pomieszczeniu.",
+      "Roleta adaptacyjna rozwiązuje problem, który ma każda klasyczna roleta zewnętrzna: opuszczona zasłania wszystko. Tutaj po osiągnięciu dolnego położenia pancerz rozsuwa się, a jego profile odchylają się o zadany kąt. Do wnętrza wpada rozproszone światło dzienne, powietrze swobodnie przepływa, a z zewnątrz nadal nie widać, co dzieje się w pomieszczeniu.",
       "To rozwiązanie sprawdza się w domach z dużymi przeszkleniami od południa i zachodu, w biurach, w których liczy się komfort pracy przy monitorze, oraz wszędzie tam, gdzie przez pół roku trzeba wybierać między przegrzaniem a sztucznym światłem. Osłona zatrzymuje promieniowanie przed szybą, więc działa skuteczniej niż jakakolwiek roleta wewnętrzna.",
-      "Sterowanie prowadzimy automatyką pogodową: czujnik nasłonecznienia przymyka lamele, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz, zanim podmuch stanie się niebezpieczny. Dzięki temu instalacja pracuje bez udziału domowników.",
+      "Sterowanie prowadzimy automatyką pogodową: czujnik nasłonecznienia przymyka profile, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz, zanim podmuch stanie się niebezpieczny. Dzięki temu instalacja pracuje bez udziału domowników.",
     ],
     features: [
       {
         icon: "sun",
-        title: "Regulacja kąta lameli",
+        title: "Regulacja prześwitu",
         description:
           "Od pełnego zaciemnienia do prześwitu - ustawienie zapamiętywane i przywoływane jednym przyciskiem.",
       },
@@ -359,24 +359,24 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "volume",
         title: "Cicha praca",
         description:
-          "Lamele prowadzone na taśmach i rolkach z tworzywa - bez metalicznego klekotu przy zmianie położenia.",
+          "Profile pracują w prowadnicach z uszczelkami - bez metalicznego klekotu przy zmianie położenia.",
       },
       {
         icon: "layers",
         title: "Smukły pancerz",
         description:
-          "Lamele o wysokości 65-90 mm zwijane w kompaktową skrzynkę, również w wersji ukrytej w elewacji.",
+          "Profile o wysokości 65-90 mm zwijane w kompaktową skrzynkę, również w wersji ukrytej w elewacji.",
       },
       {
         icon: "house",
-        title: "Dwie funkcje, jedno urządzenie",
+        title: "Dwie funkcje, jedna roleta",
         description:
-          "Zastępuje komplet: roletę zaciemniającą i żaluzję fasadową. Jeden otwór montażowy, jeden napęd, jedno sterowanie.",
+          "Pełne zaciemnienie i regulacja światła w jednej osłonie. Jeden otwór montażowy, jeden napęd, jedno sterowanie.",
       },
     ],
     specs: [
-      { label: "Typ osłony", value: "Roleta z uchylnymi lamelami (adaptacyjna)" },
-      { label: "Wysokość lameli", value: "65 / 80 / 90 mm" },
+      { label: "Typ osłony", value: "Roleta zewnętrzna z uchylnymi profilami pancerza" },
+      { label: "Wysokość profilu", value: "65 / 80 / 90 mm" },
       { label: "Kąt otwarcia", value: "Płynny, do ok. 70°" },
       { label: "Maks. szerokość", value: "do 4 m w jednym pancerzu" },
       { label: "Maks. powierzchnia", value: "do 12 m² na jedną osłonę" },
@@ -390,25 +390,25 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         description:
           "Podstawowa wersja do okien pionowych w domach jednorodzinnych i mieszkaniach z balkonem.",
         points: [
-          "Lamele 65 mm",
+          "Profil 65 mm",
           "Skrzynka nakładana",
           "Sterowanie radiowe z pilotem",
         ],
       },
       {
-        name: "Adaptacyjna fasadowa",
+        name: "Adaptacyjna do dużych przeszkleń",
         description:
-          "Wersja do dużych przeszkleń i elewacji biurowych, z prowadnicami linkowymi lub szynowymi.",
+          "Wersja do okien tarasowych, witryn i elewacji biurowych, ze wzmocnionymi prowadnicami.",
         points: [
-          "Lamele 80-90 mm",
-          "Sterowanie grupowe całą fasadą",
+          "Profil 80-90 mm",
+          "Sterowanie grupowe całą elewacją",
           "Czujniki nasłonecznienia i wiatru",
         ],
       },
       {
         name: "Adaptacyjna w wersji podtynkowej",
         description:
-          "Skrzynka ukryta w warstwie ocieplenia - z zewnątrz widoczne pozostają tylko lamele i prowadnice.",
+          "Skrzynka ukryta w warstwie ocieplenia - z zewnątrz widoczne pozostają tylko pancerz i prowadnice.",
         points: [
           "Planowana na etapie budowy",
           "Rewizja od strony wnętrza",
@@ -417,33 +417,33 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     installation: {
-      lead: "Efekt zależy od geometrii okna i strony świata. Podczas pomiaru ustalamy kąt pracy lameli, a nie tylko wymiary.",
+      lead: "Efekt zależy od geometrii okna i strony świata. Podczas pomiaru ustalamy kąt pracy profili, a nie tylko wymiary.",
       points: [
-        "Analiza nasłonecznienia elewacji i dobór wysokości lameli",
+        "Analiza nasłonecznienia elewacji i dobór wysokości profilu",
         "Pomiar z uwzględnieniem głębokości wnęki i sposobu otwierania okna",
-        "Montaż prowadnic z zachowaniem swobody pracy lameli na całej wysokości",
+        "Montaż prowadnic z zachowaniem swobody pracy pancerza na całej wysokości",
         "Uruchomienie napędu, zaprogramowanie pozycji pośrednich i scen",
         "Kalibracja czujników wiatru i słońca oraz instruktaż obsługi",
       ],
     },
     service: {
-      lead: "Mechanizm uchylania lameli wymaga innej obsługi niż zwykła roleta - serwisujemy go u każdego klienta, także po latach.",
+      lead: "Mechanizm uchylania profili wymaga innej obsługi niż zwykła roleta - serwisujemy go u każdego klienta, także po latach.",
       points: [
-        "Przegląd naciągu taśm i stanu zawieszek lameli",
+        "Przegląd mechanizmu uchylania i stanu zawieszek pancerza",
         "Kalibracja położeń pośrednich po wymianie napędu lub baterii w czujnikach",
-        "Wymiana uszkodzonych lameli bez demontażu całego pancerza",
+        "Wymiana uszkodzonych profili bez demontażu całego pancerza",
         "Regulacja czujników pogodowych i korekta scenariuszy automatyki",
         "Modernizacja starszych instalacji: dodanie automatyki do rolet sterowanych ręcznie",
       ],
     },
     faq: [
       {
-        q: "Czym roleta adaptacyjna różni się od żaluzji fasadowej?",
-        a: "Żaluzja fasadowa ma sztywne lamele prowadzone w szynach i jest osłoną wyłącznie przeciwsłoneczną. Roleta adaptacyjna zwija się jak klasyczna roleta do skrzynki, a funkcję regulacji światła uzyskuje dopiero w dolnym położeniu. Zajmuje mniej miejsca i pełni obie role naraz.",
+        q: "Czym roleta adaptacyjna różni się od zwykłej rolety zewnętrznej?",
+        a: "Zwija się tak samo - do skrzynki nad oknem - i tak samo zaciemnia. Różnica pojawia się w dolnym położeniu: profile pancerza uchylają się i wpuszczają rozproszone światło dzienne. Zwykła roleta daje tylko dwa stany - jasno albo ciemno.",
       },
       {
         q: "Czy rolety adaptacyjne zaciemniają pomieszczenie?",
-        a: "Tak, po zamknięciu lameli uzyskujemy pełne zaciemnienie, porównywalne z klasyczną roletą zewnętrzną. Różnica polega na tym, że można je otworzyć stopniowo, bez podnoszenia całego pancerza.",
+        a: "Tak, po domknięciu profili uzyskujemy pełne zaciemnienie, porównywalne z klasyczną roletą zewnętrzną. Różnica polega na tym, że można je otworzyć stopniowo, bez podnoszenia całego pancerza.",
       },
       {
         q: "Jak zachowują się przy silnym wietrze?",
@@ -457,13 +457,13 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     meta: {
       title: "Rolety adaptacyjne - regulacja światła, montaż Warszawa",
       description:
-        "Rolety adaptacyjne z uchylnymi lamelami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
+        "Rolety adaptacyjne z uchylnymi profilami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
       keywords: [
         "rolety adaptacyjne",
         "rolety adaptacyjne Warszawa",
-        "rolety z uchylnymi lamelami",
         "rolety zewnetrzne regulacja swiatla",
-        "oslony przeciwsloneczne fasadowe",
+        "rolety adaptacyjne montaz",
+        "rolety zewnetrzne przeciwsloneczne",
       ],
     },
     projectCategories: ["adaptive"],

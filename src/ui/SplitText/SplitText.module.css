@@ -1,0 +1,32 @@
+.root {
+  display: inline;
+}
+
+/* Maska slowa z zapasem na polskie znaki nad i pod linia (Ś, ą, ę). */
+.word {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.12em 0 0.1em;
+  margin: -0.12em 0 -0.1em;
+  vertical-align: top;
+}
+
+.inner {
+  display: inline-block;
+}
+
+:global(html.js) .inner {
+  transform: translateY(112%);
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:global(html.js) .in .inner {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.js) .inner {
+    transform: none;
+    transition: none;
+  }
+}

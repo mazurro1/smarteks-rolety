@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { PROCESS_STEPS } from "@/data/site";
 import SectionHeader from "@/ui/SectionHeader";
-import Reveal from "@/ui/Reveal";
+import ProcessSteps from "./ProcessSteps";
 import styles from "./Process.module.css";
 
 export async function Process() {
@@ -21,20 +21,7 @@ export async function Process() {
           id="process-heading"
         />
 
-        <ol className={styles.steps}>
-          {PROCESS_STEPS.map((step, index) => (
-            <li key={step.number} className={styles.step}>
-              <Reveal delay={index * 70} className={styles.stepInner}>
-                <span className={styles.marker} aria-hidden="true">
-                  <span className={styles.dot} />
-                </span>
-                <span className={styles.number}>{step.number}</span>
-                <h3 className={styles.title}>{step.title}</h3>
-                <p className={styles.description}>{step.description}</p>
-              </Reveal>
-            </li>
-          ))}
-        </ol>
+        <ProcessSteps steps={PROCESS_STEPS} />
       </div>
     </section>
   );

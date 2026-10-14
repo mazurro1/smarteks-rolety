@@ -134,6 +134,19 @@
   color: var(--color-text-muted);
 }
 
+.pointLink {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-brand-accent);
+  transition: color var(--transition-fast);
+}
+
+.pointLink:hover {
+  color: var(--color-text-primary);
+}
+
 .link {
   margin-top: 0.5rem;
   font-size: 0.76rem;

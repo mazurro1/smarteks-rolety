@@ -1,0 +1,105 @@
+.section {
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+  overflow: hidden;
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+
+.viewport {
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Bez animacji (brak JS lub ograniczony ruch): miasta zawijaja sie w wiersze. */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0;
+  padding-inline: var(--container-padding);
+}
+
+.section:not(.animated) .track {
+  width: auto;
+}
+
+/* Przeciaganie: poziomy ruch przesuwa pasek, pionowy przewija strone. */
+.animated .viewport {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.animated .viewport.dragging {
+  cursor: grabbing;
+}
+
+.animated .list {
+  flex-wrap: nowrap;
+  padding-inline: 0;
+}
+
+.city {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(2.1rem, 6vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+  color: var(--color-text-primary);
+}
+
+/* Co druga miejscowosc obrysem - rytm jak pancerz rolety. */
+.city:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.38);
+}
+
+/* Separator: miniaturowa roleta w kolorze marki. */
+.city::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.42em;
+  height: 0.42em;
+  margin-inline: 0.55em;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--color-brand-accent) 0 2px,
+    transparent 2px 5px
+  );
+  box-shadow: 0 0 18px rgba(var(--color-brand-rgb), 0.5);
+}

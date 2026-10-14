@@ -121,6 +121,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
                 ratio="4/3"
                 sizes="120px"
                 className={styles.thumbFrame}
+                reveal={false}
               />
             </button>
           ))}
@@ -153,6 +154,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
               label={current.caption}
               sizes="90vw"
               className={styles.lightboxFrame}
+              reveal={false}
             />
             <p className={styles.lightboxCaption}>
               {current.caption ?? current.alt}

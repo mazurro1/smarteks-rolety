@@ -58,7 +58,20 @@
     "ctaPrimary": "Zamów bezpłatną wycenę",
     "cardLabel": "Klasa odporności",
     "cardValue": "RC2 / RC3",
-    "cardText": "Certyfikat wydany dla całego zestawu wg PN-EN 1627 - z protokołem montażu."
+    "cardText": "Certyfikat wydany dla całego zestawu wg PN-EN 1627 - z protokołem montażu.",
+    "model": {
+      "show": "Pokaż budowę rolety",
+      "hide": "Złóż roletę",
+      "legendTitle": "Budowa rolety",
+      "parts": [
+        "Skrzynka z wałem nawojowym",
+        "Napęd rurowy z hamulcem",
+        "Wzmocnione prowadnice",
+        "Profile aluminiowe z pianką PU",
+        "Blokady antypodnoszeniowe",
+        "Listwa dolna z uszczelką"
+      ]
+    }
   },
 
   "home": {
@@ -66,17 +79,21 @@
     "pageDescription": "Montaż i serwis rolet antywłamaniowych RC2 i RC3, rolet adaptacyjnych, podtynkowych oraz bram rolowanych. Bezpłatny pomiar, 5 lat gwarancji, własna ekipa montażowa.",
     "benefits": {
       "eyebrow": "Dlaczego my",
-      "title": "Robimy jedną rzecz i robimy ją dobrze",
+      "title": "Robimy to, na czym się znamy - i robimy to dobrze",
       "lead": "Bez podwykonawców z przypadku, bez wycen z sufitu i bez znikania po odebraniu przelewu."
     },
     "process": {
       "eyebrow": "Jak pracujemy",
-      "title": "Pięć kroków od telefonu do odbioru",
+      "title": "Pięć kroków od wymiarów do odbioru",
       "lead": "Wiesz, co się wydarzy na każdym etapie - łącznie z tym, ile to potrwa i ile będzie kosztować."
     },
     "company": {
       "yearsLabel": "lat doświadczenia",
       "cta": "Zobacz nasze realizacje"
+    },
+    "cities": {
+      "eyebrow": "Obszar działania",
+      "title": "Montujemy i serwisujemy rolety w Warszawie i okolicach"
     },
     "controlBand": {
       "eyebrow": "Sterowanie",
@@ -181,6 +198,12 @@
       "ctaTitle": "Podobny projekt u Ciebie?",
       "ctaText": "Przyjedziemy, zmierzymy i powiemy, co da się zrobić w Twoim budynku. Pomiar jest bezpłatny.",
       "relatedTitle": "Podobne realizacje",
+      "beforeAfter": {
+        "title": "Przed i po montażu - przesuń suwak, żeby porównać.",
+        "before": "Przed",
+        "after": "Po",
+        "slider": "Porównanie zdjęć przed i po montażu"
+      },
       "backToList": "Wszystkie realizacje"
     }
   },
@@ -225,9 +248,9 @@
   },
 
   "cta": {
-    "eyebrow": "Bezpłatny pomiar",
-    "title": "Zacznijmy od pomiaru - reszta wyjdzie w praniu",
-    "text": "Przyjeżdżamy, mierzymy, sprawdzamy nadproże i dostęp do zasilania. Dopiero potem rozmawiamy o cenie. Bez zaliczek za wycenę i bez zobowiązań.",
+    "eyebrow": "Bezpłatna wycena",
+    "title": "Zacznijmy od wymiarów - resztę ustalimy na miejscu",
+    "text": "Prześlij wstępne wymiary przez formularz lub e-mailem - odpowiemy wstępną wyceną. Ostateczną kwotę podajemy po bezpłatnym pomiarze. Bez zaliczek za wycenę i bez zobowiązań.",
     "ctaPrimary": "Zamów bezpłatną wycenę"
   },
 
@@ -247,11 +270,11 @@
 
     "infoEyebrow": "Dane kontaktowe",
     "infoTitle": "Zadzwoń, napisz albo wypełnij formularz",
-    "infoLead": "Najszybciej odezwiemy się, gdy zadzwonisz. Wiadomości z formularza obsługujemy w ciągu jednego dnia roboczego.",
+    "infoLead": "Najszybciej odezwiemy się, gdy zadzwonisz. Wstępne wymiary do wyceny możesz przesłać przez formularz lub e-mailem - odpowiadamy w ciągu jednego dnia roboczego.",
     "areaTitle": "Dojeżdżamy do",
 
     "formTitle": "Bezpłatna wycena",
-    "formSubtitle": "Wypełnij formularz - odpiszemy lub oddzwonimy w ciągu 24 godzin.",
+    "formSubtitle": "Podaj wstępne wymiary okien - przygotujemy wstępną wycenę i odezwiemy się w ciągu 24 godzin.",
     "formAriaLabel": "Formularz kontaktowy",
     "privacyNote": "Wysyłając formularz akceptujesz",
     "privacyLinkLabel": "politykę prywatności",
@@ -276,7 +299,7 @@
       "emailPlaceholder": "jan@example.com",
       "topic": "Czego dotyczy zapytanie",
       "topicPlaceholder": "- wybierz temat -",
-      "message": "Opis projektu",
+      "message": "Opis projektu i wstępne wymiary",
       "messagePlaceholder": "Liczba okien, wymiary, etap budowy, preferencje sterowania…",
       "messageCounter": "{count}/{max} znaków",
       "submit": "Wyślij zapytanie",
@@ -324,7 +347,8 @@
       "blog": "Blog",
       "contact": "Kontakt",
       "privacyPolicy": "Polityka prywatności",
-      "cookiePolicy": "Polityka cookies"
+      "cookiePolicy": "Polityka cookies",
+      "barriersSite": "Szlabany parkingowe"
     }
   },
 

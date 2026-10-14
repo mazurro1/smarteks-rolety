@@ -43,6 +43,17 @@ export const PROJECTS: Project[] = [
       { label: "Sterowanie", value: "Radiowe, grupowe + aplikacja" },
       { label: "Czas realizacji", value: "2 dni robocze" },
     ],
+    // Demo suwaka przed/po - podmien "before" na zdjecie z tego samego kadru przed montazem.
+    beforeAfter: {
+      before: {
+        alt: "Okna parteru domu w Wilanowie przed montażem rolet RC2",
+        caption: "Zdjęcie sprzed montażu - do uzupełnienia",
+      },
+      after: {
+        ...SOMFY_IMAGES.shuttersCornerRemote,
+        position: "center 35%",
+      },
+    },
     gallery: [
       { ...SOMFY_IMAGES.shuttersCornerRemote, caption: "Rolety w narożnym przeszkleniu sterowane pilotem Somfy Situo 5", position: "center 40%" },
       { ...SOMFY_IMAGES.livingRoomShutter, caption: "Salon z roletą opuszczoną do połowy i nadajnikiem Somfy Smoove przy oknie" },
@@ -97,14 +108,14 @@ export const PROJECTS: Project[] = [
     year: 2025,
     buildingType: "Apartament z tarasem",
     summary:
-      "Przeszklenia południowo-zachodnie z regulacją kąta lameli i automatyką słoneczną - koniec z wyborem między upałem a ciemnością.",
+      "Przeszklenia południowo-zachodnie z regulacją prześwitu pancerza i automatyką słoneczną - koniec z wyborem między upałem a ciemnością.",
     description: [
       "Salon z przeszkleniem na południowy zachód nagrzewał się latem do granic wytrzymałości, a klasyczne rolety zewnętrzne oznaczały pracę przy sztucznym świetle przez pół dnia.",
-      "Zamontowaliśmy rolety adaptacyjne z lamelami 80 mm. Po opuszczeniu pancerza lamele odchylają się o zadany kąt: światło wpada do wnętrza, powietrze przepływa, a z zewnątrz nie widać, co dzieje się w mieszkaniu.",
-      "Automatyka steruje osłonami bez udziału mieszkańców - czujnik nasłonecznienia przymyka lamele, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz przed nadejściem silniejszych podmuchów.",
+      "Zamontowaliśmy rolety adaptacyjne z profilem 80 mm. Po opuszczeniu pancerza profile odchylają się o zadany kąt: światło wpada do wnętrza, powietrze przepływa, a z zewnątrz nie widać, co dzieje się w mieszkaniu.",
+      "Automatyka steruje osłonami bez udziału mieszkańców - czujnik nasłonecznienia przymyka profile, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz przed nadejściem silniejszych podmuchów.",
     ],
     scope: [
-      "Analiza nasłonecznienia elewacji i dobór wysokości lameli",
+      "Analiza nasłonecznienia elewacji i dobór wysokości profilu",
       "Montaż 5 rolet adaptacyjnych, w tym osłony tarasowej 3,2 m",
       "Instalacja czujników nasłonecznienia i wiatru",
       "Zaprogramowanie scen dziennych i wieczornych",
@@ -112,15 +123,14 @@ export const PROJECTS: Project[] = [
     ],
     specs: [
       { label: "Liczba osłon", value: "5 rolet adaptacyjnych" },
-      { label: "Lamele", value: "80 mm, kąt do 70°" },
+      { label: "Profil pancerza", value: "80 mm, kąt do 70°" },
       { label: "Największa osłona", value: "3,2 m szerokości" },
       { label: "Automatyka", value: "Czujnik słońca i wiatru" },
       { label: "Czas realizacji", value: "2 dni robocze" },
     ],
     gallery: [
-      { ...SOMFY_IMAGES.louvresBalcony, caption: "Zewnętrzne lamele przy wyjściu na balkon, pilot Somfy Situo", position: "center 40%" },
-      { ...SOMFY_IMAGES.louvresRoom, caption: "Lamele uchylone - rozproszone światło dzienne w pokoju", position: "right center" },
-      { ...SOMFY_IMAGES.bedroomSunProtect, caption: "Nadajnik Somfy Smoove z funkcją Sun Protect w sypialni", position: "center 50%" },
+      { ...SOMFY_IMAGES.bedroomSunProtect, caption: "Światło dzienne przez uchylony pancerz, nadajnik Somfy Smoove z funkcją Sun Protect", position: "center 30%" },
+      { ...SOMFY_IMAGES.roundTransmitterBook, caption: "Nadajnik Somfy w świetle przechodzącym przez pancerz rolety", position: "center 40%" },
       { ...SOMFY_IMAGES.sunSensorWindow, caption: "Czujnik nasłonecznienia Somfy przy oknie" },
     ],
     outcome:
@@ -157,7 +167,7 @@ export const PROJECTS: Project[] = [
     gallery: [
       { ...SOMFY_IMAGES.shutterGarden, caption: "Roleta uchylona nad przeszkleniem z widokiem na ogród" },
       { ...SOMFY_IMAGES.smooveShutter, caption: "Nadajnik Somfy Smoove przy oknie z roletą", position: "center 45%" },
-      { ...SOMFY_IMAGES.roundTransmitterBook, caption: "Nadajnik Somfy w świetle przechodzącym przez lamele rolety", position: "center 60%" },
+      { ...SOMFY_IMAGES.livingRoomShutter, caption: "Salon z roletą zewnętrzną opuszczoną do połowy okna" },
     ],
     outcome:
       "Budynek zyskał osłony bez kompromisu w bryle elewacji i bez przerwania ciągłości izolacji nad oknami.",
@@ -199,7 +209,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "biuro-wola-rolety-adaptacyjne",
-    title: "Biuro na Woli - fasada z automatyką słoneczną",
+    title: "Biuro na Woli - rolety adaptacyjne z automatyką słoneczną",
     category: "adaptive",
     location: "Warszawa, Wola",
     year: 2025,
@@ -208,7 +218,7 @@ export const PROJECTS: Project[] = [
       "Dwadzieścia dwie osłony adaptacyjne sterowane grupowo, z harmonogramem dopasowanym do godzin pracy zespołu.",
     description: [
       "Open space z przeszkleniami na dwie strony świata oznaczał codzienną wojnę o rolety - jedni chcieli światła, inni uciekali przed odblaskiem na monitorach.",
-      "Rolety adaptacyjne rozwiązały spór technicznie: lamele przepuszczają światło dzienne, jednocześnie odcinając bezpośrednie promieniowanie. Sterowanie podzieliliśmy na strefy odpowiadające układowi stanowisk.",
+      "Rolety adaptacyjne rozwiązały spór technicznie: uchylone profile przepuszczają światło dzienne, jednocześnie odcinając bezpośrednie promieniowanie. Sterowanie podzieliliśmy na strefy odpowiadające układowi stanowisk.",
       "Harmonogram uruchamia osłony przed przyjściem zespołu i otwiera je po godzinach pracy, żeby serwis sprzątający miał pełne światło dzienne.",
     ],
     scope: [

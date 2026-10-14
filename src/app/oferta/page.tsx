@@ -62,7 +62,7 @@ export default async function OfferPage() {
                 delay={index * 60}
                 className={index < 2 ? styles.wide : styles.narrow}
               >
-                <article className={styles.card}>
+                <article className={styles.card} data-tilt="">
                   <div className={styles.media}>
                     <MediaFrame
                       src={product.image.src}

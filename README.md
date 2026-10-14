@@ -82,7 +82,7 @@ Slug = nazwa pliku. Wpis pojawia się automatycznie na liście, w sitemapie i w 
 
 Zdjęcia produktów Somfy leżą w `public/images/somfy`, a ich ścieżki, opisy i kadry w `src/data/media.ts`. Wykorzystane są w miniaturach listy oferty na stronie głównej, w kartach i na podstronach oferty, w sekcji „O firmie”, w pasie zdjęciowym „Sterowanie” (`PhotoBand`), w tle sekcji CTA, we wpisach bloga (pole `image` we frontmatterze) oraz jako przykładowe zdjęcia w galeriach realizacji.
 
-Tło nagłówków (strona główna i podstrony) to zdjęcie domu z Unsplash: `public/images/dom/nowoczesny-dom-z-zaslonami.jpg`, fot. Meri Vasilevski, [licencja Unsplash](https://unsplash.com/license) - użycie komercyjne bez opłat i bez obowiązku podpisu. Aby podmienić je na zdjęcie z własnej realizacji, wystarczy zmienić `HOUSE` w `src/data/media.ts`.
+Tło nagłówków (strona główna i podstrony) to zdjęcie budynku z roletami zewnętrznymi z Pexels: `public/images/dom/budynek-z-roletami-zewnetrznymi.jpg`, fot. Francesco Ungaro, [licencja Pexels](https://www.pexels.com/license/) - użycie komercyjne bez opłat i bez obowiązku podpisu. Aby podmienić je na zdjęcie z własnej realizacji, wystarczy zmienić `HOUSE` w `src/data/media.ts`.
 
 Każde zdjęcie ma `alt` opisujący scenę, a przy zdjęciach Somfy także nazwę pokazanego produktu (np. „…sterowane pilotem Somfy Situo 5”). Dotyczy to też zdjęć w tle - dlatego tła są renderowane przez `next/image`, a nie CSS `background-image`.
 
@@ -98,6 +98,40 @@ gallery: [
 ```
 
 Komponent `MediaFrame` sam przełączy się na `next/image` - nie trzeba zmieniać kodu widoków.
+
+### Porównanie przed/po w realizacjach
+
+W `src/data/projects.ts` każda realizacja może mieć pole `beforeAfter` - na stronie realizacji pojawia się wtedy suwak porównania (najlepiej dwa zdjęcia z tego samego kadru):
+
+```ts
+beforeAfter: {
+  before: { src: "/images/realizacje/wilanow-przed.jpg", alt: "…" },
+  after: { src: "/images/realizacje/wilanow-po.jpg", alt: "…" },
+},
+```
+
+Obecnie demo jest w realizacji „Dom jednorodzinny z roletami RC2” - zdjęcie „przed” to placeholder do podmiany.
+
+## Efekty i animacje
+
+| Efekt | Gdzie |
+| --- | --- |
+| Model 3D rolety w hero (Three.js, ładowany leniwie po załadowaniu strony) | `src/components/sections/Hero/` (`RollerWindow`, `PortalVan`, `HeroModel`) |
+| Zdjęcia odsłaniane jak roleta | `src/ui/ShutterReveal` (wbudowane w `MediaFrame`, wyłączenie: `reveal={false}`) |
+| Nagłówki wjeżdżające słowo po słowie | `src/ui/SplitText` (w `SectionHeader`, poza `h1`) |
+| Liczniki statystyk | `src/ui/Odometer` |
+| Pasek miejscowości (przeciąganie, reakcja na scroll) | `src/components/sections/CitiesMarquee` |
+| Przejście między podstronami jak roleta | `src/components/layout/ShutterTransition` |
+| Magnetyczne przyciski i pochylane karty | `src/components/layout/InteractiveEffects` + atrybuty `data-magnetic` / `data-tilt` |
+| Kroki procesu podświetlane po kolei | `src/components/sections/Process/ProcessSteps.tsx` |
+| Paralaksa zdjęć (pas „Sterowanie”, CTA) | CSS `animation-timeline: view()` w modułach `PhotoBand` i `CTA` |
+
+Zasady (SEO na pierwszym miejscu):
+
+- cały tekst jest w HTML z serwera - efekty tylko go animują,
+- stany „przed animacją” (ukryte zdjęcia, nagłówki, `Reveal`) działają wyłącznie z klasą `html.js` ustawianą w `layout.tsx` - bez JS treść jest od razu widoczna,
+- elementy dekoracyjne (taśma cyfr licznika, kopia listy miast) nie trafiają do HTML ani do czytników ekranu,
+- linki pozostają zwykłymi `<a href>`, efekty respektują `prefers-reduced-motion`.
 
 ## Kolorystyka
 

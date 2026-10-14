@@ -3,11 +3,16 @@
   border-top: 1px solid var(--color-line);
 }
 
+.stepsWrap {
+  --steps-gap: 1.5rem;
+  position: relative;
+}
+
 .steps {
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: var(--steps-gap);
 }
 
 /* Linia laczaca kroki na desktopie. */
@@ -18,16 +23,54 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    var(--color-line) 0%,
-    var(--color-line-brand) 50%,
-    var(--color-line) 100%
-  );
+  background-color: var(--color-line-strong);
 }
 
+/* Postep: linia dociaga do znacznika aktywnego kroku. */
+.progress {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 0;
+  height: 3px;
+  width: calc(
+    (100% + var(--steps-gap)) * var(--step-active) / var(--step-count) + 8px
+  );
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-primary) 0%,
+    var(--color-brand-accent) 100%
+  );
+  box-shadow: 0 0 14px rgba(var(--color-brand-rgb), 0.7);
+  transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+/* Nad linia postepu - znaczniki krokow przykrywaja jej koniec. */
 .step {
   position: relative;
+  z-index: 2;
+}
+
+/* Podswietlenie aktywnego kroku. */
+.step::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 1.4rem -0.75rem -0.9rem;
+  border: 1px solid var(--color-line-brand);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    var(--color-brand-tint) 0%,
+    rgba(var(--color-brand-rgb), 0.03) 100%
+  );
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .stepInner {
@@ -39,6 +82,7 @@
 
 .marker {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
@@ -48,21 +92,29 @@
   height: 15px;
   border-radius: 50%;
   background-color: var(--color-bg-base);
-  border: 1px solid var(--color-line-brand);
+  border: 1px solid var(--color-line-strong);
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base),
+    transform var(--transition-slow);
 }
 
 .dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: var(--color-brand-accent);
+  background-color: var(--color-text-muted);
+  transition: background-color var(--transition-base);
 }
 
 .number {
+  display: inline-block;
+  align-self: flex-start;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
-  color: var(--color-brand-accent);
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
 }
 
 .title {
@@ -70,6 +122,8 @@
   font-size: 1.02rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base);
 }
 
 .description {
@@ -79,13 +133,116 @@
   color: var(--color-text-secondary);
 }
 
+/* Odliczanie do przeskoku na kolejny krok. */
+.timer {
+  position: relative;
+  display: block;
+  height: 2px;
+  margin-top: 0.35rem;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background-color: var(--color-line);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.timer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-brand-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.timerRunning {
+  opacity: 1;
+}
+
+.timerRunning::after {
+  animation: timerFill var(--step-interval) linear forwards;
+}
+
+/* ── Stany krokow ─────────────────────────────────────────── */
+.done .marker {
+  border-color: var(--color-line-brand);
+}
+
+.done .dot {
+  background-color: var(--color-brand-accent);
+}
+
+.done .number {
+  color: var(--color-brand-accent);
+}
+
+.active::after {
+  opacity: 1;
+  transform: none;
+}
+
+.active .marker {
+  border-color: var(--color-brand-accent);
+  background-color: var(--color-brand-primary);
+  transform: scale(1.35);
+  animation: markerPulse 1.6s ease-out infinite;
+}
+
+.active .dot {
+  background-color: var(--color-white);
+}
+
+.active .number {
+  color: var(--color-brand-accent);
+  animation: numberJump 520ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.active .title {
+  color: var(--color-text-primary);
+}
+
+@keyframes numberJump {
+  0% {
+    opacity: 0;
+    transform: translateY(0.9em) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes markerPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--color-brand-rgb), 0.65);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(var(--color-brand-rgb), 0);
+  }
+}
+
+@keyframes timerFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @media (max-width: 1023px) {
+  .stepsWrap {
+    --steps-gap: 2rem 1.75rem;
+  }
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem 1.75rem;
   }
-  .steps::before {
+  .steps::before,
+  .progress {
     display: none;
+  }
+  .step::after {
+    inset: -0.9rem -0.9rem -0.9rem -0.6rem;
   }
   .stepInner {
     padding-top: 0;
@@ -97,8 +254,22 @@
 }
 
 @media (max-width: 599px) {
+  .stepsWrap {
+    --steps-gap: 1.75rem;
+  }
   .steps {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress,
+  .step::after,
+  .marker {
+    transition: none;
+  }
+  .active .marker,
+  .active .number {
+    animation: none;
   }
 }

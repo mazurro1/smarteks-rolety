@@ -1,9 +1,13 @@
+import { CONTACT_INFO } from "@/constants/contact";
 import type { FaqItem, IconKey, ProcessStep, StatItem } from "@/types";
+
+/** Staz firmy - w statystykach i na zdjeciu w sekcji "Kim jestesmy". */
+export const YEARS_IN_BUSINESS = 6;
 
 /** Liczby pokazywane pod hero i na stronie realizacji. */
 export const STATS: StatItem[] = [
   { value: "600+", label: "zamontowanych osłon" },
-  { value: "12", label: "lat na rynku" },
+  { value: String(YEARS_IN_BUSINESS), label: "lat na rynku" },
   { value: "5 lat", label: "gwarancji" },
   { value: "48h", label: "reakcji serwisu" },
 ];
@@ -31,9 +35,9 @@ export const BENEFITS: Benefit[] = [
   },
   {
     icon: "ruler",
-    title: "Pomiar przed wyceną",
+    title: "Wycena w dwóch krokach",
     description:
-      "Przyjeżdżamy, mierzymy i sprawdzamy nadproże oraz warstwę ocieplenia. Wycena powstaje na podstawie tego, co zastaliśmy, a nie szacunków przez telefon.",
+      "Wstępną wycenę podajemy na podstawie przesłanych wymiarów. Ostateczną - po pomiarze na miejscu, gdy sprawdzimy nadproże i warstwę ocieplenia. Bez niespodzianek przy montażu.",
   },
   {
     icon: "wrench",
@@ -64,9 +68,9 @@ export const BENEFITS: Benefit[] = [
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "01",
-    title: "Rozmowa i wstępny zakres",
+    title: "Wymiary i wstępna wycena",
     description:
-      "Ustalamy, co ma osłaniać instalacja: bezpieczeństwo, światło, ciepło czy wszystko naraz. Podajemy orientacyjny przedział cenowy.",
+      "Prześlij wstępne wymiary okien przez formularz lub e-mailem. Na ich podstawie przygotujemy wstępną wycenę i podpowiemy, które rozwiązanie ma sens.",
   },
   {
     number: "02",
@@ -76,9 +80,9 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     number: "03",
-    title: "Wycena i dobór zestawu",
+    title: "Ostateczna wycena i dobór zestawu",
     description:
-      "Otrzymujesz wycenę z rozbiciem na osłony, napędy, sterowanie i montaż. Bez pozycji „inne” i bez kosztów, które pojawiają się później.",
+      "Otrzymujesz ostateczną wycenę z rozbiciem na osłony, napędy, sterowanie i montaż. Bez pozycji „inne” i bez kosztów, które pojawiają się później.",
   },
   {
     number: "04",
@@ -97,7 +101,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const HOME_FAQ: FaqItem[] = [
   {
     q: "Ile kosztuje montaż rolet zewnętrznych?",
-    a: "Cena zależy od wymiaru osłony, typu pancerza i sposobu montażu. Roleta standardowa na typowe okno to zwykle kilkaset złotych za sztukę wraz z montażem, certyfikowana roleta RC2 kosztuje wyraźnie więcej ze względu na konstrukcję pancerza i prowadnic. Dokładną kwotę podajemy po bezpłatnym pomiarze - bez niego każda wycena jest zgadywaniem.",
+    a: "Cena zależy od wymiaru osłony, typu pancerza i sposobu montażu. Roleta standardowa na typowe okno to zwykle kilkaset złotych za sztukę wraz z montażem, certyfikowana roleta RC2 kosztuje wyraźnie więcej ze względu na konstrukcję pancerza i prowadnic. Wstępną wycenę przygotujemy na podstawie wymiarów przesłanych przez formularz lub e-mailem, a dokładną kwotę potwierdzamy po bezpłatnym pomiarze.",
   },
   {
     q: "Czy montujecie rolety w gotowych, wykończonych domach?",
@@ -147,15 +151,20 @@ export const GENERIC_SERVICE = {
 /** Skrocony opis firmy - sekcja na stronie glownej i dane do schema.org. */
 export const COMPANY_INTRO = {
   eyebrow: "Kim jesteśmy",
-  title: "Rolety zewnętrzne to cała nasza robota",
+  title: "Osłony zewnętrzne znamy od nadproża po napęd",
   paragraphs: [
-    "Smarteks Rolety to zespół montażowy z Warszawy, który zajmuje się wyłącznie osłonami zewnętrznymi: roletami antywłamaniowymi, adaptacyjnymi, podtynkowymi i bramami rolowanymi. Nie rozmieniamy się na dziesięć branż - dzięki temu wiemy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.",
+    "Smarteks to firma montażowa z Warszawy z kilkoma specjalizacjami. Jedną z nich są osłony zewnętrzne: rolety antywłamaniowe, adaptacyjne, podtynkowe i bramy rolowane - to im poświęcona jest ta strona. Przy każdym montażu sprawdzamy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.",
     "Pracujemy w Warszawie i okolicach - w promieniu, w którym jesteśmy w stanie przyjechać na serwis szybko, a nie „kiedyś w przyszłym miesiącu”. To świadome ograniczenie zasięgu: wolimy obsłużyć mniejszy obszar porządnie niż pół kraju byle jak.",
   ],
   points: [
     {
-      title: "Jedna specjalizacja",
-      description: "Tylko osłony zewnętrzne - od pomiaru po serwis po latach.",
+      title: "Kilka specjalizacji",
+      description:
+        "Rolety i bramy rolowane, a także szlabany parkingowe i automatyka wjazdów.",
+      link: {
+        href: CONTACT_INFO.BARRIERS_SITE_URL,
+        label: "Zobacz ofertę szlabanów",
+      },
     },
     {
       title: "Własna ekipa montażowa",

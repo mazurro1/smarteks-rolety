@@ -13,6 +13,8 @@ import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/ui/CookieBanner";
 import { MobileBottomBar } from "@/ui/MobileBottomBar";
 import ScrollToTop from "@/components/layout/ScrollToTop";
+import { ShutterTransition } from "@/components/layout/ShutterTransition";
+import { InteractiveEffects } from "@/components/layout/InteractiveEffects";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -145,8 +147,17 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <head>
+        {/* Flaga JS przed pierwszym malowaniem: stany startowe animacji (np. roleta
+            zaslaniajaca zdjecie) dzialaja tylko z JS - bez niego tresc jest widoczna. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -165,6 +176,8 @@ export default async function RootLayout({
           <Footer />
           <MobileBottomBar />
           <CookieBanner />
+          <ShutterTransition />
+          <InteractiveEffects />
         </NextIntlClientProvider>
       </body>
     </html>

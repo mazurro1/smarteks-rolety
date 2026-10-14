@@ -5,7 +5,7 @@
   background-color: var(--color-bg-base);
 }
 
-/* ── Tlo: zdjecie domu z roleta ───────────────────────────── */
+/* ── Tlo: zdjecie budynku z roletami ─────────────────────── */
 .backdrop {
   position: absolute;
   inset: 0;
@@ -141,92 +141,8 @@
   min-width: 0;
 }
 
-.frame {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 4 / 5;
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-lg);
-  /* Przezroczysta ramka - przez szybe widac dom w tle. */
-  background: rgba(18, 18, 24, 0.18);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-}
-
-.glass {
-  position: absolute;
-  inset: 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(
-    200deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.02) 45%,
-    rgba(var(--color-brand-rgb), 0.1) 100%
-  );
-}
-
-.curtain {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  right: 14px;
-  height: calc(100% - 28px);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  animation: shutterCycle 20s ease-in-out 1.2s infinite;
-}
-
-.slats {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  aspect-ratio: 4 / 5;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.slat {
-  display: block;
-  flex: 1 1 0;
-  min-height: 0;
-  border-radius: 2px;
-  background: linear-gradient(180deg, #34343e 0%, #22222a 55%, #1a1a20 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  transform-origin: top center;
-  animation: slatDrop 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-/* Dolne lamele pozostaja uchylone - czytelny znak rolety adaptacyjnej. */
-.slat:nth-last-child(-n + 4) {
-  flex: 0 0 16px;
-  background: linear-gradient(180deg, #2c2c35 0%, #1d1d24 100%);
-  opacity: 0.82;
-}
-
-.rail {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 10px;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  background: linear-gradient(
-    180deg,
-    var(--color-brand-primary-light) 0%,
-    var(--color-brand-primary-dark) 100%
-  );
-}
-
+/* Polozenie karty ustala HeroModel (wspolne miejsce z legenda czesci). */
 .floatCard {
-  position: absolute;
-  left: -1.5rem;
-  bottom: 2rem;
-  width: min(250px, 72%);
   padding: 1.1rem 1.25rem;
   background-color: rgba(23, 23, 28, 0.95);
   backdrop-filter: blur(8px);
@@ -301,33 +217,7 @@
   color: var(--color-text-muted);
 }
 
-@keyframes slatDrop {
-  from {
-    opacity: 0;
-    transform: translateY(-14px) scaleY(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
-  }
-}
-
-@keyframes shutterCycle {
-  0%,
-  40% {
-    height: calc(100% - 28px);
-  }
-  50%,
-  70% {
-    height: 26px;
-  }
-  80%,
-  100% {
-    height: calc(100% - 28px);
-  }
-}
-
-/* Telefon i tablet: bez animowanej rolety - naglowek od gory, karta pod trescia. */
+/* Telefon i tablet: naglowek od gory, model i karta pod trescia. */
 @media (max-width: 1023px) {
   .shade {
     background: linear-gradient(
@@ -340,13 +230,6 @@
   .inner {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  .frame {
-    display: none;
-  }
-  .floatCard {
-    position: static;
-    width: 100%;
   }
 }
 

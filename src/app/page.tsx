@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { ROUTES } from "@/constants/routes";
 import { CONTROL_BAND_IMAGE } from "@/data/media";
+import { SERVICE_CITIES } from "@/constants/contact";
 import { Hero } from "@/components/sections/Hero";
 import { OfferIndex } from "@/components/sections/OfferIndex";
 import { Benefits } from "@/components/sections/Benefits";
@@ -10,6 +11,7 @@ import { CompanyIntro } from "@/components/sections/CompanyIntro";
 import { Process } from "@/components/sections/Process";
 import { PhotoBand } from "@/components/sections/PhotoBand";
 import { ProjectsTeaser } from "@/components/sections/Projects";
+import { CitiesMarquee } from "@/components/sections/CitiesMarquee";
 import { BlogTeaser } from "@/components/sections/Blog";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
@@ -54,6 +56,11 @@ export default async function HomePage() {
         cta={{ href: ROUTES.OFFER, label: t("controlBand.cta") }}
       />
       <ProjectsTeaser />
+      <CitiesMarquee
+        eyebrow={t("cities.eyebrow")}
+        title={t("cities.title")}
+        cities={SERVICE_CITIES}
+      />
       <BlogTeaser />
       <FAQ />
       <CTA />

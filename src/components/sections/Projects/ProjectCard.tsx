@@ -55,7 +55,7 @@ export default function ProjectCard({
   const current = project.gallery[index];
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-tilt="">
       <div
         className={styles.media}
         onTouchStart={(event) => setTouchStartX(event.touches[0].clientX)}

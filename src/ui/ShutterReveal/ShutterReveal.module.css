@@ -1,0 +1,67 @@
+.root {
+  isolation: isolate;
+}
+
+.shutter {
+  display: none;
+}
+
+/* Pancerz rolety: profile z jasna krawedzia i listwa dolna w kolorze marki. */
+:global(html.js) .shutter {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 35%),
+    repeating-linear-gradient(
+      180deg,
+      #2c2d34 0px,
+      #2c2d34 13px,
+      #1a1b20 13px,
+      #1a1b20 15px,
+      rgba(255, 255, 255, 0.1) 15px,
+      rgba(255, 255, 255, 0.1) 16px
+    );
+  transition: transform 1.15s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+:global(html.js) .shutter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-primary-dark) 0%,
+    var(--color-brand-accent) 100%
+  );
+  box-shadow: 0 0 16px rgba(var(--color-brand-rgb), 0.6);
+}
+
+.open .shutter {
+  transform: translateY(-101%);
+}
+
+/* Zdjecie pod roleta lekko sie "oddala" - wlasciwosc scale nie koliduje z transform. */
+:global(html.js) .root :global(img) {
+  scale: 1.08;
+  transition: scale 1.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:global(html.js) .open :global(img) {
+  scale: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.js) .shutter {
+    display: none;
+  }
+  :global(html.js) .root :global(img) {
+    scale: 1;
+    transition: none;
+  }
+}

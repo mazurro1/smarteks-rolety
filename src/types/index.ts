@@ -141,6 +141,11 @@ export interface Project {
   scope: string[];
   specs: OfferSpec[];
   gallery: ProjectImage[];
+  /** Porownanie przed/po montazu (suwak na stronie realizacji). Najlepiej ten sam kadr. */
+  beforeAfter?: {
+    before: ProjectImage;
+    after: ProjectImage;
+  };
   outcome: string;
 }
 

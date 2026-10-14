@@ -85,6 +85,16 @@ export async function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={CONTACT_INFO.BARRIERS_SITE_URL}
+                  className={styles.colLink}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {tFooter("links.barriersSite")} &#8599;
+                </a>
+              </li>
             </ul>
           </nav>
 

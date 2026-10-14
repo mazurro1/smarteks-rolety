@@ -8,6 +8,8 @@ import { ROUTES } from "@/constants/routes";
 import { STATS, TRUST_POINTS } from "@/data/site";
 import { HERO_IMAGE } from "@/data/media";
 import Button from "@/ui/Button";
+import Odometer from "@/ui/Odometer";
+import HeroModel from "./HeroModel";
 import styles from "./Hero.module.css";
 
 export async function Hero() {
@@ -36,7 +38,7 @@ export async function Hero() {
           </p>
 
           <h1 id="hero-heading" className={styles.heading}>
-            {t("headingLine1")}
+            {t("headingLine1")}{" "}
             <span className={styles.headingAccent}>{t("headingAccent")}</span>
           </h1>
 
@@ -67,27 +69,22 @@ export async function Hero() {
           </ul>
         </div>
 
-        <div className={styles.visual} aria-hidden="true">
-          <div className={styles.frame}>
-            <div className={styles.glass} />
-            <div className={styles.curtain}>
-              <div className={styles.slats}>
-                {Array.from({ length: 18 }, (_, index) => (
-                  <span
-                    key={index}
-                    className={styles.slat}
-                    style={{ animationDelay: `${index * 45}ms` }}
-                  />
-                ))}
+        <div className={styles.visual}>
+          <HeroModel
+            labels={{
+              show: t("model.show"),
+              hide: t("model.hide"),
+              legendTitle: t("model.legendTitle"),
+              parts: t.raw("model.parts") as string[],
+            }}
+            card={
+              <div className={styles.floatCard}>
+                <p className={styles.floatCardLabel}>{t("cardLabel")}</p>
+                <p className={styles.floatCardValue}>{t("cardValue")}</p>
+                <p className={styles.floatCardText}>{t("cardText")}</p>
               </div>
-              <div className={styles.rail} />
-            </div>
-          </div>
-          <div className={styles.floatCard}>
-            <p className={styles.floatCardLabel}>{t("cardLabel")}</p>
-            <p className={styles.floatCardValue}>{t("cardValue")}</p>
-            <p className={styles.floatCardText}>{t("cardText")}</p>
-          </div>
+            }
+          />
         </div>
       </div>
 
@@ -95,7 +92,7 @@ export async function Hero() {
         <div className={`container ${styles.statsInner}`}>
           {STATS.map((stat) => (
             <div key={stat.label} className={styles.stat}>
-              <span className={styles.statValue}>{stat.value}</span>
+              <Odometer value={stat.value} className={styles.statValue} />
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
           ))}

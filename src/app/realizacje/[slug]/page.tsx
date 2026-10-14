@@ -15,7 +15,7 @@ import {
 } from "@/data/projects";
 import { OFFER_PRODUCTS } from "@/data/offer";
 import { PageHero } from "@/components/sections/PageHero";
-import { ProjectGallery, ProjectCard } from "@/components/sections/Projects";
+import { BeforeAfter, ProjectGallery, ProjectCard } from "@/components/sections/Projects";
 import { CTA } from "@/components/sections/CTA";
 import Button from "@/ui/Button";
 import Icon from "@/ui/Icon";
@@ -90,6 +90,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className={`container ${styles.inner}`}>
           <div className={styles.main}>
             <ProjectGallery images={project.gallery} title={project.title} />
+
+            {project.beforeAfter && (
+              <BeforeAfter
+                before={project.beforeAfter.before}
+                after={project.beforeAfter.after}
+                labels={{
+                  title: t("detail.beforeAfter.title"),
+                  before: t("detail.beforeAfter.before"),
+                  after: t("detail.beforeAfter.after"),
+                  slider: t("detail.beforeAfter.slider"),
+                }}
+              />
+            )}
 
             <div className={styles.description}>
               {project.description.map((paragraph) => (

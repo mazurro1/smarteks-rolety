@@ -17,6 +17,7 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -26,7 +27,8 @@
   overflow: hidden;
   transition:
     border-color var(--transition-base),
-    transform var(--transition-base);
+    transform var(--transition-base),
+    rotate 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover {

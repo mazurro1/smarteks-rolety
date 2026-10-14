@@ -47,6 +47,8 @@ export default function Button(props: ButtonProps) {
     children,
     className = "",
   } = props;
+  // Przyciski glowne lekko podazaja za kursorem (InteractiveEffects).
+  const magnet = variant === "primary" ? { "data-magnetic": "" } : {};
   const cls = [
     styles.btn,
     styles[variant],
@@ -71,6 +73,7 @@ export default function Button(props: ButtonProps) {
       <a
         href={href}
         className={cls}
+        {...magnet}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
@@ -89,7 +92,7 @@ export default function Button(props: ButtonProps) {
       ...rest
     } = props;
     return (
-      <Link href={href} className={cls} {...rest}>
+      <Link href={href} className={cls} {...magnet} {...rest}>
         {children}
       </Link>
     );
@@ -105,6 +108,7 @@ export default function Button(props: ButtonProps) {
   return (
     <button
       className={cls}
+      {...magnet}
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}

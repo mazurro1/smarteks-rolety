@@ -15,9 +15,15 @@
     background-color var(--transition-base),
     border-color var(--transition-base),
     color var(--transition-base),
-    transform var(--transition-fast);
+    transform var(--transition-fast),
+    translate 280ms cubic-bezier(0.22, 1, 0.36, 1);
   white-space: nowrap;
   cursor: pointer;
+}
+
+/* Magnes: wlasciwosc translate nie koliduje z transform przy :active. */
+.btn[data-magnetic] {
+  translate: var(--magnet-x, 0) var(--magnet-y, 0);
 }
 
 .btn:active {

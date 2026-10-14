@@ -28,7 +28,7 @@ To największa pojedyncza pozycja w wycenie. Od najtańszego do najdroższego:
 
 - **Pancerz standardowy** - aluminium wypełnione pianką, funkcja przeciwsłoneczna i zaciemniająca.
 - **Pancerz RC2** - wzmocniony profil, blokady antypodnoszeniowe, certyfikat klasy odporności.
-- **Pancerz adaptacyjny** - uchylne lamele, mechanizm regulacji kąta, więcej elementów ruchomych.
+- **Pancerz adaptacyjny** - uchylne profile, mechanizm regulacji kąta, więcej elementów ruchomych.
 - **Pancerz RC3** - pełne profile ekstrudowane, wielokrotnie większa masa i sztywność.
 
 Między pancerzem standardowym a RC3 różnica w cenie jednej osłony potrafi być kilkukrotna. Warto więc świadomie zdecydować, które okna faktycznie wymagają ochrony antywłamaniowej, a przy których wystarczy roleta standardowa.

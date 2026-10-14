@@ -11,6 +11,8 @@ export const CONTACT_INFO = {
   BRAND_NAME: "Smarteks Rolety",
   SERVICE_AREA: "Warszawa i okolice",
   GOOGLE_MAPS_URL: "https://maps.google.com/?q=Marywilska+17A,+Warszawa",
+  /** Druga specjalizacja firmy - osobny serwis o szlabanach. */
+  BARRIERS_SITE_URL: "https://szlabany-smarteks.pl",
 } as const;
 
 /** Miejscowosci obslugiwane w promieniu dojazdu - uzywane w stopce i na kontakcie. */

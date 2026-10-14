@@ -9,13 +9,13 @@ import type { MediaImage } from "@/types";
 const DIR = "/images/somfy";
 
 /**
- * Tlo naglowkow: prawdziwe zdjecie domu z Unsplash (licencja Unsplash -
- * uzycie komercyjne bez oplat). Fot. Meri Vasilevski,
- * https://unsplash.com/photos/a-house-with-a-tree-in-front-of-it-4KXEQrDUizs
+ * Tlo naglowkow: zdjecie budynku z roletami zewnetrznymi z Pexels (licencja
+ * Pexels - uzycie komercyjne bez oplat). Fot. Francesco Ungaro,
+ * https://www.pexels.com/photo/shuttered-windows-of-a-residential-building-7981800/
  */
 const HOUSE: MediaImage = {
-  src: "/images/dom/nowoczesny-dom-z-zaslonami.jpg",
-  alt: "Nowoczesny piętrowy dom z zasłonami w dużych oknach, garażem i ogrodem przed wejściem",
+  src: "/images/dom/budynek-z-roletami-zewnetrznymi.jpg",
+  alt: "Nowoczesny budynek mieszkalny o zmierzchu z zamkniętymi roletami zewnętrznymi w oknach",
 };
 
 export const SOMFY_IMAGES = {
@@ -30,10 +30,6 @@ export const SOMFY_IMAGES = {
   remoteShutterSlats: {
     src: `${DIR}/pilot-somfy-situo-5-roleta-zewnetrzna.jpg`,
     alt: "Pilot Somfy Situo 5 skierowany na opuszczony pancerz rolety zewnętrznej",
-  },
-  louvresRoom: {
-    src: `${DIR}/zaluzje-zewnetrzne-somfy-smoove-pokoj.jpg`,
-    alt: "Pokój z zewnętrznymi lamelami uchylonymi do światła dziennego i naściennym nadajnikiem Somfy Smoove",
   },
   shutterTahoma: {
     src: `${DIR}/roleta-zewnetrzna-somfy-tahoma-switch.jpg`,
@@ -83,10 +79,6 @@ export const SOMFY_IMAGES = {
     src: `${DIR}/pilot-somfy-situo-5-roleta-okno-tarasowe.jpg`,
     alt: "Sterowanie roletą zewnętrzną okna tarasowego pilotem Somfy Situo 5",
   },
-  louvresBalcony: {
-    src: `${DIR}/pilot-somfy-situo-zaluzje-fasadowe-balkon.jpg`,
-    alt: "Zewnętrzne lamele przy wyjściu na balkon sterowane pilotem Somfy Situo",
-  },
   sensorsPergolaHouse: {
     src: `${DIR}/czujniki-somfy-pergola-dom.jpg`,
     alt: "Czujniki wiatru i nasłonecznienia Somfy na narożniku pergoli przy domu",
@@ -125,7 +117,7 @@ export const SOMFY_IMAGES = {
   },
   bedroomSunProtect: {
     src: `${DIR}/sypialnia-somfy-smoove-sun-protect.jpg`,
-    alt: "Sypialnia w świetle przechodzącym przez lamele, na ścianie nadajnik Somfy Smoove z funkcją Sun Protect",
+    alt: "Sypialnia w świetle przechodzącym przez pancerz rolety, na ścianie nadajnik Somfy Smoove z funkcją Sun Protect",
   },
   remotesTable: {
     src: `${DIR}/piloty-somfy-na-stole.jpg`,
@@ -133,7 +125,7 @@ export const SOMFY_IMAGES = {
   },
   roundTransmitterBook: {
     src: `${DIR}/okragly-nadajnik-somfy-stol.jpg`,
-    alt: "Okrągły nadajnik Somfy na stole w świetle przechodzącym przez lamele rolety",
+    alt: "Okrągły nadajnik Somfy na stole w świetle przechodzącym przez pancerz rolety",
   },
 } satisfies Record<string, MediaImage>;
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ShutterReveal from "@/ui/ShutterReveal";
 import styles from "./MediaFrame.module.css";
 
 type Ratio = "21/9" | "16/9" | "4/3" | "3/2" | "1/1" | "3/4";
@@ -15,6 +16,8 @@ interface MediaFrameProps {
   priority?: boolean;
   sizes?: string;
   className?: string;
+  /** Odslanianie jak roleta przy wejsciu w ekran (domyslnie tak; wylaczone np. w miniaturach). */
+  reveal?: boolean;
 }
 
 const RATIO_CLASS: Record<Ratio, string> = {
@@ -40,14 +43,17 @@ export default function MediaFrame({
   priority = false,
   sizes = "(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 33vw",
   className = "",
+  reveal = true,
 }: MediaFrameProps) {
   const wrapperClass = [styles.frame, RATIO_CLASS[ratio], className]
     .filter(Boolean)
     .join(" ");
 
+  const Frame = reveal ? ShutterReveal : "div";
+
   if (src) {
     return (
-      <div className={wrapperClass}>
+      <Frame className={wrapperClass}>
         <Image
           src={src}
           alt={alt}
@@ -57,12 +63,12 @@ export default function MediaFrame({
           className={styles.image}
           style={position ? { objectPosition: position } : undefined}
         />
-      </div>
+      </Frame>
     );
   }
 
   return (
-    <div className={wrapperClass} role="img" aria-label={alt}>
+    <Frame className={wrapperClass} role="img" aria-label={alt}>
       <div className={styles.placeholder} aria-hidden="true">
         <div className={styles.slats} />
         <div className={styles.placeholderBody}>
@@ -79,6 +85,6 @@ export default function MediaFrame({
           {label && <span className={styles.placeholderLabel}>{label}</span>}
         </div>
       </div>
-    </div>
+    </Frame>
   );
 }

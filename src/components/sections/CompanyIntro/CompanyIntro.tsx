@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
-import { COMPANY_INTRO } from "@/data/site";
+import { COMPANY_INTRO, YEARS_IN_BUSINESS } from "@/data/site";
 import { COMPANY_IMAGE } from "@/data/media";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import MediaFrame from "@/ui/MediaFrame";
 import Icon from "@/ui/Icon";
+import SplitText from "@/ui/SplitText";
 import styles from "./CompanyIntro.module.css";
 
 export async function CompanyIntro() {
@@ -25,7 +26,7 @@ export async function CompanyIntro() {
             sizes="(max-width: 1023px) 100vw, 45vw"
           />
           <div className={styles.mediaBadge}>
-            <span className={styles.mediaBadgeValue}>12</span>
+            <span className={styles.mediaBadgeValue}>{YEARS_IN_BUSINESS}</span>
             <span className={styles.mediaBadgeLabel}>{t("company.yearsLabel")}</span>
           </div>
         </div>
@@ -33,7 +34,7 @@ export async function CompanyIntro() {
         <div className={styles.content}>
           <p className={styles.eyebrow}>{COMPANY_INTRO.eyebrow}</p>
           <h2 id="company-heading" className={styles.title}>
-            {COMPANY_INTRO.title}
+            <SplitText text={COMPANY_INTRO.title} />
           </h2>
 
           {COMPANY_INTRO.paragraphs.map((paragraph) => (
@@ -51,6 +52,16 @@ export async function CompanyIntro() {
                 <span>
                   <strong className={styles.pointTitle}>{point.title}</strong>
                   <span className={styles.pointText}>{point.description}</span>
+                  {point.link && (
+                    <a
+                      href={point.link.href}
+                      className={styles.pointLink}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {point.link.label} &rarr;
+                    </a>
+                  )}
                 </span>
               </li>
             ))}

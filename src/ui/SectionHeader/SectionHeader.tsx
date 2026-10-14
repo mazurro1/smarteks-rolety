@@ -1,3 +1,4 @@
+import SplitText from "@/ui/SplitText";
 import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
@@ -27,7 +28,8 @@ export default function SectionHeader({
     >
       {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
       <Tag className={styles.title} id={id}>
-        {title}
+        {/* H1 bez animacji - nie opozniamy LCP. */}
+        {Tag === "h1" ? title : <SplitText text={title} />}
       </Tag>
       {lead && <p className={styles.lead}>{lead}</p>}
     </div>

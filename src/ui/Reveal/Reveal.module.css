@@ -1,4 +1,5 @@
-.reveal {
+/* Stan ukryty tylko z JS (klasa html.js) - bez JS tresc jest od razu widoczna. */
+:global(html.js) .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition:
@@ -6,13 +7,13 @@
     transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.visible {
+:global(html.js) .visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  :global(html.js) .reveal {
     opacity: 1;
     transform: none;
   }

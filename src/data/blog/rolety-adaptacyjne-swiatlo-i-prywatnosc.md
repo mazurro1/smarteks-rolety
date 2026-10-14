@@ -1,20 +1,20 @@
 ---
 title: "Rolety adaptacyjne - światło dzienne przy opuszczonym pancerzu"
-metaDescription: "Jak działają rolety adaptacyjne z uchylnymi lamelami, czym różnią się od żaluzji fasadowych i kiedy realnie obniżają koszty chłodzenia budynku."
+metaDescription: "Jak działają rolety adaptacyjne z uchylnymi profilami, czym różnią się od zwykłych rolet zewnętrznych i kiedy realnie obniżają koszty chłodzenia budynku."
 publishedAt: "2026-06-17"
 excerpt: "Klasyczna roleta ma dwa stany: widno albo ciemno. Roleta adaptacyjna wprowadza trzeci - zamknięta, a jednak przepuszcza światło. Sprawdzamy, jak to działa."
 category: "Technologie"
 keywords:
   - rolety adaptacyjne
-  - rolety z uchylnymi lamelami
+  - rolety zewnetrzne regulacja swiatla
   - oslony przeciwsloneczne
-  - zaluzja fasadowa czy roleta
-image: "/images/somfy/zaluzje-zewnetrzne-somfy-smoove-pokoj.jpg"
-imageAlt: "Pokój z zewnętrznymi lamelami uchylonymi do światła dziennego i naściennym nadajnikiem Somfy Smoove"
-imagePosition: "right center"
+  - roleta adaptacyjna czy zwykla
+image: "/images/somfy/sypialnia-somfy-smoove-sun-protect.jpg"
+imageAlt: "Sypialnia w świetle przechodzącym przez pancerz rolety, na ścianie nadajnik Somfy Smoove z funkcją Sun Protect"
+imagePosition: "center 25%"
 faq:
   - q: "Czy roleta adaptacyjna zaciemnia pomieszczenie tak jak zwykła?"
-    a: "Tak. Przy zamkniętych lamelach uzyskujemy pełne zaciemnienie porównywalne z klasyczną roletą zewnętrzną. Różnica polega na tym, że światło można wpuścić stopniowo, bez podnoszenia całego pancerza."
+    a: "Tak. Przy domkniętych profilach uzyskujemy pełne zaciemnienie porównywalne z klasyczną roletą zewnętrzną. Różnica polega na tym, że światło można wpuścić stopniowo, bez podnoszenia całego pancerza."
   - q: "Czy rolety adaptacyjne chronią przed włamaniem?"
     a: "Nie w rozumieniu normy PN-EN 1627 - to osłony komfortowe, nie zabezpieczenia certyfikowane. Jeśli potrzebna jest ochrona antywłamaniowa, stosuje się rolety RC2 lub RC3 na kondygnacjach dostępnych z zewnątrz, a adaptacyjne wyżej."
   - q: "Co się dzieje przy silnym wietrze?"
@@ -25,29 +25,29 @@ Problem klasycznej rolety zewnętrznej jest banalny: opuszczona zasłania wszyst
 
 ## Jak to działa
 
-Pancerz zwija się do skrzynki jak w każdej innej rolecie. Różnica pojawia się w dolnym położeniu: po osiągnięciu pełnego wysunięcia lamele rozsuwają się i odchylają o zadany kąt - nawet do około 70 stopni.
+Pancerz zwija się do skrzynki jak w każdej innej rolecie. Różnica pojawia się w dolnym położeniu: po osiągnięciu pełnego wysunięcia profile pancerza rozsuwają się i odchylają o zadany kąt - nawet do około 70 stopni.
 
-Efekt jest podwójny:
+Efekt jest potrójny:
 
 - do wnętrza wpada rozproszone światło dzienne,
-- powietrze swobodnie przepływa między lamelami,
+- powietrze swobodnie przepływa przez uchylony pancerz,
 - z zewnątrz nadal nie widać, co dzieje się w pomieszczeniu.
 
 Ustawienie kąta jest płynne i zapamiętywane, więc codzienna obsługa sprowadza się do jednego przycisku albo do harmonogramu, który robi to bez udziału domowników.
 
-## Roleta adaptacyjna a żaluzja fasadowa
+## Roleta adaptacyjna a zwykła roleta zewnętrzna
 
-To dwa różne urządzenia, często mylone:
+Z zewnątrz wyglądają podobnie - różnicę widać dopiero po opuszczeniu pancerza:
 
-| | Roleta adaptacyjna | Żaluzja fasadowa |
+| | Roleta adaptacyjna | Zwykła roleta zewnętrzna |
 | --- | --- | --- |
-| Sposób chowania | zwija się do skrzynki | podnosi się w pakiet |
-| Lamele | zwijane wraz z pancerzem | sztywne, prowadzone w szynach |
-| Miejsce nad oknem | skrzynka, także podtynkowa | pakiet lameli + prowadnice |
-| Zaciemnienie | pełne po zamknięciu lameli | częściowe, zależne od typu lameli |
-| Zastosowanie | dom, apartament, biuro | głównie elewacje biurowe |
+| Sposób chowania | zwija się do skrzynki | zwija się do skrzynki |
+| Pancerz w dolnym położeniu | profile uchylają się o zadany kąt | pozostaje szczelnie zamknięty |
+| Światło przy opuszczonej rolecie | regulowane, od prześwitu do zaciemnienia | brak |
+| Skrzynka | nakładana lub podtynkowa | nakładana lub podtynkowa |
+| Zastosowanie | dom, apartament, biuro | dom, apartament, biuro |
 
-Upraszczając: roleta adaptacyjna to osłona zaciemniająca z funkcją regulacji światła, a żaluzja fasadowa to osłona przeciwsłoneczna, która zaciemnia tylko przy okazji.
+Upraszczając: roleta adaptacyjna to zwykła roleta zewnętrzna z dodatkową funkcją regulacji światła.
 
 ## Dlaczego osłona zewnętrzna bije wewnętrzną
 
@@ -59,7 +59,7 @@ Różnica w praktyce jest wyraźnie odczuwalna w pomieszczeniach od południa i 
 
 Rolety adaptacyjne pracują najlepiej wtedy, gdy nikt o nich nie myśli. Dlatego standardowo konfigurujemy:
 
-- **czujnik nasłonecznienia** - przymyka lamele, gdy słońce operuje na elewację, i otwiera je, gdy przestaje,
+- **czujnik nasłonecznienia** - przymyka profile, gdy słońce operuje na elewację, i otwiera je, gdy przestaje,
 - **czujnik wiatru** - zwija pancerz przed nadejściem silniejszych podmuchów, z priorytetem nad wszystkimi innymi poleceniami,
 - **harmonogram** - inne ustawienia w godzinach pracy, inne wieczorem,
 - **sceny** - jedno polecenie dla całej elewacji lub strefy.
@@ -75,7 +75,7 @@ W biurach dochodzi podział na strefy odpowiadający układowi stanowisk - dzię
 
 ## Czego nie załatwią
 
-Rolety adaptacyjne nie są zabezpieczeniem antywłamaniowym. Mają więcej elementów ruchomych niż zwykła roleta i wymagają okresowej kontroli naciągu taśm oraz stanu zawieszek lameli. Przy bardzo dużych powierzchniach konieczny jest czujnik wiatru - to nie jest opcja, tylko warunek bezpiecznej eksploatacji.
+Rolety adaptacyjne nie są zabezpieczeniem antywłamaniowym. Mają więcej elementów ruchomych niż zwykła roleta i wymagają okresowej kontroli mechanizmu uchylania oraz stanu zawieszek pancerza. Przy bardzo dużych powierzchniach konieczny jest czujnik wiatru - to nie jest opcja, tylko warunek bezpiecznej eksploatacji.
 
 Typowe rozwiązanie w domu jednorodzinnym wygląda więc tak: rolety RC2 na parterze, rolety adaptacyjne na piętrze i przy przeszkleniach, do których nikt nie dosięgnie z zewnątrz.
 
@@ -83,4 +83,4 @@ Typowe rozwiązanie w domu jednorodzinnym wygląda więc tak: rolety RC2 na part
 
 Roleta adaptacyjna to odpowiedź na konkretny problem: potrzebę prywatności i ochrony przed słońcem bez rezygnacji ze światła dziennego. Jeśli Twój salon latem zamienia się w szklarnię, a zaciągnięte rolety oznaczają zapalone lampy w południe - to rozwiązanie stworzone dokładnie do tej sytuacji.
 
-Podczas bezpłatnego pomiaru sprawdzamy nasłonecznienie elewacji i dobieramy wysokość lameli oraz kąt pracy do konkretnego okna. To ustawienie ma większy wpływ na komfort niż wybór producenta.
+Podczas bezpłatnego pomiaru sprawdzamy nasłonecznienie elewacji i dobieramy wysokość profilu oraz kąt pracy do konkretnego okna. To ustawienie ma większy wpływ na komfort niż wybór producenta.

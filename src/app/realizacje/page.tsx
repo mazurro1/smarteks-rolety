@@ -8,6 +8,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ProjectsExplorer } from "@/components/sections/Projects";
 import { CTA } from "@/components/sections/CTA";
 import styles from "./page.module.css";
+import Odometer from "@/ui/Odometer";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -62,7 +63,9 @@ export default async function ProjectsPage() {
           {STATS.map((stat) => (
             <div key={stat.label} className={styles.stat}>
               <dt className={styles.statLabel}>{stat.label}</dt>
-              <dd className={styles.statValue}>{stat.value}</dd>
+              <dd className={styles.statValue}>
+                <Odometer value={stat.value} />
+              </dd>
             </div>
           ))}
         </dl>

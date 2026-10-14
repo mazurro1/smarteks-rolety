@@ -93,3 +93,24 @@
     background-color: rgba(18, 18, 22, 0.97);
   }
 }
+
+/* Paralaksa zdjecia przy przewijaniu - czysty CSS (scroll-driven animations).
+   Przegladarki bez wsparcia i ograniczony ruch: zdjecie statyczne. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .media {
+      inset: -12% 0;
+      animation: parallax linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(-9%);
+  }
+  to {
+    transform: translateY(9%);
+  }
+}
