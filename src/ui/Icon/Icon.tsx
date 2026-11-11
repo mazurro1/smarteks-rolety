@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import {
   faShield,
   faShieldHalved,
@@ -23,7 +23,7 @@ import {
   faHouse,
   faCertificate,
 } from "@fortawesome/free-solid-svg-icons";
-import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import type { IconKey } from "@/types";
 
 /**

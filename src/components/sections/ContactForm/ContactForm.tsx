@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO, CONTACT_TOPICS, SERVICE_CITIES } from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";

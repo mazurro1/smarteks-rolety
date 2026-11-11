@@ -33,7 +33,8 @@ export function PageHero({
           src={image.src}
           alt={image.alt}
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
           quality={90}
           className={styles.backdropImage}

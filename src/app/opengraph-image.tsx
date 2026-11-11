@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { COLORS } from "@/constants/colors";
+import { SITE_URL } from "@/constants/routes";
 
 export const alt = "Smarteks Rolety - rolety zewnętrzne i antywłamaniowe, Warszawa";
 export const size = { width: 1200, height: 630 };
@@ -12,9 +13,7 @@ export default async function OpengraphImage() {
   const t = await getTranslations(NAMESPACES.SITE);
   const title = t("ogTitle");
   const subtitle = t("ogDescription");
-  const host = process.env.NEXT_PUBLIC_SITE_URL
-    ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname
-    : "smarteks.pl";
+  const host = new URL(SITE_URL).hostname;
 
   return new ImageResponse(
     (

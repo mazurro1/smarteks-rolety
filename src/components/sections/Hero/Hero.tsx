@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
@@ -22,7 +22,8 @@ export async function Hero() {
           src={HERO_IMAGE.src}
           alt={HERO_IMAGE.alt}
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
           quality={90}
           className={styles.backdropImage}

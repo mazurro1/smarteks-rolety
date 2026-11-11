@@ -3,15 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
-import { ROUTES, blogPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, blogPath } from "@/constants/routes";
 import { getAllPosts } from "@/data/blog";
 import { PageHero } from "@/components/sections/PageHero";
 import { PostCard } from "@/components/sections/Blog";
 import { CTA } from "@/components/sections/CTA";
 import Reveal from "@/ui/Reveal";
 import styles from "./page.module.css";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.BLOG);
@@ -20,11 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: `${BASE_URL}${ROUTES.BLOG}` },
+    alternates: { canonical: `${SITE_URL}${ROUTES.BLOG}` },
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: `${BASE_URL}${ROUTES.BLOG}`,
+      url: `${SITE_URL}${ROUTES.BLOG}`,
       siteName: tSite("name"),
       title: t("pageTitle"),
       description: t("pageDescription"),

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import {
   faPhone,
   faEnvelope,
@@ -52,7 +52,7 @@ export async function Footer() {
               aria-label={tFooter("logoAriaLabel")}
             >
               <span className={styles.logoText}>
-                Smarteks<span className={styles.logoAccent}>Rolety</span>
+                Smarteks <span className={styles.logoAccent}>Rolety</span>
               </span>
             </Link>
             <p className={styles.brandDesc}>{tFooter("tagline")}</p>

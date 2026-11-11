@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
-import { ROUTES } from "@/constants/routes";
+import { SITE_URL, ROUTES } from "@/constants/routes";
 import { HOME_FAQ } from "@/data/site";
 import { PageHero } from "@/components/sections/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FAQ } from "@/components/sections/FAQ";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.CONTACT);
@@ -16,11 +14,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: `${BASE_URL}${ROUTES.CONTACT}` },
+    alternates: { canonical: `${SITE_URL}${ROUTES.CONTACT}` },
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: `${BASE_URL}${ROUTES.CONTACT}`,
+      url: `${SITE_URL}${ROUTES.CONTACT}`,
       siteName: tSite("name"),
       title: t("pageTitle"),
       description: t("pageDescription"),

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
-import { ROUTES, offerPath, projectPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, offerPath, projectPath } from "@/constants/routes";
 import {
   PROJECTS,
   PROJECT_CATEGORY_LABELS,
@@ -20,8 +20,6 @@ import { CTA } from "@/components/sections/CTA";
 import Button from "@/ui/Button";
 import Icon from "@/ui/Icon";
 import styles from "./page.module.css";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -39,7 +37,7 @@ export async function generateMetadata({
   if (!project) return {};
 
   const tSite = await getTranslations(NAMESPACES.SITE);
-  const url = `${BASE_URL}${projectPath(slug)}`;
+  const url = `${SITE_URL}${projectPath(slug)}`;
   const title = `${project.title} - ${project.location}`;
 
   return {

@@ -71,18 +71,50 @@ export default function HeroModel({ card, labels }: HeroModelProps) {
     setExploded(open);
   }, []);
 
-  // Three.js dopiero po hydratacji, w wolnej chwili przegladarki.
+  // Three.js (~1 MB kodu) dopiero, gdy scena jest na ekranie, i w wolnej chwili
+  // przegladarki. Na desktopie model jest obok tresci, wiec startuje od razu;
+  // na telefonie lezy pod trescia hero i laduje sie dopiero po przewinieciu -
+  // nie blokuje watku glownego przy wczytywaniu strony.
   useEffect(() => {
+    const node = stageRef.current;
+    if (!node) return;
+
+    let idleId = 0;
+    let timeoutId = 0;
     const start = () => {
       if (hasWebGL()) setEnabled(true);
       else setUnsupported(true);
     };
-    if ("requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(start, { timeout: 1500 });
-      return () => window.cancelIdleCallback(id);
+    const schedule = () => {
+      if ("requestIdleCallback" in window) {
+        idleId = window.requestIdleCallback(start, { timeout: 1500 });
+      } else {
+        timeoutId = window.setTimeout(start, 600);
+      }
+    };
+    const cancel = () => {
+      if (idleId) window.cancelIdleCallback(idleId);
+      window.clearTimeout(timeoutId);
+    };
+
+    if (typeof IntersectionObserver === "undefined") {
+      schedule();
+      return cancel;
     }
-    const id = setTimeout(start, 600);
-    return () => clearTimeout(id);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        schedule();
+      },
+      { threshold: 0.2 },
+    );
+    observer.observe(node);
+    return () => {
+      observer.disconnect();
+      cancel();
+    };
   }, []);
 
   // Renderowanie tylko wtedy, gdy hero jest na ekranie.

@@ -3,10 +3,8 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
-import { ROUTES } from "@/constants/routes";
+import { SITE_URL, ROUTES } from "@/constants/routes";
 import styles from "../polityka-prywatnosci/page.module.css";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 const COOKIE_CONSENT_KEY = "smarteks_cookies_consent";
 
@@ -16,12 +14,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: `${BASE_URL}${ROUTES.COOKIE_POLICY}` },
+    alternates: { canonical: `${SITE_URL}${ROUTES.COOKIE_POLICY}` },
     robots: { index: false },
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: `${BASE_URL}${ROUTES.COOKIE_POLICY}`,
+      url: `${SITE_URL}${ROUTES.COOKIE_POLICY}`,
       siteName: tSite("name"),
       title: t("pageTitle"),
       description: t("pageDescription"),

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
-import { ROUTES, projectPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, projectPath } from "@/constants/routes";
 import { PROJECTS } from "@/data/projects";
 import { STATS } from "@/data/site";
 import { PageHero } from "@/components/sections/PageHero";
@@ -10,8 +10,6 @@ import { CTA } from "@/components/sections/CTA";
 import styles from "./page.module.css";
 import Odometer from "@/ui/Odometer";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
-
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.PROJECTS);
   const tSite = await getTranslations(NAMESPACES.SITE);
@@ -19,11 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: `${BASE_URL}${ROUTES.PROJECTS}` },
+    alternates: { canonical: `${SITE_URL}${ROUTES.PROJECTS}` },
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: `${BASE_URL}${ROUTES.PROJECTS}`,
+      url: `${SITE_URL}${ROUTES.PROJECTS}`,
       siteName: tSite("name"),
       title: t("pageTitle"),
       description: t("pageDescription"),
@@ -42,7 +40,7 @@ export default async function ProjectsPage() {
       "@type": "ListItem",
       position: index + 1,
       name: project.title,
-      url: `${BASE_URL}${projectPath(project.slug)}`,
+      url: `${SITE_URL}${projectPath(project.slug)}`,
     })),
   };
 

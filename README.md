@@ -140,4 +140,4 @@ Zasady (SEO na pierwszym miejscu):
 | `--color-bg-base` | `#0e0e10` | najciemniejsze tło |
 | `--color-bg-raised` / `--color-bg-surface` | `#121216` / `#17171c` | sekcje i karty |
 | `--color-brand-primary` | `#8e1f3f` | przyciski, akcenty pełne |
-| `--color-brand-accent` | `#e0527a` | drobny tekst akcentowy (kontrast 5:1 na tle bazowym) |
+| `--color-brand-accent` | `#e3587f` | drobny tekst akcentowy (kontrast 5,5:1 na tle bazowym, 4,7:1 na `--color-bg-elevated` - min. WCAG AA 4,5:1) |

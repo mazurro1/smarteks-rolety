@@ -3,7 +3,7 @@ export const COLORS = {
   BRAND_PRIMARY: "#8e1f3f",
   BRAND_PRIMARY_DARK: "#6c1730",
   BRAND_PRIMARY_LIGHT: "#a6254a",
-  BRAND_ACCENT: "#e0527a",
+  BRAND_ACCENT: "#e3587f",
 
   // Surfaces
   BG_BASE: "#0e0e10",

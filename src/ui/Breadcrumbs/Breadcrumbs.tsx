@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ROUTES } from "@/constants/routes";
+import { SITE_URL, ROUTES } from "@/constants/routes";
 import styles from "./Breadcrumbs.module.css";
 
 export interface Crumb {
@@ -14,8 +14,6 @@ interface BreadcrumbsProps {
   homeLabel?: string;
   className?: string;
 }
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 /**
  * Sciezka nawigacyjna wraz z danymi strukturalnymi BreadcrumbList -
@@ -36,7 +34,7 @@ export default function Breadcrumbs({
       "@type": "ListItem",
       position: index + 1,
       name: crumb.label,
-      ...(crumb.href ? { item: `${BASE_URL ?? ""}${crumb.href}` } : {}),
+      ...(crumb.href ? { item: `${SITE_URL}${crumb.href}` } : {}),
     })),
   };
 

@@ -7,7 +7,7 @@
   --color-brand-primary: #8e1f3f;
   --color-brand-primary-dark: #6c1730;
   --color-brand-primary-light: #a6254a;
-  --color-brand-accent: #e0527a; /* small accent text on dark - 5.1:1 */
+  --color-brand-accent: #e3587f; /* small accent text: 5.5:1 on base, 4.7:1 on elevated */
   --color-brand-rgb: 142, 31, 63;
 
   /* Surfaces (darkest → lightest) */
@@ -246,6 +246,16 @@ p {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Ikony Font Awesome (ui/FaIcon) - bazowy styl z fontawesome-svg-core. */
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
 }
 
 :focus-visible {

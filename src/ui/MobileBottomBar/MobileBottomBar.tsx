@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";

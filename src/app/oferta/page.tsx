@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
-import { ROUTES, offerPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS } from "@/data/offer";
 import { GENERIC_INSTALLATION, GENERIC_SERVICE } from "@/data/site";
 import { PageHero } from "@/components/sections/PageHero";
@@ -14,8 +14,6 @@ import Icon from "@/ui/Icon";
 import Reveal from "@/ui/Reveal";
 import styles from "./page.module.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
-
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.OFFER);
   const tSite = await getTranslations(NAMESPACES.SITE);
@@ -23,11 +21,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
-    alternates: { canonical: `${BASE_URL}${ROUTES.OFFER}` },
+    alternates: { canonical: `${SITE_URL}${ROUTES.OFFER}` },
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: `${BASE_URL}${ROUTES.OFFER}`,
+      url: `${SITE_URL}${ROUTES.OFFER}`,
       siteName: tSite("name"),
       title: t("pageTitle"),
       description: t("pageDescription"),

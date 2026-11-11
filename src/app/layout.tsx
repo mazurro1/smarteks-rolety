@@ -1,8 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Geist, Geist_Mono } from "next/font/google";
-config.autoAddCss = false;
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
@@ -15,6 +12,7 @@ import { MobileBottomBar } from "@/ui/MobileBottomBar";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import { ShutterTransition } from "@/components/layout/ShutterTransition";
 import { InteractiveEffects } from "@/components/layout/InteractiveEffects";
+import { SITE_URL } from "@/constants/routes";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -23,19 +21,29 @@ const geistSans = Geist({
   display: "swap",
 });
 
+// Mono tylko w drobnych numerach i etykietach - bez preloadu, zeby nie
+// konkurowal o pasmo ze zdjeciem hero (LCP). Pobiera sie, gdy jest uzyty.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+/** Teksty potrzebne komponentom klienckim - reszta zostaje na serwerze (mniejszy HTML). */
+const CLIENT_NAMESPACES = [
+  NAMESPACES.NAV,
+  NAMESPACES.COMMON,
+  NAMESPACES.COOKIES,
+  NAMESPACES.CONTACT,
+  NAMESPACES.PROJECTS,
+] as const;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.SITE);
 
   return {
-    metadataBase: new URL(BASE_URL ?? "http://localhost:3000"),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("metaTitle"),
       template: t("metaTitleTemplate"),
@@ -69,9 +77,8 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
+    // Canonical ustawia kazda strona sama - tutaj odziedziczylaby go np. strona 404.
     alternates: {
-      canonical: BASE_URL,
-      languages: { "pl-PL": BASE_URL },
       types: {
         "application/rss+xml": [{ url: "/feed.xml", title: t("rssFeedTitle") }],
       },
@@ -79,7 +86,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: "pl_PL",
-      url: BASE_URL,
+      url: SITE_URL,
       siteName: t("name"),
       title: t("ogTitle"),
       description: t("ogDescription"),
@@ -106,8 +113,8 @@ const localBusinessSchema = {
   legalName: CONTACT_INFO.COMPANY_NAME_FULL,
   description:
     "Montaz i serwis rolet zewnetrznych: antywlamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych. Warszawa i okolice.",
-  url: BASE_URL,
-  image: `${BASE_URL}/opengraph-image`,
+  url: SITE_URL,
+  image: `${SITE_URL}/opengraph-image`,
   telephone: CONTACT_INFO.PHONE_HREF,
   email: CONTACT_INFO.EMAIL,
   address: {
@@ -142,6 +149,9 @@ export default async function RootLayout({
 }) {
   const locale = await getLocale();
   const messages = await getMessages();
+  const clientMessages = Object.fromEntries(
+    CLIENT_NAMESPACES.map((namespace) => [namespace, messages[namespace]]),
+  );
 
   return (
     <html
@@ -166,7 +176,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={clientMessages} locale={locale}>
           <ScrollToTop />
           <a href="#main-content" className="skipLink">
             Przejdź do treści

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
-import { ROUTES, SECTION_ANCHORS, offerPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, SECTION_ANCHORS, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS, getOfferProduct, getOfferSlugs } from "@/data/offer";
 import { getProjectsByCategory } from "@/data/projects";
 import { PageHero } from "@/components/sections/PageHero";
@@ -20,8 +20,6 @@ import Button from "@/ui/Button";
 import Icon from "@/ui/Icon";
 import Reveal from "@/ui/Reveal";
 import styles from "./page.module.css";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 interface OfferProductPageProps {
   params: Promise<{ slug: string }>;
@@ -39,7 +37,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   const tSite = await getTranslations(NAMESPACES.SITE);
-  const url = `${BASE_URL}${offerPath(slug)}`;
+  const url = `${SITE_URL}${offerPath(slug)}`;
 
   return {
     title: product.meta.title,
@@ -91,7 +89,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
       { "@type": "City", name: "Warszawa" },
       { "@type": "AdministrativeArea", name: "Mazowieckie" },
     ],
-    url: `${BASE_URL}${offerPath(product.slug)}`,
+    url: `${SITE_URL}${offerPath(product.slug)}`,
   };
 
   return (

@@ -5,19 +5,17 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
-import { ROUTES, blogPath } from "@/constants/routes";
+import { SITE_URL, ROUTES, blogPath } from "@/constants/routes";
 import { getBlogPost, getAllSlugs, getRelatedPosts } from "@/data/blog";
 import { PageHero } from "@/components/sections/PageHero";
 import { PostCard } from "@/components/sections/Blog";
 import Button from "@/ui/Button";
 import Accordion from "@/ui/Accordion";
 import styles from "./page.module.css";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -35,7 +33,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   const tSite = await getTranslations(NAMESPACES.SITE);
-  const url = `${BASE_URL}${blogPath(slug)}`;
+  const url = `${SITE_URL}${blogPath(slug)}`;
 
   return {
     title: post.title,
@@ -54,7 +52,7 @@ export async function generateMetadata({
       authors: [CONTACT_INFO.COMPANY_NAME],
       ...(post.image && {
         images: [
-          { url: `${BASE_URL}${post.image}`, alt: post.imageAlt ?? post.title },
+          { url: `${SITE_URL}${post.image}`, alt: post.imageAlt ?? post.title },
         ],
       }),
     },
@@ -89,7 +87,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const t = await getTranslations(NAMESPACES.BLOG);
   const tCommon = await getTranslations(NAMESPACES.COMMON);
   const related = getRelatedPosts(slug, 3);
-  const url = `${BASE_URL}${blogPath(slug)}`;
+  const url = `${SITE_URL}${blogPath(slug)}`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -101,15 +99,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       "@type": "Organization",
       name: CONTACT_INFO.COMPANY_NAME,
-      url: BASE_URL,
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: CONTACT_INFO.COMPANY_NAME,
-      url: BASE_URL,
+      url: SITE_URL,
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    ...(post.image && { image: `${BASE_URL}${post.image}` }),
+    ...(post.image && { image: `${SITE_URL}${post.image}` }),
     ...(post.keywords && { keywords: post.keywords.join(", ") }),
     inLanguage: "pl-PL",
     isAccessibleForFree: true,

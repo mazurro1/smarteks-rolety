@@ -1,3 +1,12 @@
+/**
+ * Bazowy adres strony (bez koncowego "/") - canonicale, sitemap, robots.txt,
+ * RSS, Open Graph i JSON-LD. Domyslnie domena produkcyjna, bo brak zmiennej
+ * NEXT_PUBLIC_SITE_URL na hostingu dawal adresy "undefined/..." i "localhost".
+ */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://rolety-smarteks.pl"
+).replace(/\/$/, "");
+
 export const ROUTES = {
   HOME: "/",
   OFFER: "/oferta",
