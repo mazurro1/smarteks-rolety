@@ -3,9 +3,24 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/config.ts');
 
+/** Jedyny wlasciwy adres strony - pozostale domeny przekierowuja tutaj kodem 301. */
+const CANONICAL_ORIGIN = 'https://rolety-smarteks.pl';
+const REDIRECTED_HOSTS = ['www.rolety-smarteks.pl', 'smarteks-rolety.vercel.app'];
+
 const nextConfig: NextConfig = {
   // Compress output
   compress: true,
+
+  // Jedna wersja adresu: www i domena Vercel -> rolety-smarteks.pl (301).
+  // Podglady (smarteks-rolety-git-*.vercel.app) maja inne hosty, wiec dzialaja dalej.
+  async redirects() {
+    return REDIRECTED_HOSTS.map((host) => ({
+      source: '/:path*',
+      has: [{ type: 'host' as const, value: host }],
+      destination: `${CANONICAL_ORIGIN}/:path*`,
+      statusCode: 301 as const,
+    }));
+  },
 
   // Security headers
   async headers() {

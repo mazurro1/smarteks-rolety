@@ -11,6 +11,7 @@ import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { SITE_URL, ROUTES, blogPath } from "@/constants/routes";
 import { getBlogPost, getAllSlugs, getRelatedPosts } from "@/data/blog";
+import { BUSINESS_REF, PARENT_ORGANIZATION } from "@/data/schema";
 import { PageHero } from "@/components/sections/PageHero";
 import { PostCard } from "@/components/sections/Blog";
 import Button from "@/ui/Button";
@@ -20,6 +21,9 @@ import styles from "./page.module.css";
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
+
+/** Tylko istniejace wpisy - kazdy inny adres od razu dostaje kod 404. */
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -38,7 +42,6 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.metaDescription,
-    keywords: post.keywords,
     alternates: { canonical: url },
     openGraph: {
       type: "article",
@@ -96,48 +99,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.metaDescription,
     datePublished: post.publishedAt,
     ...(post.updatedAt && { dateModified: post.updatedAt }),
-    author: {
-      "@type": "Organization",
-      name: CONTACT_INFO.COMPANY_NAME,
-      url: SITE_URL,
-    },
+    // Autor i wydawca powiazani przez @id z firma z layoutu i spolka Smarteks.
+    author: BUSINESS_REF,
     publisher: {
-      "@type": "Organization",
-      name: CONTACT_INFO.COMPANY_NAME,
-      url: SITE_URL,
+      "@type": PARENT_ORGANIZATION["@type"],
+      "@id": PARENT_ORGANIZATION["@id"],
+      name: PARENT_ORGANIZATION.name,
+      url: PARENT_ORGANIZATION.url,
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     ...(post.image && { image: `${SITE_URL}${post.image}` }),
-    ...(post.keywords && { keywords: post.keywords.join(", ") }),
+    // Bez "keywords" - z tego samego powodu co meta keywords (zdradza frazy).
     inLanguage: "pl-PL",
     isAccessibleForFree: true,
   };
 
-  const faqSchema =
-    post.faq && post.faq.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: post.faq.map((item) => ({
-            "@type": "Question",
-            name: item.q,
-            acceptedAnswer: { "@type": "Answer", text: item.a },
-          })),
-        }
-      : null;
-
+  // Bez FAQPage - Google pokazuje takie wyniki tylko stronom rzadowym i medycznym.
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
 
       <PageHero
         eyebrow={post.category}
@@ -175,7 +158,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     alt={post.imageAlt ?? post.title}
                     width={1200}
                     height={630}
-                    priority
+                    // Pierwsze zdjecie wpisu to element LCP - preload i wysoki priorytet.
+                    preload
+                    fetchPriority="high"
+                    // Telefon: 400 px x gestosc ekranu = ok. 1200 px; tablet: pelna
+                    // szerokosc; desktop: kolumna tresci ok. 860 px.
+                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 100vw, 860px"
                     className={styles.heroImg}
                     style={
                       post.imagePosition

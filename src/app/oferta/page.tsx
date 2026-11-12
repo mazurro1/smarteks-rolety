@@ -68,7 +68,6 @@ export default async function OfferPage() {
                       position={product.image.position}
                       ratio={index < 2 ? "16/9" : "4/3"}
                       label={product.cardTitle}
-                      priority={index < 2}
                       sizes="(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 40vw"
                       className={styles.mediaFrame}
                     />

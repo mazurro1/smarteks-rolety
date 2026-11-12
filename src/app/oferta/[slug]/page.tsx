@@ -9,6 +9,7 @@ import { CONTACT_INFO } from "@/constants/contact";
 import { SITE_URL, ROUTES, SECTION_ANCHORS, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS, getOfferProduct, getOfferSlugs } from "@/data/offer";
 import { getProjectsByCategory } from "@/data/projects";
+import { getServiceSchema } from "@/data/schema";
 import { PageHero } from "@/components/sections/PageHero";
 import { InstallService } from "@/components/sections/InstallService";
 import { FAQ } from "@/components/sections/FAQ";
@@ -24,6 +25,9 @@ import styles from "./page.module.css";
 interface OfferProductPageProps {
   params: Promise<{ slug: string }>;
 }
+
+/** Tylko slugi z danych - kazdy inny adres od razu dostaje kod 404. */
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getOfferSlugs().map((slug) => ({ slug }));
@@ -42,7 +46,6 @@ export async function generateMetadata({
   return {
     title: product.meta.title,
     description: product.meta.description,
-    keywords: product.meta.keywords,
     alternates: { canonical: url },
     openGraph: {
       type: "website",
@@ -66,31 +69,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
   const relatedProjects = getProjectsByCategory(product.projectCategories, 3);
   const otherProducts = OFFER_PRODUCTS.filter((item) => item.slug !== product.slug);
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: product.title,
-    description: product.meta.description,
-    serviceType: product.title,
-    provider: {
-      "@type": "LocalBusiness",
-      name: CONTACT_INFO.COMPANY_NAME,
-      telephone: CONTACT_INFO.PHONE_HREF,
-      email: CONTACT_INFO.EMAIL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: CONTACT_INFO.ADDRESS_STREET,
-        addressLocality: "Warszawa",
-        postalCode: "03-228",
-        addressCountry: "PL",
-      },
-    },
-    areaServed: [
-      { "@type": "City", name: "Warszawa" },
-      { "@type": "AdministrativeArea", name: "Mazowieckie" },
-    ],
-    url: `${SITE_URL}${offerPath(product.slug)}`,
-  };
+  const serviceSchema = getServiceSchema(product);
 
   return (
     <>

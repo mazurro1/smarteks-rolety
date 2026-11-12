@@ -49,7 +49,7 @@ export const SOMFY_IMAGES = {
   },
   roundTransmitterTable: {
     src: `${DIR}/nadajnik-somfy-na-stole-roleta.jpg`,
-    alt: "Dłoń na okrągłym nadajniku Somfy położonym na stole przy oknie z roletą zewnętrzną",
+    alt: "Nadajnik Somfy na stole, w tle okno z roletą zewnętrzną",
   },
   livingRoomShutter: {
     src: `${DIR}/salon-roleta-zewnetrzna-somfy-smoove.jpg`,
@@ -57,15 +57,15 @@ export const SOMFY_IMAGES = {
   },
   wallSwitchGate: {
     src: `${DIR}/nadajnik-somfy-elewacja-brama.jpg`,
-    alt: "Dłoń naciskająca naścienny nadajnik Somfy na elewacji, w tle brama wjazdowa",
+    alt: "Naścienny nadajnik Somfy na elewacji, w tle brama",
   },
   keyfobGate: {
     src: `${DIR}/brelok-somfy-brama-wjazdowa.jpg`,
-    alt: "Brelok Somfy w dłoni przed szarą bramą wjazdową",
+    alt: "Brelok Somfy w dłoni, w tle brama wjazdowa",
   },
   tahomaHallway: {
     src: `${DIR}/somfy-tahoma-switch-smoove-przedpokoj.jpg`,
-    alt: "Centrala Somfy TaHoma switch na konsoli i nadajnik Somfy Smoove na ścianie",
+    alt: "Centrala Somfy TaHoma switch i nadajnik Somfy Smoove w przedpokoju",
   },
   blackSwitchFacade: {
     src: `${DIR}/czarny-nadajnik-somfy-elewacja.jpg`,
@@ -73,11 +73,11 @@ export const SOMFY_IMAGES = {
   },
   remoteWindow: {
     src: `${DIR}/pilot-somfy-situo-5-okno.jpg`,
-    alt: "Pilot Somfy Situo 5 skierowany na okno z opuszczoną osłoną",
+    alt: "Pilot Somfy Situo 5 na tle okna",
   },
   remoteTerraceWindow: {
     src: `${DIR}/pilot-somfy-situo-5-roleta-okno-tarasowe.jpg`,
-    alt: "Sterowanie roletą zewnętrzną okna tarasowego pilotem Somfy Situo 5",
+    alt: "Pilot Somfy Situo 5 na tle rolety zewnętrznej w oknie tarasowym",
   },
   sensorsPergolaHouse: {
     src: `${DIR}/czujniki-somfy-pergola-dom.jpg`,
@@ -85,23 +85,23 @@ export const SOMFY_IMAGES = {
   },
   rainSensor: {
     src: `${DIR}/czujnik-deszczu-somfy-pergola.jpg`,
-    alt: "Czujnik deszczu Somfy na belce pergoli w czasie opadów",
+    alt: "Czujnik deszczu Somfy na konstrukcji pergoli",
   },
   sunSensorPergola: {
     src: `${DIR}/czujnik-slonca-somfy-pergola.jpg`,
-    alt: "Czujnik nasłonecznienia Somfy na belce pergoli na tle nieba",
+    alt: "Czujnik słońca Somfy na konstrukcji pergoli",
   },
   windSensorPergola: {
     src: `${DIR}/czujnik-wiatru-somfy-pergola.jpg`,
-    alt: "Czujnik wiatru Somfy z wiatraczkiem na krawędzi pergoli",
+    alt: "Czujnik wiatru Somfy na konstrukcji pergoli",
   },
   smooveTerrace: {
     src: `${DIR}/somfy-smoove-wyjscie-na-taras.jpg`,
-    alt: "Dłoń na naściennym nadajniku Somfy Smoove przy wyjściu na taras",
+    alt: "Naścienny nadajnik Somfy Smoove przy wyjściu na taras",
   },
   smooveWhiteWall: {
     src: `${DIR}/somfy-smoove-biala-sciana.jpg`,
-    alt: "Naścienny nadajnik Somfy Smoove na białej ścianie w smudze słońca",
+    alt: "Naścienny nadajnik Somfy Smoove na białej ścianie",
   },
   situoWallHolder: {
     src: `${DIR}/pilot-somfy-situo-5-uchwyt-scienny.jpg`,
@@ -109,11 +109,11 @@ export const SOMFY_IMAGES = {
   },
   sunSensorWindow: {
     src: `${DIR}/czujnik-slonca-somfy-okno.jpg`,
-    alt: "Czujnik nasłonecznienia Somfy na ścianie obok okna z kasetą osłony",
+    alt: "Czujnik słońca Somfy przy oknie",
   },
   facadeScreenSensor: {
     src: `${DIR}/elewacja-oslona-czujnik-somfy.jpg`,
-    alt: "Elewacja z zewnętrzną osłoną w kasecie i czujnikiem Somfy obok numeru domu",
+    alt: "Elewacja budynku z osłoną okna i czujnikiem Somfy",
   },
   bedroomSunProtect: {
     src: `${DIR}/sypialnia-somfy-smoove-sun-protect.jpg`,
@@ -125,7 +125,7 @@ export const SOMFY_IMAGES = {
   },
   roundTransmitterBook: {
     src: `${DIR}/okragly-nadajnik-somfy-stol.jpg`,
-    alt: "Okrągły nadajnik Somfy na stole w świetle przechodzącym przez pancerz rolety",
+    alt: "Okrągły nadajnik Somfy na stole",
   },
 } satisfies Record<string, MediaImage>;
 

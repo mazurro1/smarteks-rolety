@@ -19,6 +19,14 @@
   animation: fadeIn var(--transition-base) both;
 }
 
+/* Decyzja juz zapisana - klasa z <head> layoutu ukrywa baner przed hydracja.
+   Bez JS przyciski nie dzialaja, a strona nie zapisuje cookies - baner zbedny.
+   Nazwy klas: COOKIES_DECIDED_CLASS w src/constants/cookies.ts i flaga "js" w layoucie. */
+:global(html.cookies-ok) .banner,
+:global(html:not(.js)) .banner {
+  display: none;
+}
+
 .text {
   flex: 1;
   min-width: 260px;

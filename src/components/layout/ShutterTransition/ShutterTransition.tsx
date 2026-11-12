@@ -95,7 +95,10 @@ export default function ShutterTransition() {
   }, [phase, router]);
 
   return (
-    <div className={`${styles.overlay} ${styles[phase]}`} aria-hidden="true">
+    <div
+      className={[styles.overlay, styles[phase]].filter(Boolean).join(" ")}
+      aria-hidden="true"
+    >
       <div className={styles.curtain}>
         <span className={styles.brand}>
           Smarteks <span className={styles.brandAccent}>Rolety</span>

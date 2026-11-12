@@ -25,6 +25,9 @@ interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
 
+/** Tylko istniejace realizacje - kazdy inny adres od razu dostaje kod 404. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
 }

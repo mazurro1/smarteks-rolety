@@ -7,7 +7,11 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
-import { CONTACT_INFO, SERVICE_CITIES } from "@/constants/contact";
+import {
+  CONTACT_INFO,
+  COMPANY_LEGAL_LINE,
+  SERVICE_CITIES,
+} from "@/constants/contact";
 import { ROUTES, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS } from "@/data/offer";
 import Button from "@/ui/Button";
@@ -23,6 +27,13 @@ export async function Footer() {
     { href: ROUTES.CONTACT, label: tFooter("links.contact") },
     { href: ROUTES.PRIVACY_POLICY, label: tFooter("links.privacyPolicy") },
     { href: ROUTES.COOKIE_POLICY, label: tFooter("links.cookiePolicy") },
+  ];
+
+  /** Serwisy firmy Smarteks i profil w Google - otwierane w nowej karcie. */
+  const externalLinks = [
+    { href: CONTACT_INFO.BARRIERS_SITE_URL, label: tFooter("links.barriersSite") },
+    { href: CONTACT_INFO.MAIN_SITE_URL, label: tFooter("links.mainSite") },
+    { href: CONTACT_INFO.GOOGLE_REVIEWS_URL, label: tFooter("links.googleReviews") },
   ];
 
   return (
@@ -85,16 +96,18 @@ export async function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href={CONTACT_INFO.BARRIERS_SITE_URL}
-                  className={styles.colLink}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {tFooter("links.barriersSite")} &#8599;
-                </a>
-              </li>
+              {externalLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className={styles.colLink}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {link.label} &#8599;
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -122,7 +135,8 @@ export async function Footer() {
 
         <div className={styles.bottom}>
           <p>{tFooter("copyright", { year: new Date().getFullYear() })}</p>
-          <p className={styles.company}>{CONTACT_INFO.COMPANY_NAME}</p>
+          {/* Dane spolki wymagane na stronie (art. 206 KSH). */}
+          <p className={styles.company}>{COMPANY_LEGAL_LINE}</p>
         </div>
       </div>
     </footer>

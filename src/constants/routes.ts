@@ -1,11 +1,9 @@
 /**
- * Bazowy adres strony (bez koncowego "/") - canonicale, sitemap, robots.txt,
- * RSS, Open Graph i JSON-LD. Domyslnie domena produkcyjna, bo brak zmiennej
- * NEXT_PUBLIC_SITE_URL na hostingu dawal adresy "undefined/..." i "localhost".
+ * Bazowy adres strony (bez koncowego "/") - metadataBase, canonicale, sitemap,
+ * RSS, Open Graph i JSON-LD. Stala w kodzie, nie zmienna srodowiskowa: brak
+ * zmiennej na hostingu dawal adresy "undefined/..." i "localhost:3000".
  */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://rolety-smarteks.pl"
-).replace(/\/$/, "");
+export const SITE_URL = "https://rolety-smarteks.pl";
 
 export const ROUTES = {
   HOME: "/",

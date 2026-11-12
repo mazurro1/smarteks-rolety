@@ -104,7 +104,6 @@ export interface OfferProduct {
   meta: {
     title: string;
     description: string;
-    keywords: string[];
   };
   /** Kategorie realizacji powiazane z produktem. */
   projectCategories: ProjectCategory[];

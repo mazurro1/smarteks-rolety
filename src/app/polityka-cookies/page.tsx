@@ -4,9 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { SITE_URL, ROUTES } from "@/constants/routes";
+import { COOKIE_CONSENT_KEY } from "@/constants/cookies";
 import styles from "../polityka-prywatnosci/page.module.css";
-
-const COOKIE_CONSENT_KEY = "smarteks_cookies_consent";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations(NAMESPACES.COOKIE_POLICY);
@@ -15,7 +14,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("pageTitle"),
     description: t("pageDescription"),
     alternates: { canonical: `${SITE_URL}${ROUTES.COOKIE_POLICY}` },
-    robots: { index: false },
     openGraph: {
       type: "website",
       locale: "pl_PL",

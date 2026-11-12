@@ -86,7 +86,9 @@ export default function HeroModel({ card, labels }: HeroModelProps) {
       else setUnsupported(true);
     };
     const schedule = () => {
-      if ("requestIdleCallback" in window) {
+      // typeof zamiast "in": "in" zaweza window do never w galezi else (TS2339),
+      // a Safari < 16.4 nie ma requestIdleCallback.
+      if (typeof window.requestIdleCallback === "function") {
         idleId = window.requestIdleCallback(start, { timeout: 1500 });
       } else {
         timeoutId = window.setTimeout(start, 600);

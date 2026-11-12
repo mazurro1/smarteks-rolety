@@ -151,13 +151,6 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       title: "Rolety antywłamaniowe RC2 - montaż i serwis Warszawa",
       description:
         "Certyfikowane rolety antywłamaniowe klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach. Protokół montażu dla ubezpieczyciela.",
-      keywords: [
-        "rolety antywlamaniowe RC2",
-        "rolety RC2 Warszawa",
-        "rolety antywlamaniowe montaz",
-        "rolety zewnetrzne antywlamaniowe",
-        "certyfikat RC2 PN-EN 1627",
-      ],
     },
     projectCategories: ["rc2"],
   },
@@ -305,13 +298,6 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       title: "Rolety antywłamaniowe RC3 - najwyższa klasa ochrony, Warszawa",
       description:
         "Rolety antywłamaniowe klasy RC3 z profili ekstrudowanych. Certyfikat PN-EN 1627, ryglowanie wielopunktowe, montaż i serwis w Warszawie i okolicach.",
-      keywords: [
-        "rolety antywlamaniowe RC3",
-        "rolety RC3 Warszawa",
-        "rolety antywlamaniowe willa",
-        "rolety klasa RC3 certyfikat",
-        "zabezpieczenie okien RC3",
-      ],
     },
     projectCategories: ["rc3"],
   },
@@ -458,13 +444,6 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       title: "Rolety adaptacyjne - regulacja światła, montaż Warszawa",
       description:
         "Rolety adaptacyjne z uchylnymi profilami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
-      keywords: [
-        "rolety adaptacyjne",
-        "rolety adaptacyjne Warszawa",
-        "rolety zewnetrzne regulacja swiatla",
-        "rolety adaptacyjne montaz",
-        "rolety zewnetrzne przeciwsloneczne",
-      ],
     },
     projectCategories: ["adaptive"],
   },
@@ -611,13 +590,6 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       title: "Rolety podtynkowe - skrzynka ukryta w elewacji, Warszawa",
       description:
         "Rolety podtynkowe montowane w warstwie ocieplenia i nadprożu. Bez mostka termicznego, z rewizją od wewnątrz. Doradztwo na etapie budowy, montaż i serwis.",
-      keywords: [
-        "rolety podtynkowe",
-        "rolety podtynkowe Warszawa",
-        "rolety w warstwie ocieplenia",
-        "skrzynka rolety nadprozowa",
-        "rolety zewnetrzne nowy dom",
-      ],
     },
     projectCategories: ["recessed"],
   },
@@ -764,13 +736,6 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       title: "Bramy rolowane - montaż i serwis, Warszawa i okolice",
       description:
         "Bramy rolowane garażowe i obiektowe: praca przy niskim nadprożu, napęd z otwieraniem awaryjnym, fotokomórki i listwa krawędziowa. Montaż, serwis, naprawy.",
-      keywords: [
-        "bramy rolowane",
-        "bramy rolowane Warszawa",
-        "brama garazowa rolowana",
-        "montaz bram rolowanych",
-        "serwis bram rolowanych",
-      ],
     },
     projectCategories: ["rollerGates"],
   },

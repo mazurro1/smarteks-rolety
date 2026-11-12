@@ -24,7 +24,8 @@ export async function Hero() {
           fill
           preload
           fetchPriority="high"
-          sizes="100vw"
+          // Telefon: 400 px x gestosc ekranu = ok. 1200 px (tlo jest i tak przyciemnione).
+          sizes="(max-width: 767px) 400px, 100vw"
           quality={90}
           className={styles.backdropImage}
           style={{ objectPosition: HERO_IMAGE.position }}
@@ -33,11 +34,7 @@ export async function Hero() {
       <div className={styles.shade} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
-          <p className={styles.badge}>
-            <span className={styles.badgeDot} aria-hidden="true" />
-            {t("badge")}
-          </p>
-
+          {/* H1 jako pierwszy element - "Warszawa i okolice" jest w pasku zaufania. */}
           <h1 id="hero-heading" className={styles.heading}>
             {t("headingLine1")}{" "}
             <span className={styles.headingAccent}>{t("headingAccent")}</span>

@@ -77,12 +77,8 @@ export default function ProjectsExplorer({ projects }: ProjectsExplorerProps) {
         <p className={styles.empty}>{t("empty")}</p>
       ) : (
         <div className={styles.grid}>
-          {filtered.map((project, index) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              priority={index < 3}
-            />
+          {filtered.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       )}

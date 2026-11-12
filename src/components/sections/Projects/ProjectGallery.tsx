@@ -61,7 +61,6 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
           position={current.position}
           ratio="16/9"
           label={current.caption}
-          priority
           sizes="(max-width: 1023px) 100vw, 66vw"
         />
 
@@ -114,9 +113,11 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
               aria-label={`${t("goToSlide")} ${thumbIndex + 1}`}
               aria-current={thumbIndex === index}
             >
+              {/* Alt na miniaturze - kolejne zdjecia galerii sa w HTML tylko tutaj,
+                  wiec bez niego Google widzi je jako obrazy bez opisu. */}
               <MediaFrame
                 src={image.src}
-                alt=""
+                alt={image.alt}
                 position={image.position}
                 ratio="4/3"
                 sizes="120px"

@@ -1,0 +1,42 @@
+# robots.txt - rolety-smarteks.pl
+#
+# Zasada: wyszukiwarki i asystenci AI maja dostep do calej publicznej tresci.
+# Blokujemy tylko techniczne adresy API. Katalogu /_next/ NIE blokujemy -
+# Google potrzebuje skryptow i stylow, zeby poprawnie wyswietlic strone.
+# robots.txt to prosba do botow, a nie zabezpieczenie danych.
+#
+# Grupa ponizej (jedne zasady dla wszystkich):
+#  - wyszukiwarki: Googlebot, Bingbot (z Bing korzysta m.in. ChatGPT i Copilot), DuckDuckBot, Applebot
+#  - wyszukiwarki i asystenci AI, ktore cytuja zrodla: OAI-SearchBot i ChatGPT-User (ChatGPT),
+#    Claude-SearchBot i Claude-User (Claude), PerplexityBot i Perplexity-User (Perplexity),
+#    DuckAssistBot (DuckDuckGo), MistralAI-User (Mistral)
+#  - boty uczace modele AI (dzieki nim modele znaja marke): GPTBot, ClaudeBot,
+#    Google-Extended (Gemini), Applebot-Extended, meta-externalagent, Amazonbot, CCBot
+#    Jesli klient nie chce, zeby tresc sluzyla do uczenia modeli, przenies te boty
+#    do osobnej grupy z "Disallow: /". Nie wplynie to na wyniki wyszukiwania ani cytowania.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: CCBot
+Disallow: /api/
+
+# Pozostale boty
+User-agent: *
+Disallow: /api/
+
+Sitemap: https://rolety-smarteks.pl/sitemap.xml

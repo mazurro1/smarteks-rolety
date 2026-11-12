@@ -92,7 +92,6 @@ export default async function BlogPage() {
                       src={featured.image}
                       alt={featured.imageAlt ?? featured.title}
                       fill
-                      priority
                       sizes="(max-width: 1023px) 100vw, 420px"
                       className={styles.featuredImage}
                       style={

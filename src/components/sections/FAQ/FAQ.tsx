@@ -14,32 +14,23 @@ interface FAQProps {
   title?: string;
   lead?: string;
   idPrefix?: string;
-  /** Dane strukturalne FAQPage - wylaczamy, gdy na stronie jest juz inny blok FAQ. */
-  withSchema?: boolean;
   columns?: 1 | 2;
 }
 
+/**
+ * Sekcja pytan i odpowiedzi. Bez danych strukturalnych FAQPage - Google
+ * pokazuje takie wyniki tylko stronom rzadowym i medycznym.
+ */
 export async function FAQ({
   items,
   eyebrow,
   title,
   lead,
   idPrefix = "faq",
-  withSchema = true,
   columns = 2,
 }: FAQProps) {
   const t = await getTranslations(NAMESPACES.FAQ);
   const faqItems = items ?? HOME_FAQ;
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
 
   return (
     <section
@@ -47,12 +38,6 @@ export async function FAQ({
       id={SECTION_ANCHORS.FAQ}
       aria-labelledby={`${idPrefix}-heading`}
     >
-      {withSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      )}
       <div className="container">
         <SectionHeader
           eyebrow={eyebrow ?? t("eyebrow")}

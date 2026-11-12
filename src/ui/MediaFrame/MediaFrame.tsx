@@ -13,7 +13,6 @@ interface MediaFrameProps {
   label?: string;
   /** Kadr zdjecia (CSS object-position), np. "center 30%". */
   position?: string;
-  priority?: boolean;
   sizes?: string;
   className?: string;
   /** Odslanianie jak roleta przy wejsciu w ekran (domyslnie tak; wylaczone np. w miniaturach). */
@@ -40,7 +39,6 @@ export default function MediaFrame({
   ratio = "4/3",
   label,
   position,
-  priority = false,
   sizes = "(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 33vw",
   className = "",
   reveal = true,
@@ -59,7 +57,6 @@ export default function MediaFrame({
           alt={alt}
           fill
           sizes={sizes}
-          priority={priority}
           className={styles.image}
           style={position ? { objectPosition: position } : undefined}
         />

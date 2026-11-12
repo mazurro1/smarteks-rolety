@@ -18,15 +18,12 @@ import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {
   project: Project;
-  priority?: boolean;
 }
 
 const SWIPE_THRESHOLD = 40;
 
-export default function ProjectCard({
-  project,
-  priority = false,
-}: ProjectCardProps) {
+/** Karty realizacji sa ponizej naglowka - zdjecia laduja sie leniwie. */
+export default function ProjectCard({ project }: ProjectCardProps) {
   const t = useTranslations(`${NAMESPACES.PROJECTS}.card`);
   const [index, setIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
@@ -72,7 +69,6 @@ export default function ProjectCard({
           position={current.position}
           ratio="4/3"
           label={current.caption}
-          priority={priority && index === 0}
           sizes="(max-width: 767px) 100vw, (max-width: 1239px) 50vw, 33vw"
           className={styles.frame}
         />

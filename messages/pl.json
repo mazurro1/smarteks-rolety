@@ -51,7 +51,6 @@
   },
 
   "hero": {
-    "badge": "Warszawa i okolice",
     "headingLine1": "Rolety, które robią różnicę.",
     "headingAccent": "Bezpieczeństwo, cisza, komfort.",
     "lead": "Certyfikowane rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne, podtynkowe i bramy rolowane. Mierzymy, montujemy i serwisujemy - od pierwszego pomiaru po przegląd w piątym roku.",
@@ -272,12 +271,14 @@
     "infoTitle": "Zadzwoń, napisz albo wypełnij formularz",
     "infoLead": "Najszybciej odezwiemy się, gdy zadzwonisz. Wstępne wymiary do wyceny możesz przesłać przez formularz lub e-mailem - odpowiadamy w ciągu jednego dnia roboczego.",
     "areaTitle": "Dojeżdżamy do",
+    "companyTitle": "Dane firmy",
+    "shareCapital": "Kapitał zakładowy: {amount}",
+    "googleReviews": "Zobacz opinie o Smarteks w Google",
 
     "formTitle": "Bezpłatna wycena",
     "formSubtitle": "Podaj wstępne wymiary okien - przygotujemy wstępną wycenę i odezwiemy się w ciągu 24 godzin.",
     "formAriaLabel": "Formularz kontaktowy",
-    "privacyNote": "Wysyłając formularz akceptujesz",
-    "privacyLinkLabel": "politykę prywatności",
+    "privacyClause": "Administratorem danych podanych w formularzu jest {company}, {address}, KRS {krs}, NIP {nip}, {email}. Dane przetwarzamy wyłącznie w celu odpowiedzi na zapytanie - szczegóły w <link>polityce prywatności</link>.",
 
     "topics": {
       "rc2": "Rolety antywłamaniowe RC2",
@@ -348,7 +349,9 @@
       "contact": "Kontakt",
       "privacyPolicy": "Polityka prywatności",
       "cookiePolicy": "Polityka cookies",
-      "barriersSite": "Szlabany parkingowe"
+      "barriersSite": "Szlabany parkingowe",
+      "mainSite": "Smarteks – pełna oferta",
+      "googleReviews": "Opinie w Google"
     }
   },
 
@@ -366,9 +369,9 @@
     "breadcrumbAriaLabel": "Nawigacja okruszkowa",
     "breadcrumbHome": "Start",
     "title": "Polityka prywatności",
-    "lastUpdated": "Ostatnia aktualizacja: 1 września 2026",
+    "lastUpdated": "Ostatnia aktualizacja: 12 listopada 2026",
     "section1Title": "1. Administrator danych osobowych",
-    "section1Body": "Administratorem Twoich danych osobowych jest <company>{companyName}</company>, z siedzibą pod adresem {address}. Kontakt: <emailLink>{email}</emailLink>, tel. <phoneLink>{phone}</phoneLink>.",
+    "section1Body": "Administratorem Twoich danych osobowych jest <company>{companyName}</company>, {address}, KRS {krs}, NIP {nip}. Kontakt: <emailLink>{email}</emailLink>, tel. <phoneLink>{phone}</phoneLink>.",
     "section2Title": "2. Jakie dane zbieramy",
     "section2Intro": "Za pośrednictwem formularza kontaktowego zbieramy następujące dane:",
     "section2Items": [

@@ -32,11 +32,10 @@ export async function OfferIndex() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  {/* Miniatura dekoracyjna - nazwa produktu jest w tekscie linku. */}
                   <span className={styles.thumb}>
                     <Image
                       src={product.image.src}
-                      alt=""
+                      alt={product.image.alt}
                       fill
                       sizes="(max-width: 599px) 88px, 144px"
                       className={styles.thumbImage}

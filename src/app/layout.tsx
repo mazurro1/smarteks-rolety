@@ -13,6 +13,8 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 import { ShutterTransition } from "@/components/layout/ShutterTransition";
 import { InteractiveEffects } from "@/components/layout/InteractiveEffects";
 import { SITE_URL } from "@/constants/routes";
+import { BUSINESS_SCHEMA } from "@/data/schema";
+import { COOKIE_CONSENT_KEY, COOKIES_DECIDED_CLASS } from "@/constants/cookies";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -25,7 +27,7 @@ const geistSans = Geist({
 // konkurowal o pasmo ze zdjeciem hero (LCP). Pobiera sie, gdy jest uzyty.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   preload: false,
 });
@@ -49,20 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: t("metaTitleTemplate"),
     },
     description: t("metaDescription"),
-    keywords: [
-      "rolety zewnetrzne Warszawa",
-      "rolety antywlamaniowe RC2",
-      "rolety antywlamaniowe RC3",
-      "rolety adaptacyjne",
-      "rolety podtynkowe",
-      "bramy rolowane Warszawa",
-      "montaz rolet Warszawa",
-      "serwis rolet Warszawa",
-      "rolety elektryczne",
-      "oslony przeciwsloneczne",
-      "rolety na wymiar",
-      "przeglad rolet",
-    ],
+    // Bez meta keywords - Google ich nie uzywa, a zdradzaja konkurencji docelowe frazy.
     authors: [{ name: CONTACT_INFO.COMPANY_NAME }],
     creator: CONTACT_INFO.COMPANY_NAME,
     publisher: CONTACT_INFO.COMPANY_NAME,
@@ -106,42 +95,6 @@ export const viewport: Viewport = {
   themeColor: COLORS.BG_BASE,
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: CONTACT_INFO.BRAND_NAME,
-  legalName: CONTACT_INFO.COMPANY_NAME_FULL,
-  description:
-    "Montaz i serwis rolet zewnetrznych: antywlamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych. Warszawa i okolice.",
-  url: SITE_URL,
-  image: `${SITE_URL}/opengraph-image`,
-  telephone: CONTACT_INFO.PHONE_HREF,
-  email: CONTACT_INFO.EMAIL,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Warszawa",
-    addressCountry: "PL",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 52.2297,
-    longitude: 21.0122,
-  },
-  areaServed: [
-    { "@type": "City", name: "Warszawa" },
-    { "@type": "AdministrativeArea", name: "Mazowieckie" },
-  ],
-  serviceType: [
-    "Montaz rolet antywlamaniowych RC2",
-    "Montaz rolet antywlamaniowych RC3",
-    "Montaz rolet adaptacyjnych",
-    "Montaz rolet podtynkowych",
-    "Montaz i serwis bram rolowanych",
-  ],
-  priceRange: "$$",
-  sameAs: [],
-};
-
 export default async function RootLayout({
   children,
 }: {
@@ -161,17 +114,19 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
-        {/* Flaga JS przed pierwszym malowaniem: stany startowe animacji (np. roleta
-            zaslaniajaca zdjecie) dzialaja tylko z JS - bez niego tresc jest widoczna. */}
+        {/* Flagi przed pierwszym malowaniem: "js" - stany startowe animacji (np. roleta
+            zaslaniajaca zdjecie) dzialaja tylko z JS, bez niego tresc jest widoczna;
+            "cookies-ok" - decyzja o cookies juz zapisana, baner z HTML ma sie nie pokazac. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
+            // Decyzja z localStorage albo z cookie (zapas, gdy localStorage jest zablokowany).
+            __html: `(function(d){d.classList.add('js');var k='${COOKIE_CONSENT_KEY}',s=null;try{s=localStorage.getItem(k)}catch(e){}if(s||document.cookie.indexOf(k+'=')>-1)d.classList.add('${COOKIES_DECIDED_CLASS}')})(document.documentElement)`,
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify(BUSINESS_SCHEMA),
           }}
         />
       </head>

@@ -7,7 +7,12 @@ import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { NAMESPACES } from "@/constants/namespaces";
-import { CONTACT_INFO, CONTACT_TOPICS, SERVICE_CITIES } from "@/constants/contact";
+import {
+  CONTACT_INFO,
+  COMPANY_REGISTRY,
+  CONTACT_TOPICS,
+  SERVICE_CITIES,
+} from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";
 import type { ContactFormValues, FormStatus } from "@/types";
 import styles from "./ContactForm.module.css";
@@ -266,6 +271,30 @@ export function ContactForm() {
               ))}
             </div>
 
+            {/* Dane spolki wymagane na stronie (art. 206 KSH) - te same co w stopce. */}
+            <div className={styles.companyCard}>
+              <p className={styles.areaTitle}>{t("companyTitle")}</p>
+              <address className={styles.companyData}>
+                <strong>{CONTACT_INFO.COMPANY_NAME}</strong>
+                <span>{CONTACT_INFO.ADDRESS_FULL}</span>
+                <span>{COMPANY_REGISTRY.COURT}</span>
+                <span>
+                  KRS {COMPANY_REGISTRY.KRS} · NIP {COMPANY_REGISTRY.NIP}
+                </span>
+                <span>
+                  {t("shareCapital", { amount: COMPANY_REGISTRY.SHARE_CAPITAL })}
+                </span>
+              </address>
+              <a
+                href={CONTACT_INFO.GOOGLE_REVIEWS_URL}
+                className={styles.reviewsLink}
+                target="_blank"
+                rel="noopener"
+              >
+                {t("googleReviews")}
+              </a>
+            </div>
+
             <div className={styles.areaCard}>
               <p className={styles.areaTitle}>{t("areaTitle")}</p>
               <p className={styles.areaCities}>{SERVICE_CITIES.join(" · ")}</p>
@@ -466,11 +495,16 @@ export function ContactForm() {
                       {status === "submitting" ? tForm("sending") : tForm("submit")}
                     </button>
                     <p className={styles.privacy}>
-                      {t("privacyNote")}{" "}
-                      <Link href={ROUTES.PRIVACY_POLICY}>
-                        {t("privacyLinkLabel")}
-                      </Link>
-                      .
+                      {t.rich("privacyClause", {
+                        company: CONTACT_INFO.COMPANY_NAME,
+                        address: CONTACT_INFO.ADDRESS_FULL,
+                        krs: COMPANY_REGISTRY.KRS,
+                        nip: COMPANY_REGISTRY.NIP,
+                        email: CONTACT_INFO.EMAIL,
+                        link: (chunks) => (
+                          <Link href={ROUTES.PRIVACY_POLICY}>{chunks}</Link>
+                        ),
+                      })}
                     </p>
                   </div>
                 </div>

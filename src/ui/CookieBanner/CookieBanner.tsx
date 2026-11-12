@@ -5,29 +5,53 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { NAMESPACES } from "@/constants/namespaces";
 import { ROUTES } from "@/constants/routes";
+import { COOKIE_CONSENT_KEY } from "@/constants/cookies";
 import styles from "./CookieBanner.module.css";
 
-const COOKIE_CONSENT_KEY = "smarteks_cookies_consent";
+/**
+ * Baner jest w HTML z serwera, wiec pokazuje sie od razu - bez czekania na JS
+ * (pozno doklejony baner potrafi zostac elementem LCP na telefonie).
+ * Osobom, ktore juz zdecydowaly, ukrywa go klasa "cookies-ok" ustawiana
+ * w <head> layoutu przed pierwszym malowaniem - bez migniecia.
+ */
+/**
+ * Decyzja z localStorage, a gdy go brak - z cookie. localStorage bywa
+ * zablokowany (tryb prywatny, ustawienia) i wtedy rzuca wyjatek.
+ */
+const readConsent = (): boolean => {
+  try {
+    if (localStorage.getItem(COOKIE_CONSENT_KEY)) return true;
+  } catch {
+    // Sprawdzamy cookie ponizej.
+  }
+  return document.cookie.includes(`${COOKIE_CONSENT_KEY}=`);
+};
+
+const saveConsent = (value: "accepted" | "rejected") => {
+  try {
+    localStorage.setItem(COOKIE_CONSENT_KEY, value);
+  } catch {
+    // Zostaje sam cookie ponizej.
+  }
+  document.cookie = `${COOKIE_CONSENT_KEY}=${value}; path=/; max-age=${60 * 60 * 24 * 365}`;
+};
 
 export function CookieBanner() {
   const t = useTranslations(NAMESPACES.COOKIES);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (!consent) setVisible(true);
+    if (readConsent()) setVisible(false);
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
-    document.cookie = `${COOKIE_CONSENT_KEY}=accepted; path=/; max-age=${60 * 60 * 24 * 365}`;
+    saveConsent("accepted");
     setVisible(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, "rejected");
-    document.cookie = `${COOKIE_CONSENT_KEY}=rejected; path=/; max-age=${60 * 60 * 24 * 365}`;
+    saveConsent("rejected");
     setVisible(false);
   };
 

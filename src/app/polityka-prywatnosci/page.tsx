@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
-import { CONTACT_INFO } from "@/constants/contact";
+import { CONTACT_INFO, COMPANY_REGISTRY } from "@/constants/contact";
 import { SITE_URL, ROUTES } from "@/constants/routes";
 import styles from "./page.module.css";
 
@@ -13,7 +13,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("pageTitle"),
     description: t("pageDescription"),
     alternates: { canonical: `${SITE_URL}${ROUTES.PRIVACY_POLICY}` },
-    robots: { index: false },
     openGraph: {
       type: "website",
       locale: "pl_PL",
@@ -41,8 +40,10 @@ export default async function PrivacyPolicyPage() {
           <h2>{t("section1Title")}</h2>
           <p>
             {t.rich("section1Body", {
-              companyName: CONTACT_INFO.COMPANY_NAME_FULL,
+              companyName: CONTACT_INFO.COMPANY_NAME,
               address: CONTACT_INFO.ADDRESS_FULL,
+              krs: COMPANY_REGISTRY.KRS,
+              nip: COMPANY_REGISTRY.NIP,
               email: CONTACT_INFO.EMAIL,
               phone: CONTACT_INFO.PHONE,
               company: (chunks) => <strong>{chunks}</strong>,

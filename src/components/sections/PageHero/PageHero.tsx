@@ -35,7 +35,8 @@ export function PageHero({
           fill
           preload
           fetchPriority="high"
-          sizes="100vw"
+          // Telefon: 400 px x gestosc ekranu = ok. 1200 px (tlo jest i tak przyciemnione).
+          sizes="(max-width: 767px) 400px, 100vw"
           quality={90}
           className={styles.backdropImage}
           style={image.position ? { objectPosition: image.position } : undefined}
@@ -45,8 +46,9 @@ export function PageHero({
       <div className={`container ${styles.inner}`}>
         <Breadcrumbs items={crumbs} className={styles.crumbs} />
 
-        {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
+        {/* H1 jako pierwszy element nad trescia - rozowa etykieta pod nim. */}
         <h1 className={styles.title}>{title}</h1>
+        {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
         {lead && <p className={styles.lead}>{lead}</p>}
 
         {chips && chips.length > 0 && (
