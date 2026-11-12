@@ -8,7 +8,7 @@ keywords:
   - rolety podtynkowe
   - skrzynka rolety w ociepleniu
   - rolety etap budowy
-  - rolety nadprozowe
+  - rolety nadprożowe
 image: "/images/somfy/roleta-zewnetrzna-somfy-tahoma-switch.jpg"
 imageAlt: "Roleta zewnętrzna opuszczona do połowy przeszklenia, nadajnik Somfy Smoove na słupie i centrala Somfy TaHoma switch na stoliku"
 imagePosition: "center 45%"

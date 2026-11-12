@@ -5,9 +5,9 @@ publishedAt: "2026-03-10"
 excerpt: "Rolety bywają sprzedawane jako sposób na tanie ogrzewanie. Sprawdzamy, co faktycznie wynika z fizyki, a co jest tylko chwytem sprzedażowym."
 category: "Poradnik"
 keywords:
-  - rolety zewnetrzne oszczednosc energii
+  - rolety zewnętrzne oszczędność energii
   - rolety a ogrzewanie
-  - oslony przeciwsloneczne klimatyzacja
+  - osłony przeciwsłoneczne klimatyzacja
   - rolety izolacja termiczna
 image: "/images/somfy/roleta-zewnetrzna-somfy-smoove-ogrod.jpg"
 imageAlt: "Uchylona roleta zewnętrzna w przeszkleniu tarasowym z widokiem na ogród, obok naścienny nadajnik Somfy Smoove"

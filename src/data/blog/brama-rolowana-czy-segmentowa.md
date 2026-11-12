@@ -6,9 +6,9 @@ excerpt: "Jeśli nad wjazdem masz mniej niż 40 cm albo pod stropem biegną inst
 category: "Porównanie"
 keywords:
   - brama rolowana czy segmentowa
-  - brama rolowana garaz
-  - niskie nadproze brama
-  - montaz bram rolowanych
+  - brama rolowana garaż
+  - niskie nadproże brama
+  - montaż bram rolowanych
 image: "/images/somfy/nadajnik-somfy-wjazd-do-garazu.jpg"
 imageAlt: "Naścienny nadajnik Somfy przy wjeździe do garażu, w tle brama wjazdowa"
 faq:

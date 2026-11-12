@@ -5,10 +5,10 @@ publishedAt: "2026-09-02"
 excerpt: "RC2 wytrzymuje trzy minuty, RC3 - pięć. Brzmi jak drobiazg, ale różnica decyduje o tym, czy włamywacz zrezygnuje. Sprawdź, która klasa pasuje do Twojego domu."
 category: "Bezpieczeństwo"
 keywords:
-  - rolety antywlamaniowe RC2
-  - rolety antywlamaniowe RC3
-  - klasa odpornosci PN-EN 1627
-  - jakie rolety antywlamaniowe wybrac
+  - rolety antywłamaniowe RC2
+  - rolety antywłamaniowe RC3
+  - klasa odporności PN-EN 1627
+  - jakie rolety antywłamaniowe wybrać
 image: "/images/somfy/rolety-zewnetrzne-pilot-somfy-situo-5.jpg"
 imageAlt: "Rolety zewnętrzne w narożnym przeszkleniu sterowane pilotem Somfy Situo 5"
 faq:

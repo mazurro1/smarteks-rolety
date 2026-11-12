@@ -5,7 +5,7 @@ publishedAt: "2026-04-14"
 excerpt: "Większość awarii rolet nie bierze się z wady, tylko z zaniedbania. Piętnaście minut raz w roku potrafi przedłużyć życie instalacji o kilka lat."
 category: "Serwis"
 keywords:
-  - przeglad rolet zewnetrznych
+  - przegląd rolet zewnętrznych
   - konserwacja rolet
   - serwis rolet Warszawa
   - naprawa rolety awaria

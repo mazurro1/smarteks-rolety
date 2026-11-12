@@ -6,9 +6,9 @@ excerpt: "Klasyczna roleta ma dwa stany: widno albo ciemno. Roleta adaptacyjna w
 category: "Technologie"
 keywords:
   - rolety adaptacyjne
-  - rolety zewnetrzne regulacja swiatla
-  - oslony przeciwsloneczne
-  - roleta adaptacyjna czy zwykla
+  - rolety zewnętrzne regulacja światła
+  - osłony przeciwsłoneczne
+  - roleta adaptacyjna czy zwykła
 image: "/images/somfy/sypialnia-somfy-smoove-sun-protect.jpg"
 imageAlt: "Sypialnia w świetle przechodzącym przez pancerz rolety, na ścianie nadajnik Somfy Smoove z funkcją Sun Protect"
 imagePosition: "center 25%"

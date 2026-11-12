@@ -5,10 +5,10 @@ publishedAt: "2026-08-12"
 excerpt: "Cena rolety to nie jedna liczba, tylko suma pięciu decyzji. Pokazujemy, które z nich naprawdę podnoszą koszt, a które da się odpuścić bez straty."
 category: "Cennik"
 keywords:
-  - ile kosztuja rolety zewnetrzne
-  - cena rolet antywlamaniowych
-  - wycena rolet zewnetrznych
-  - koszt montazu rolet
+  - ile kosztują rolety zewnętrzne
+  - cena rolet antywłamaniowych
+  - wycena rolet zewnętrznych
+  - koszt montażu rolet
 image: "/images/somfy/salon-roleta-zewnetrzna-somfy-smoove.jpg"
 imageAlt: "Salon z roletą zewnętrzną opuszczoną do połowy okna i naściennym nadajnikiem Somfy Smoove"
 faq:
