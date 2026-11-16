@@ -59,9 +59,18 @@
 
 .heading {
   margin: 0;
-  font-size: clamp(2.4rem, 5.4vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.1rem, 4.4vw, 3.3rem);
+  line-height: 1.08;
   letter-spacing: -0.035em;
+}
+
+.slogan {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.3vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
 }
 
 .headingAccent {

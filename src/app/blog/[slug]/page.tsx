@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { FontAwesomeIcon } from "@/ui/FaIcon";
 import { faPhone, faFileLines } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,7 @@ import { NAMESPACES } from "@/constants/namespaces";
 import { CONTACT_INFO } from "@/constants/contact";
 import { SITE_URL, ROUTES, blogPath } from "@/constants/routes";
 import { getBlogPost, getAllSlugs, getRelatedPosts } from "@/data/blog";
+import { getPublicImageSize } from "@/data/blog/imageSize";
 import { BUSINESS_REF, PARENT_ORGANIZATION } from "@/data/schema";
 import { PageHero } from "@/components/sections/PageHero";
 import { PostCard } from "@/components/sections/Blog";
@@ -74,6 +75,10 @@ export async function generateMetadata({
     },
   };
 }
+
+/** Domyslny filtr adresow react-markdown wycina "tel:" - numer w tresci ma byc klikalny. */
+const transformUrl = (value: string): string =>
+  value.startsWith("tel:") ? value : defaultUrlTransform(value);
 
 const formatDate = (value: string): string =>
   new Date(value).toLocaleDateString("pl-PL", {
@@ -175,7 +180,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               )}
 
               <div className={styles.content}>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  urlTransform={transformUrl}
+                  components={{
+                    // Zdjecia w tresci: next/image z wymiarami pliku z /public.
+                    img: ({ src, alt }) => {
+                      if (typeof src !== "string") return null;
+                      const size = getPublicImageSize(src);
+                      if (!size) {
+                        // eslint-disable-next-line @next/next/no-img-element
+                        return <img src={src} alt={alt ?? ""} loading="lazy" />;
+                      }
+                      return (
+                        <Image
+                          src={src}
+                          alt={alt ?? ""}
+                          width={size.width}
+                          height={size.height}
+                          sizes="(max-width: 1023px) 100vw, 860px"
+                        />
+                      );
+                    },
+                  }}
+                >
                   {post.content}
                 </ReactMarkdown>
               </div>
@@ -201,7 +229,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </Button>
                   <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline">
                     <FontAwesomeIcon icon={faPhone} />
-                    {CONTACT_INFO.PHONE}
+                    {CONTACT_INFO.PHONE_CTA}
                   </Button>
                 </div>
               </div>

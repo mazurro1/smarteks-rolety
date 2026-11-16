@@ -164,6 +164,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </Link>
             )}
 
+            {project.guide && (
+              <Link href={project.guide.href} className={styles.productLink}>
+                <Icon name="ruler" />
+                <span>
+                  <span className={styles.productLinkLabel}>
+                    {t("detail.guideLinkLabel")}
+                  </span>
+                  <span className={styles.productLinkTitle}>
+                    {project.guide.label}
+                  </span>
+                </span>
+                <span className={styles.productArrow} aria-hidden="true">
+                  &rarr;
+                </span>
+              </Link>
+            )}
+
             <div className={styles.ctaCard}>
               <p className={styles.ctaTitle}>{t("detail.ctaTitle")}</p>
               <p className={styles.ctaText}>{t("detail.ctaText")}</p>
@@ -179,7 +196,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   fullWidth
                 >
                   <FontAwesomeIcon icon={faPhone} />
-                  {CONTACT_INFO.PHONE}
+                  {CONTACT_INFO.PHONE_CTA}
                 </Button>
               </div>
             </div>

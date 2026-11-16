@@ -9,6 +9,7 @@ import {
 import { REDUCED_MOTION_QUERY, useMediaQuery } from "@/lib/useMediaQuery";
 import type { ProcessStep } from "@/types";
 import Reveal from "@/ui/Reveal";
+import RichText from "@/ui/RichText";
 import styles from "./Process.module.css";
 
 /** Czas wyswietlania jednego kroku przed przeskokiem do nastepnego (ms). */
@@ -92,7 +93,9 @@ export default function ProcessSteps({ steps }: ProcessStepsProps) {
                 </span>
                 <span className={styles.number}>{step.number}</span>
                 <h3 className={styles.title}>{step.title}</h3>
-                <p className={styles.description}>{step.description}</p>
+                <p className={styles.description}>
+                  <RichText text={step.description} />
+                </p>
                 {/* Zawsze w DOM - stala wysokosc kroku, brak skakania ukladu. */}
                 <span
                   className={`${styles.timer} ${

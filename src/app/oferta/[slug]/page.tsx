@@ -80,7 +80,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
 
       <PageHero
         eyebrow={product.eyebrow}
-        title={product.title}
+        title={product.heroTitle ?? product.title}
         lead={product.tagline}
         crumbs={[
           { label: t("breadcrumb"), href: ROUTES.OFFER },
@@ -106,7 +106,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
               </Button>
               <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline">
                 <FontAwesomeIcon icon={faPhone} />
-                {CONTACT_INFO.PHONE}
+                {CONTACT_INFO.PHONE_CTA}
               </Button>
             </div>
           </div>
@@ -264,6 +264,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
         lead={t("faqLead")}
         idPrefix={`faq-${product.slug}`}
         columns={1}
+        guides={product.faqGuides}
       />
 
       {/* ── Pozostale kategorie ── */}

@@ -159,6 +159,17 @@
   color: var(--color-text-primary);
 }
 
+.companyData a {
+  color: var(--color-brand-accent);
+}
+
+.phoneHours {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
 .reviewsLink {
   display: inline-block;
   margin-top: 0.75rem;

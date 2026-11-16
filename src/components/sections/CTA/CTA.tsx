@@ -47,7 +47,7 @@ export async function CTA({ title, text }: CTAProps) {
           </Button>
           <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline" size="lg">
             <FontAwesomeIcon icon={faPhone} />
-            {CONTACT_INFO.PHONE}
+            {CONTACT_INFO.PHONE_CTA}
           </Button>
         </div>
       </div>

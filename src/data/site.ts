@@ -1,4 +1,5 @@
 import { CONTACT_INFO } from "@/constants/contact";
+import { OFFER_SLUGS, offerPath } from "@/constants/routes";
 import type { FaqItem, IconKey, ProcessStep, StatItem } from "@/types";
 
 /** Staz firmy - w statystykach i na zdjeciu w sekcji "Kim jestesmy". */
@@ -7,7 +8,7 @@ export const YEARS_IN_BUSINESS = 6;
 /** Liczby pokazywane pod hero i na stronie realizacji. */
 export const STATS: StatItem[] = [
   { value: "600+", label: "zamontowanych osłon" },
-  { value: String(YEARS_IN_BUSINESS), label: "lat na rynku" },
+  { value: String(YEARS_IN_BUSINESS), label: "lat doświadczenia" },
   { value: "5 lat", label: "gwarancji" },
   { value: "48h", label: "reakcji serwisu" },
 ];
@@ -82,7 +83,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "03",
     title: "Ostateczna wycena i dobór zestawu",
     description:
-      "Otrzymujesz ostateczną wycenę z rozbiciem na osłony, napędy, sterowanie i montaż. Bez pozycji „inne” i bez kosztów, które pojawiają się później.",
+      "Otrzymujesz ostateczną wycenę z rozbiciem na osłony, napędy, sterowanie i montaż. Bez pozycji „inne” i bez kosztów, które pojawiają się później. Zakup możesz rozłożyć na raty: kredytu udziela Santander Consumer Bank S.A., a Smarteks jako pośrednik kredytowy tego banku udostępnia wniosek. O kredycie decyduje bank. [Jak kupić na raty →](https://smarteks.pl/zakupy-na-raty/)",
   },
   {
     number: "04",
@@ -123,7 +124,58 @@ export const HOME_FAQ: FaqItem[] = [
     q: "Serwisujecie rolety zamontowane przez inną firmę?",
     a: "Tak, to duża część naszej pracy. Wymieniamy napędy, naprawiamy pancerze i prowadnice, modernizujemy sterowanie z taśmy na napęd elektryczny. Warunkiem jest dostępność części lub możliwość zastosowania kompatybilnego zamiennika.",
   },
+  {
+    q: "Czy rolety można kupić na raty?",
+    a: "Tak. Zakup rolet z montażem możesz rozłożyć na raty. Kredytu udziela Santander Consumer Bank S.A., a Smarteks działa jako pośrednik kredytowy tego banku: informuje o możliwości skorzystania z kredytu i udostępnia wniosek. O przyznaniu kredytu i jego warunkach decyduje bank. Szczegóły: [zakupy na raty w Smarteks](https://smarteks.pl/zakupy-na-raty/).",
+  },
+  {
+    q: "Czy można zamontować rolety zewnętrzne w mieszkaniu w bloku?",
+    a: "Tak. Elewacja bloku jest zwykle częścią wspólną budynku, dlatego przed montażem zapytaj zarządcę – wspólnotę albo spółdzielnię – czy potrzebna jest zgoda i czy są wymagania, na przykład co do koloru skrzynki. Przy pomiarze dobierzemy system do okien i sprawdzimy, jak doprowadzić zasilanie.",
+  },
+  {
+    q: "Czy montujecie rolety na pasek?",
+    a: "Nie. Montujemy wyłącznie rolety z napędem elektrycznym. Pasek wymaga otworu w ścianie, przez który ucieka ciepło, a napęd elektryczny wystarczy zasilić przewodem. Roletą sterujesz pilotem, przyciskiem na ścianie albo z telefonu.",
+  },
 ];
+
+/** Tabela "co pasuje do Twojego domu" pod lista kategorii na stronie glownej. */
+export const OFFER_GUIDE = {
+  title: "Jakie rolety zewnętrzne do Twojego domu",
+  columns: ["Twoja sytuacja", "Co pasuje"],
+  rows: [
+    {
+      situation: "Dom albo mieszkanie już stoi",
+      fit: `[rolety adaptacyjne](${offerPath(OFFER_SLUGS.ADAPTIVE)}) – skrzynka na elewacji albo we wnęce, bez wymiany okien`,
+    },
+    {
+      situation: "Budujesz dom albo docieplasz elewację",
+      fit: `[rolety podtynkowe](${offerPath(OFFER_SLUGS.RECESSED)}) – skrzynka schowana w ociepleniu, trzeba ją zaplanować przed tynkowaniem`,
+    },
+    {
+      situation: "Chcesz ochrony przed włamaniem",
+      fit: `[rolety antywłamaniowe RC2](${offerPath(OFFER_SLUGS.RC2)}) – certyfikowany zestaw, także do gotowego domu; przy wyższym ryzyku [RC3](${offerPath(OFFER_SLUGS.RC3)})`,
+    },
+    {
+      situation: "Garaż albo wjazd do hali",
+      fit: `[brama rolowana](${offerPath(OFFER_SLUGS.ROLLER_GATES)}) – zwija się nad wjazdem i nie zabiera miejsca pod stropem`,
+    },
+  ],
+};
+
+/** Oceny klientow - sekcja "Opinie" na stronie glownej. Liczby aktualizowac recznie razem z data. */
+export const REVIEWS = {
+  eyebrow: "Opinie",
+  title: "Jak oceniają nas klienci",
+  stats: [
+    { value: "5,0 / 5", stars: "★★★★★", label: "średnia ocena na Oferteo" },
+    { value: "36", stars: undefined, label: "opinii na Oferteo" },
+  ],
+  note: "Stan na 16.11.2026. Opinie dotyczą wszystkich usług firmy Smarteks, nie tylko rolet.",
+  links: [
+    { href: CONTACT_INFO.OFERTEO_URL, label: "Zobacz opinie na Oferteo" },
+    { href: CONTACT_INFO.GOOGLE_REVIEWS_URL, label: "Opinie w Google" },
+  ],
+};
 
 /** Ogolny blok montaz + serwis dla strony /oferta (bez wiazania z produktem). */
 export const GENERIC_INSTALLATION = {
@@ -153,7 +205,7 @@ export const COMPANY_INTRO = {
   eyebrow: "Kim jesteśmy",
   title: "Osłony zewnętrzne znamy od nadproża po napęd",
   paragraphs: [
-    "Smarteks to firma montażowa z Warszawy z kilkoma specjalizacjami. Jedną z nich są osłony zewnętrzne: rolety antywłamaniowe, adaptacyjne, podtynkowe i bramy rolowane - to im poświęcona jest ta strona. Przy każdym montażu sprawdzamy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.",
+    `Smarteks to firma montażowa z Warszawy z kilkoma specjalizacjami. Jedną z nich są osłony zewnętrzne: rolety antywłamaniowe, adaptacyjne, podtynkowe i bramy rolowane - to im poświęcona jest ta strona. Pełną ofertę firmy znajdziesz na [smarteks.pl](${CONTACT_INFO.MAIN_SITE_URL}). Przy każdym montażu sprawdzamy, jak zachowa się nadproże z pustaka, ile waży pancerz ekstrudowany i który napęd wytrzyma dziesięć lat pracy.`,
     "Pracujemy w Warszawie i okolicach - w promieniu, w którym jesteśmy w stanie przyjechać na serwis szybko, a nie „kiedyś w przyszłym miesiącu”. To świadome ograniczenie zasięgu: wolimy obsłużyć mniejszy obszar porządnie niż pół kraju byle jak.",
   ],
   points: [
@@ -161,10 +213,16 @@ export const COMPANY_INTRO = {
       title: "Kilka specjalizacji",
       description:
         "Rolety i bramy rolowane, a także szlabany parkingowe i automatyka wjazdów.",
-      link: {
-        href: CONTACT_INFO.BARRIERS_SITE_URL,
-        label: "Zobacz ofertę szlabanów",
-      },
+      links: [
+        {
+          href: CONTACT_INFO.BARRIERS_SITE_URL,
+          label: "Zobacz ofertę szlabanów",
+        },
+        {
+          href: CONTACT_INFO.MAIN_SITE_URL,
+          label: "Pełna oferta Smarteks",
+        },
+      ],
     },
     {
       title: "Własna ekipa montażowa",

@@ -51,9 +51,10 @@
   },
 
   "hero": {
+    "heading": "Rolety zewnętrzne w Warszawie – montaż i serwis",
     "headingLine1": "Rolety, które robią różnicę.",
     "headingAccent": "Bezpieczeństwo, cisza, komfort.",
-    "lead": "Certyfikowane rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne, podtynkowe i bramy rolowane. Mierzymy, montujemy i serwisujemy - od pierwszego pomiaru po przegląd w piątym roku.",
+    "lead": "Smarteks to warszawska firma, która montuje rolety zewnętrzne: certyfikowane rolety antywłamaniowe RC2 i RC3, rolety adaptacyjne do gotowych domów, rolety podtynkowe do nowych domów oraz bramy rolowane. Mierzymy, montujemy i serwisujemy - od pierwszego pomiaru po przegląd w piątym roku.",
     "ctaPrimary": "Zamów bezpłatną wycenę",
     "cardLabel": "Klasa odporności",
     "cardValue": "RC2 / RC3",
@@ -97,7 +98,7 @@
     "controlBand": {
       "eyebrow": "Sterowanie",
       "title": "Pilot, przycisk na ścianie albo telefon",
-      "text": "Rolety z napędem obsłużysz tak, jak Ci wygodnie - pojedynczo albo całą grupą okien naraz. Konfigurujemy sceny i harmonogramy, a potem uczymy, jak z nich korzystać.",
+      "text": "Montujemy wyłącznie rolety elektryczne, na napędach i sterownikach Somfy – jesteśmy autoryzowanym partnerem tej marki. Rolety możesz podłączyć do inteligentnego domu (smart home) i sterować nimi z aplikacji w telefonie.",
       "cta": "Zobacz ofertę"
     }
   },
@@ -194,8 +195,9 @@
       "scopeTitle": "Zakres prac",
       "specsTitle": "Parametry realizacji",
       "productLinkLabel": "Rozwiązanie z oferty",
+      "guideLinkLabel": "Poradnik",
       "ctaTitle": "Podobny projekt u Ciebie?",
-      "ctaText": "Przyjedziemy, zmierzymy i powiemy, co da się zrobić w Twoim budynku. Pomiar jest bezpłatny.",
+      "ctaText": "Przyjedziemy, zmierzymy i powiemy, co da się zrobić w Twoim budynku. Pomiar jest bezpłatny. Zadzwoń i opisz swój budynek.",
       "relatedTitle": "Podobne realizacje",
       "beforeAfter": {
         "title": "Przed i po montażu - przesuń suwak, żeby porównać.",
@@ -243,13 +245,14 @@
     "title": "Najczęstsze pytania",
     "lead": "Zebraliśmy pytania, które słyszymy najczęściej - razem z uczciwymi odpowiedziami.",
     "noteText": "Nie znalazłeś odpowiedzi?",
-    "noteLink": "Napisz do nas"
+    "noteOr": "albo",
+    "noteLink": "napisz do nas"
   },
 
   "cta": {
     "eyebrow": "Bezpłatna wycena",
     "title": "Zacznijmy od wymiarów - resztę ustalimy na miejscu",
-    "text": "Prześlij wstępne wymiary przez formularz lub e-mailem - odpowiemy wstępną wyceną. Ostateczną kwotę podajemy po bezpłatnym pomiarze. Bez zaliczek za wycenę i bez zobowiązań.",
+    "text": "Najszybciej przez telefon: zadzwoń pod 737 531 193 (pn.–pt. 8–18). Możesz też przesłać wstępne wymiary przez formularz lub e-mailem - odpowiemy wstępną wyceną. Ostateczną kwotę podajemy po bezpłatnym pomiarze. Bez zaliczek za wycenę i bez zobowiązań.",
     "ctaPrimary": "Zamów bezpłatną wycenę"
   },
 
@@ -258,7 +261,7 @@
     "pageDescription": "Skontaktuj się z Smarteks Rolety: telefon, e-mail, formularz wyceny. Bezpłatny pomiar w Warszawie i okolicach, odpowiedź w ciągu 24 godzin.",
     "heroEyebrow": "Kontakt",
     "heroTitle": "Porozmawiajmy o Twoim projekcie",
-    "heroLead": "Niezależnie od skali - jedno okno czy cały budynek. Odpowiadamy w ciągu 24 godzin w dni robocze.",
+    "heroLead": "Niezależnie od skali - jedno okno czy cały budynek. Najszybciej porozmawiamy przez telefon: 737 531 193 (pn.–pt. 8–18). Na wiadomości odpowiadamy w ciągu 24 godzin w dni robocze.",
     "breadcrumb": "Kontakt",
     "chips": {
       "freeEstimate": "Bezpłatny pomiar",
@@ -273,6 +276,8 @@
     "areaTitle": "Dojeżdżamy do",
     "companyTitle": "Dane firmy",
     "shareCapital": "Kapitał zakładowy: {amount}",
+    "officeHours": "Biuro: poniedziałek–piątek 8:00–18:00",
+    "specialization": "Rolety Smarteks to jedna ze specjalizacji firmy Smarteks – pełna oferta na <link>smarteks.pl</link>.",
     "googleReviews": "Zobacz opinie o Smarteks w Google",
 
     "formTitle": "Bezpłatna wycena",
@@ -335,7 +340,7 @@
 
   "footer": {
     "ctaTitle": "Bezpłatny pomiar w Warszawie i okolicach",
-    "ctaText": "Przyjedziemy, zmierzymy i przygotujemy wycenę z rozbiciem na pozycje. Bez zobowiązań.",
+    "ctaText": "Przyjedziemy, zmierzymy i przygotujemy wycenę z rozbiciem na pozycje. Bez zobowiązań. Termin pomiaru umówisz telefonicznie, pn.–pt. 8–18.",
     "tagline": "Montaż i serwis rolet zewnętrznych: antywłamaniowych RC2 i RC3, adaptacyjnych, podtynkowych oraz bram rolowanych.",
     "logoAriaLabel": "Smarteks Rolety - strona główna",
     "offer": "Oferta",

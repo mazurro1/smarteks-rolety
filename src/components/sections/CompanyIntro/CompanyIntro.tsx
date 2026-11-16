@@ -7,6 +7,7 @@ import { NAMESPACES } from "@/constants/namespaces";
 import MediaFrame from "@/ui/MediaFrame";
 import Icon from "@/ui/Icon";
 import SplitText from "@/ui/SplitText";
+import RichText from "@/ui/RichText";
 import styles from "./CompanyIntro.module.css";
 
 export async function CompanyIntro() {
@@ -39,7 +40,7 @@ export async function CompanyIntro() {
 
           {COMPANY_INTRO.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 40)} className={styles.paragraph}>
-              {paragraph}
+              <RichText text={paragraph} />
             </p>
           ))}
 
@@ -52,15 +53,20 @@ export async function CompanyIntro() {
                 <span>
                   <strong className={styles.pointTitle}>{point.title}</strong>
                   <span className={styles.pointText}>{point.description}</span>
-                  {point.link && (
-                    <a
-                      href={point.link.href}
-                      className={styles.pointLink}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      {point.link.label} &rarr;
-                    </a>
+                  {point.links && (
+                    <span className={styles.pointLinks}>
+                      {point.links.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className={styles.pointLink}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          {link.label} &rarr;
+                        </a>
+                      ))}
+                    </span>
                   )}
                 </span>
               </li>

@@ -1,4 +1,5 @@
-import { OFFER_SLUGS } from "@/constants/routes";
+import { CONTACT_INFO } from "@/constants/contact";
+import { OFFER_SLUGS, blogPath } from "@/constants/routes";
 import { SOMFY_IMAGES } from "@/data/media";
 import type { OfferProduct } from "@/types";
 
@@ -11,6 +12,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     slug: OFFER_SLUGS.RC2,
     navLabel: "Rolety antywłamaniowe RC2",
     title: "Rolety antywłamaniowe RC2",
+    heroTitle: "Rolety antywłamaniowe RC2 w Warszawie",
     cardTitle: "Rolety RC2",
     eyebrow: "Klasa odporności RC2",
     badge: "Najczęściej wybierane",
@@ -146,11 +148,26 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         q: "Jak roleta zachowa się przy braku prądu?",
         a: "Standardowo pancerz pozostaje w ostatniej pozycji. Na życzenie montujemy awaryjne otwieranie korbą lub zasilanie akumulatorowe podtrzymujące pracę napędu przez kilkanaście cykli.",
       },
+      {
+        q: "Ile kosztują rolety antywłamaniowe RC2?",
+        a: `Cena zależy od wymiarów i liczby okien, wersji (nakładana albo podtynkowa) i sterowania, dlatego podajemy ją po bezpłatnym pomiarze. Co wpływa na cenę rolet zewnętrznych, opisaliśmy w poradniku [ile kosztują rolety zewnętrzne](${blogPath("ile-kosztuja-rolety-zewnetrzne")}).`,
+      },
+      {
+        q: "Czy rolety RC2 można kupić na raty?",
+        a: `Tak. Zakup rolet z montażem możesz rozłożyć na raty. Kredytu udziela Santander Consumer Bank S.A., a Smarteks działa jako pośrednik kredytowy tego banku: informuje o możliwości skorzystania z kredytu i udostępnia wniosek. O przyznaniu kredytu i jego warunkach decyduje bank. Szczegóły: [zakupy na raty w Smarteks](${CONTACT_INFO.INSTALMENTS_URL}).`,
+      },
+    ],
+    faqGuides: [
+      {
+        text: "Nie wiesz, którą klasę wybrać? Przeczytaj poradnik",
+        linkLabel: "rolety RC2 czy RC3 – jak wybrać klasę",
+        href: blogPath("rolety-rc2-czy-rc3-ktora-klase-wybrac"),
+      },
     ],
     meta: {
       title: "Rolety antywłamaniowe RC2 - montaż i serwis Warszawa",
       description:
-        "Certyfikowane rolety antywłamaniowe klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach. Protokół montażu dla ubezpieczyciela.",
+        "Certyfikowane rolety antywłamaniowe klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach.",
     },
     projectCategories: ["rc2"],
   },
@@ -293,9 +310,20 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         q: "Czy można łączyć RC3 z automatyką i alarmem?",
         a: "Tak. Standardowo montujemy sterowanie radiowe, a na życzenie dokładamy styki kontrolne informujące centralę alarmową o pozycji pancerza oraz integrację ze sterowaniem całą elewacją.",
       },
+      {
+        q: "Czy rolety RC3 można kupić na raty?",
+        a: `Tak. Zakup rolet z montażem możesz rozłożyć na raty. Kredytu udziela Santander Consumer Bank S.A., a Smarteks działa jako pośrednik kredytowy tego banku: informuje o możliwości skorzystania z kredytu i udostępnia wniosek. O przyznaniu kredytu i jego warunkach decyduje bank. Szczegóły: [zakupy na raty w Smarteks](${CONTACT_INFO.INSTALMENTS_URL}).`,
+      },
+    ],
+    faqGuides: [
+      {
+        text: "Zastanawiasz się, czy wystarczy RC2? Obie klasy porównaliśmy w poradniku",
+        linkLabel: "rolety RC2 czy RC3 – jak wybrać klasę",
+        href: blogPath("rolety-rc2-czy-rc3-ktora-klase-wybrac"),
+      },
     ],
     meta: {
-      title: "Rolety antywłamaniowe RC3 - najwyższa klasa ochrony, Warszawa",
+      title: "Rolety antywłamaniowe RC3 - Warszawa i okolice",
       description:
         "Rolety antywłamaniowe klasy RC3 z profili ekstrudowanych. Certyfikat PN-EN 1627, ryglowanie wielopunktowe, montaż i serwis w Warszawie i okolicach.",
     },
@@ -441,7 +469,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety adaptacyjne - regulacja światła, montaż Warszawa",
+      title: "Rolety adaptacyjne - montaż w gotowym domu, Warszawa",
       description:
         "Rolety adaptacyjne z uchylnymi profilami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
     },
@@ -451,6 +479,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     slug: OFFER_SLUGS.RECESSED,
     navLabel: "Rolety podtynkowe",
     title: "Rolety podtynkowe",
+    heroTitle: "Rolety podtynkowe w Warszawie",
     cardTitle: "Rolety podtynkowe",
     eyebrow: "Ukryte w elewacji",
     icon: "layers",
@@ -583,7 +612,18 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy da się ukryć skrzynkę w istniejącym budynku?",
-        a: "Tak, jeśli planowane jest docieplenie elewacji. Przy okazji termomodernizacji skrzynka trafia w nową warstwę styropianu. W budynku bez takich prac pozostaje wersja nakładana lub montaż we wnęce okiennej.",
+        a: "Tak, jeśli planowane jest docieplenie elewacji. Przy okazji termomodernizacji skrzynka trafia w nową warstwę styropianu. W budynku bez takich prac pozostaje wersja nakładana lub montaż we wnęce okiennej. Wszystkie sposoby opisaliśmy w poradniku [jak zamaskować skrzynkę rolety zewnętrznej](/blog/jak-zamaskowac-skrzynke-rolety-zewnetrznej).",
+      },
+      {
+        q: "Czy roletę podtynkową montuje się razem z oknami?",
+        a: "Planuje się je razem, ale montuje w dwóch etapach. Wysokość skrzynki (205, 245 albo 300 mm) trzeba uwzględnić w wymiarze otworu, zanim zamówisz okna. Skrzynki montujemy w stanie surowym, przed ociepleniem i tynkowaniem, a pancerz, prowadnice i napęd – po skończeniu elewacji.",
+      },
+    ],
+    faqGuides: [
+      {
+        text: "Na jakim etapie budowy je zamówić, opisaliśmy krok po kroku w poradniku",
+        linkLabel: "rolety podtynkowe – kiedy je zamówić",
+        href: blogPath("rolety-podtynkowe-kiedy-zamowic"),
       },
     ],
     meta: {
@@ -597,6 +637,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     slug: OFFER_SLUGS.ROLLER_GATES,
     navLabel: "Bramy rolowane",
     title: "Bramy rolowane",
+    heroTitle: "Bramy rolowane w Warszawie",
     cardTitle: "Bramy rolowane",
     eyebrow: "Garaże i obiekty",
     icon: "warehouse",
@@ -657,6 +698,11 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       { label: "Maks. szerokość", value: "do 6 m (wersje przemysłowe większe)" },
       { label: "Wymagane nadproże", value: "od 30 cm zależnie od średnicy zwoju" },
       { label: "Profil pancerza", value: "Aluminiowy wypełniony pianką lub ekstrudowany" },
+      {
+        label: "Kolory i przeszklenia",
+        value:
+          "kolory standardowe i okleiny drewnopodobne (m.in. złoty dąb, orzech), skrzynka i prowadnice także w kolorze RAL; profile z okienkami i profile wentylacyjne",
+      },
       { label: "Prędkość pracy", value: "ok. 0,15 m/s" },
       { label: "Zabezpieczenia", value: "Fotokomórki, listwa krawędziowa, kontrola przeszkody" },
       { label: "Otwieranie awaryjne", value: "Ręczne lub akumulatorowe" },
@@ -730,6 +776,22 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         q: "Czy serwisujecie bramy zamontowane przez inną firmę?",
         a: "Tak. Naprawiamy i przeglądamy bramy rolowane niezależnie od tego, kto je montował - o ile dostępne są części zamienne lub możliwa jest wymiana napędu na kompatybilny model.",
+      },
+      {
+        q: "Czy bramę rolowaną można zamontować w istniejącym garażu?",
+        a: "Tak. Bramę robimy na wymiar otworu, a sposób montażu – w garażu, na zewnątrz albo w świetle otworu – dobieramy do miejsca wokół wjazdu. Potrzebne jest zasilanie przy bramie; jeśli go nie ma, przewód doprowadza elektryk z uprawnieniami.",
+      },
+    ],
+    faqGuides: [
+      {
+        text: "Wahasz się między dwoma typami bram? Przeczytaj poradnik",
+        linkLabel: "brama rolowana czy segmentowa",
+        href: blogPath("brama-rolowana-czy-segmentowa"),
+      },
+      {
+        text: "Rodzaje, wymiary i sposoby montażu opisaliśmy w poradniku",
+        linkLabel: "bramy garażowe rolowane",
+        href: blogPath("bramy-garazowe-rolowane-rodzaje-wymiary-montaz"),
       },
     ],
     meta: {

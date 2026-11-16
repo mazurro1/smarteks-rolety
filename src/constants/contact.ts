@@ -1,6 +1,10 @@
 export const CONTACT_INFO = {
   PHONE: "737 531 193",
   PHONE_HREF: "tel:+48737531193",
+  /** Napis na przyciskach z numerem w tresci stron. */
+  PHONE_CTA: "Zadzwoń: 737 531 193",
+  /** Godziny odbierania telefonu - zgodne z openingHours w src/data/schema.ts. */
+  PHONE_HOURS: "pn.–pt. 8–18",
   EMAIL: "kontakt@smarteks.pl",
   EMAIL_HREF: "mailto:kontakt@smarteks.pl",
   ADDRESS_STREET: "ul. Marywilska 17A lok. 57",
@@ -18,6 +22,8 @@ export const CONTACT_INFO = {
   OFERTEO_URL: "https://www.oferteo.pl/smarteks-sp-z-o-o/firma/5011052",
   /** Glowna strona firmy - pelna oferta Smarteks. */
   MAIN_SITE_URL: "https://smarteks.pl/",
+  /** Zakupy na raty (Santander Consumer Bank) - strona w glownym serwisie. */
+  INSTALMENTS_URL: "https://smarteks.pl/zakupy-na-raty/",
   /** Druga specjalizacja firmy - osobny serwis o szlabanach. */
   BARRIERS_SITE_URL: "https://szlabany-smarteks.pl",
 } as const;

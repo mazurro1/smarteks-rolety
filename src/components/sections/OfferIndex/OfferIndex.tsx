@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { ROUTES, offerPath } from "@/constants/routes";
 import { OFFER_PRODUCTS } from "@/data/offer";
+import { OFFER_GUIDE } from "@/data/site";
+import RichText from "@/ui/RichText";
 import SectionHeader from "@/ui/SectionHeader";
 import Reveal from "@/ui/Reveal";
 import styles from "./OfferIndex.module.css";
@@ -73,6 +75,33 @@ export async function OfferIndex() {
             </li>
           ))}
         </ul>
+
+        <div className={styles.guide}>
+          <h3 className={styles.guideTitle}>{OFFER_GUIDE.title}</h3>
+          <div className={styles.guideScroll}>
+            <table className={styles.guideTable}>
+              <thead>
+                <tr>
+                  {OFFER_GUIDE.columns.map((column) => (
+                    <th key={column} scope="col">
+                      {column}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {OFFER_GUIDE.rows.map((row) => (
+                  <tr key={row.situation}>
+                    <td>{row.situation}</td>
+                    <td>
+                      <RichText text={row.fit} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         <div className={styles.footer}>
           <p className={styles.footerNote}>{t("sectionNote")}</p>

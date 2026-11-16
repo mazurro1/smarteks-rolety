@@ -82,6 +82,8 @@ Są dwie ścieżki:
 - **Roleta nakładana** - skrzynka na elewacji lub we wnęce okiennej. Montaż w jeden dzień, bez prac murarskich, dostępna również w wersji antywłamaniowej RC2.
 - **Termomodernizacja** - jeśli planujesz docieplenie budynku, skrzynki podtynkowe można ukryć w nowej warstwie styropianu. To jedyny moment, w którym w istniejącym domu wersja podtynkowa staje się realna.
 
+Więcej sposobów na mniej widoczną skrzynkę znajdziesz w poradniku [jak zamaskować skrzynkę rolety zewnętrznej](/blog/jak-zamaskowac-skrzynke-rolety-zewnetrznej).
+
 ## Podsumowanie
 
 Jeśli budujesz i myślisz o roletach, zadzwoń przed wykonaniem nadproży - nie po. Rozmowa na etapie stanu surowego trwa kwadrans i nic nie kosztuje, a decyduje o tym, czy elewacja zostanie gładka i czy izolacja nad oknami będzie ciągła.

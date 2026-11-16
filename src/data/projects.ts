@@ -1,3 +1,4 @@
+import { blogPath } from "@/constants/routes";
 import { SOMFY_IMAGES } from "@/data/media";
 import type { Project, ProjectCategory } from "@/types";
 
@@ -206,6 +207,10 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Wjazd zautomatyzowany mimo skrajnie niskiego nadproża, a garaż zyskał pełną przestrzeń magazynową pod stropem.",
+    guide: {
+      label: "Bramy garażowe rolowane",
+      href: blogPath("bramy-garazowe-rolowane-rodzaje-wymiary-montaz"),
+    },
   },
   {
     slug: "biuro-wola-rolety-adaptacyjne",

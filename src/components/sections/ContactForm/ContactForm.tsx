@@ -225,7 +225,12 @@ export function ContactForm() {
     {
       icon: faPhone,
       label: tCommon("contact.phoneLabel"),
-      value: <a href={CONTACT_INFO.PHONE_HREF}>{CONTACT_INFO.PHONE}</a>,
+      value: (
+        <>
+          <a href={CONTACT_INFO.PHONE_HREF}>{CONTACT_INFO.PHONE}</a>{" "}
+          <span className={styles.phoneHours}>{CONTACT_INFO.PHONE_HOURS}</span>
+        </>
+      ),
     },
     {
       icon: faEnvelope,
@@ -283,6 +288,20 @@ export function ContactForm() {
                 </span>
                 <span>
                   {t("shareCapital", { amount: COMPANY_REGISTRY.SHARE_CAPITAL })}
+                </span>
+                <span>{t("officeHours")}</span>
+                <span>
+                  {t.rich("specialization", {
+                    link: (chunks) => (
+                      <a
+                        href={CONTACT_INFO.MAIN_SITE_URL}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  })}
                 </span>
               </address>
               <a

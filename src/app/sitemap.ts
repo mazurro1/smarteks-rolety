@@ -9,7 +9,7 @@ import { PROJECTS } from "@/data/projects";
  * realizacje, kontakt). Zmieniac recznie przy wiekszej zmianie tresci - data
  * builda w lastmod mowilaby Google, ze wszystko zmienia sie przy kazdym wdrozeniu.
  */
-const CONTENT_UPDATED_AT = "2026-11-12";
+const CONTENT_UPDATED_AT = "2026-11-16";
 
 /**
  * Mapa witryny: wszystkie publiczne podstrony (25 adresow przy obecnej tresci).

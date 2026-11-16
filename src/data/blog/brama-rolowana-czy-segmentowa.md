@@ -49,6 +49,8 @@ Ta różnica przekłada się na wszystko, co dalej.
 - **Strop ma skosy lub nietypowy kształt** - prowadnice muszą biec równolegle, pancerz rolowany nie ma takiego wymagania.
 - **Brama ma zabezpieczać punkt usługowy** - witryna sklepu czy warsztatu, zamykana po godzinach pracy.
 
+Jak się ją montuje i ile ma miejsca potrzebować, opisaliśmy w poradniku [bramy garażowe rolowane – rodzaje, wymiary i montaż](/blog/bramy-garazowe-rolowane-rodzaje-wymiary-montaz).
+
 ## Kiedy lepiej wybrać segmentową
 
 - **Liczy się izolacyjność cieplna** - garaż ogrzewany lub połączony bezpośrednio z częścią mieszkalną.

@@ -10,6 +10,7 @@ import { Benefits } from "@/components/sections/Benefits";
 import { CompanyIntro } from "@/components/sections/CompanyIntro";
 import { Process } from "@/components/sections/Process";
 import { PhotoBand } from "@/components/sections/PhotoBand";
+import { Reviews } from "@/components/sections/Reviews";
 import { ProjectsTeaser } from "@/components/sections/Projects";
 import { CitiesMarquee } from "@/components/sections/CitiesMarquee";
 import { BlogTeaser } from "@/components/sections/Blog";
@@ -53,6 +54,7 @@ export default async function HomePage() {
         text={t("controlBand.text")}
         cta={{ href: ROUTES.OFFER, label: t("controlBand.cta") }}
       />
+      <Reviews />
       <ProjectsTeaser />
       <CitiesMarquee
         eyebrow={t("cities.eyebrow")}

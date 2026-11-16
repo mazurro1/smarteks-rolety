@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FaqItem } from "@/types";
+import RichText from "@/ui/RichText";
 import styles from "./Accordion.module.css";
 
 interface AccordionProps {
@@ -56,7 +57,9 @@ export default function Accordion({
               className={styles.panel}
               hidden={!isOpen}
             >
-              <p className={styles.answer}>{item.a}</p>
+              <p className={styles.answer}>
+                <RichText text={item.a} />
+              </p>
             </div>
           </div>
         );

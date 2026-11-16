@@ -153,6 +153,9 @@ export function HeaderClient({ offerItems }: HeaderClientProps) {
             >
               <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
               {CONTACT_INFO.PHONE}
+              <span className={styles.topbarHours}>
+                {CONTACT_INFO.PHONE_HOURS}
+              </span>
             </a>
           </div>
         </div>

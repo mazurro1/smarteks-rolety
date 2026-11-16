@@ -50,7 +50,7 @@ export async function Footer() {
             </Button>
             <Button as="a" href={CONTACT_INFO.PHONE_HREF} variant="outline">
               <FontAwesomeIcon icon={faPhone} />
-              {CONTACT_INFO.PHONE}
+              {CONTACT_INFO.PHONE_CTA}
             </Button>
           </div>
         </div>
@@ -116,7 +116,12 @@ export async function Footer() {
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
-                <a href={CONTACT_INFO.PHONE_HREF}>{CONTACT_INFO.PHONE}</a>
+                <span>
+                  <a href={CONTACT_INFO.PHONE_HREF}>{CONTACT_INFO.PHONE}</a>
+                  <span className={styles.contactHours}>
+                    {CONTACT_INFO.PHONE_HOURS}
+                  </span>
+                </span>
               </li>
               <li className={styles.contactItem}>
                 <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />

@@ -34,11 +34,15 @@ export async function Hero() {
       <div className={styles.shade} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
-          {/* H1 jako pierwszy element - "Warszawa i okolice" jest w pasku zaufania. */}
           <h1 id="hero-heading" className={styles.heading}>
+            {t("heading")}
+          </h1>
+
+          {/* Haslo pod naglowkiem - zwykly tekst, nie naglowek. */}
+          <p className={styles.slogan}>
             {t("headingLine1")}{" "}
             <span className={styles.headingAccent}>{t("headingAccent")}</span>
-          </h1>
+          </p>
 
           <p className={styles.lead}>{t("lead")}</p>
 
@@ -54,7 +58,7 @@ export async function Hero() {
               size="lg"
             >
               <FontAwesomeIcon icon={faPhone} />
-              {CONTACT_INFO.PHONE}
+              {CONTACT_INFO.PHONE_CTA}
             </Button>
           </div>
 

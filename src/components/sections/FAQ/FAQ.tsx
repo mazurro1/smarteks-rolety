@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
+import { CONTACT_INFO } from "@/constants/contact";
 import { ROUTES, SECTION_ANCHORS } from "@/constants/routes";
 import { HOME_FAQ } from "@/data/site";
-import type { FaqItem } from "@/types";
+import type { FaqItem, GuideLink } from "@/types";
 import SectionHeader from "@/ui/SectionHeader";
 import Accordion from "@/ui/Accordion";
 import styles from "./FAQ.module.css";
@@ -15,6 +16,8 @@ interface FAQProps {
   lead?: string;
   idPrefix?: string;
   columns?: 1 | 2;
+  /** Zdania z linkami do poradnikow, pod pytaniami. */
+  guides?: GuideLink[];
 }
 
 /**
@@ -28,6 +31,7 @@ export async function FAQ({
   lead,
   idPrefix = "faq",
   columns = 2,
+  guides,
 }: FAQProps) {
   const t = await getTranslations(NAMESPACES.FAQ);
   const faqItems = items ?? HOME_FAQ;
@@ -48,8 +52,26 @@ export async function FAQ({
 
         <Accordion items={faqItems} idPrefix={idPrefix} columns={columns} />
 
+        {guides && guides.length > 0 && (
+          <p className={styles.guides}>
+            {guides.map((guide) => (
+              <span key={guide.href}>
+                {guide.text}{" "}
+                <Link href={guide.href} className={styles.noteLink}>
+                  {guide.linkLabel}
+                </Link>
+                .{" "}
+              </span>
+            ))}
+          </p>
+        )}
+
         <p className={styles.note}>
           {t("noteText")}{" "}
+          <a href={CONTACT_INFO.PHONE_HREF} className={styles.noteLink}>
+            {CONTACT_INFO.PHONE_CTA}
+          </a>{" "}
+          {t("noteOr")}{" "}
           <Link href={ROUTES.CONTACT} className={styles.noteLink}>
             {t("noteLink")}
           </Link>

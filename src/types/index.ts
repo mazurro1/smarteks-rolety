@@ -72,12 +72,21 @@ export interface FaqItem {
   a: string;
 }
 
+/** Zdanie z linkiem do poradnika: "text" + podlinkowany "linkLabel" + kropka. */
+export interface GuideLink {
+  text: string;
+  linkLabel: string;
+  href: string;
+}
+
 export interface OfferProduct {
   slug: string;
   /** Krotka etykieta do nawigacji i breadcrumbow. */
   navLabel: string;
-  /** Pelny tytul H1 podstrony. */
+  /** Pelna nazwa kategorii - takze w danych schema.org. */
   title: string;
+  /** Naglowek H1 podstrony, gdy ma byc inny niz nazwa (np. z miastem). */
+  heroTitle?: string;
   /** Tytul w kartach na stronie glownej / w ofercie. */
   cardTitle: string;
   eyebrow: string;
@@ -101,6 +110,8 @@ export interface OfferProduct {
     points: string[];
   };
   faq: FaqItem[];
+  /** Linki do poradnikow z bloga, pokazywane pod pytaniami. */
+  faqGuides?: GuideLink[];
   meta: {
     title: string;
     description: string;
@@ -146,6 +157,8 @@ export interface Project {
     after: ProjectImage;
   };
   outcome: string;
+  /** Poradnik z bloga - drugi link w ramce pod parametrami realizacji. */
+  guide?: NavLink;
 }
 
 // ── Contact form ──────────────────────────────────────────────────────────────
