@@ -34,6 +34,20 @@ const saveConsent = (value: "accepted" | "rejected") => {
     // Zostaje sam cookie ponizej.
   }
   document.cookie = `${COOKIE_CONSENT_KEY}=${value}; path=/; max-age=${60 * 60 * 24 * 365}`;
+  updateGtmConsent(value === "accepted");
+};
+
+/** Przekazuje decyzje do GTM (Consent Mode v2) - gtag() definiuje skrypt w <head> layoutu. */
+const updateGtmConsent = (granted: boolean) => {
+  const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (!gtag) return;
+  const state = granted ? "granted" : "denied";
+  gtag("consent", "update", {
+    ad_storage: state,
+    ad_user_data: state,
+    ad_personalization: state,
+    analytics_storage: state,
+  });
 };
 
 export function CookieBanner() {

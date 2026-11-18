@@ -14,7 +14,11 @@ import { ShutterTransition } from "@/components/layout/ShutterTransition";
 import { InteractiveEffects } from "@/components/layout/InteractiveEffects";
 import { SITE_URL } from "@/constants/routes";
 import { BUSINESS_SCHEMA } from "@/data/schema";
-import { COOKIE_CONSENT_KEY, COOKIES_DECIDED_CLASS } from "@/constants/cookies";
+import {
+  COOKIE_CONSENT_KEY,
+  COOKIES_DECIDED_CLASS,
+  GTM_ID,
+} from "@/constants/cookies";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -123,6 +127,18 @@ export default async function RootLayout({
             __html: `(function(d){d.classList.add('js');var k='${COOKIE_CONSENT_KEY}',s=null;try{s=localStorage.getItem(k)}catch(e){}if(s||document.cookie.indexOf(k+'=')>-1)d.classList.add('${COOKIES_DECIDED_CLASS}')})(document.documentElement)`,
           }}
         />
+        {/* Google Tag Manager. Kolejnosc ma znaczenie: najpierw domyslny stan zgody
+            (Consent Mode v2) - odmowa, chyba ze zgoda jest juz zapisana - dopiero potem
+            start kontenera. Tagi w GTM same respektuja ten stan. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var k='${COOKIE_CONSENT_KEY}',s=null;try{s=localStorage.getItem(k)}catch(e){}var g=(s==='accepted'||document.cookie.indexOf(k+'=accepted')>-1)?'granted':'denied';gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g});})();gtag('js',new Date());dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});`,
+          }}
+        />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -131,6 +147,14 @@ export default async function RootLayout({
         />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <NextIntlClientProvider messages={clientMessages} locale={locale}>
           <ScrollToTop />
           <a href="#main-content" className="skipLink">
