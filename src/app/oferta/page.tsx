@@ -74,7 +74,7 @@ export default async function OfferPage() {
                     <span className={styles.icon}>
                       <Icon name={product.icon} />
                     </span>
-                    {product.badge && (
+                    {product.badge && product.badge !== product.eyebrow && (
                       <span className={styles.badge}>{product.badge}</span>
                     )}
                   </div>

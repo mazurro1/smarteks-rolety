@@ -41,7 +41,7 @@ export async function generateMetadata({
 
   const tSite = await getTranslations(NAMESPACES.SITE);
   const url = `${SITE_URL}${projectPath(slug)}`;
-  const title = `${project.title} - ${project.location}`;
+  const title = project.metaTitle ?? `${project.title} - ${project.location}`;
 
   return {
     title,
@@ -70,8 +70,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     (item) => item.slug !== project.slug && item.category === project.category,
   ).slice(0, 3);
 
-  const relatedProduct = OFFER_PRODUCTS.find((product) =>
-    product.projectCategories.includes(project.category),
+  // Glowna kategoria i dodatkowe (np. RC2 + podtynkowe) - po jednym linku do oferty.
+  const projectCategories = [project.category, ...(project.extraCategories ?? [])];
+  const relatedProducts = OFFER_PRODUCTS.filter((product) =>
+    product.projectCategories.some((category) =>
+      projectCategories.includes(category),
+    ),
   );
 
   return (
@@ -144,8 +148,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </dl>
             </div>
 
-            {relatedProduct && (
+            {relatedProducts.map((relatedProduct) => (
               <Link
+                key={relatedProduct.slug}
                 href={offerPath(relatedProduct.slug)}
                 className={styles.productLink}
               >
@@ -156,6 +161,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   </span>
                   <span className={styles.productLinkTitle}>
                     {relatedProduct.navLabel}
+                  </span>
+                </span>
+                <span className={styles.productArrow} aria-hidden="true">
+                  &rarr;
+                </span>
+              </Link>
+            ))}
+
+            {project.solutionLink && (
+              <Link href={project.solutionLink.href} className={styles.productLink}>
+                <Icon name="sun" />
+                <span>
+                  <span className={styles.productLinkLabel}>
+                    {t("detail.productLinkLabel")}
+                  </span>
+                  <span className={styles.productLinkTitle}>
+                    {project.solutionLink.label}
                   </span>
                 </span>
                 <span className={styles.productArrow} aria-hidden="true">

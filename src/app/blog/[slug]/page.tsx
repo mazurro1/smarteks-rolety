@@ -12,7 +12,7 @@ import { CONTACT_INFO } from "@/constants/contact";
 import { SITE_URL, ROUTES, blogPath } from "@/constants/routes";
 import { getBlogPost, getAllSlugs, getRelatedPosts } from "@/data/blog";
 import { getPublicImageSize } from "@/data/blog/imageSize";
-import { BUSINESS_REF, PARENT_ORGANIZATION } from "@/data/schema";
+import { BUSINESS_ID } from "@/data/schema";
 import { PageHero } from "@/components/sections/PageHero";
 import { PostCard } from "@/components/sections/Blog";
 import Button from "@/ui/Button";
@@ -39,9 +39,10 @@ export async function generateMetadata({
 
   const tSite = await getTranslations(NAMESPACES.SITE);
   const url = `${SITE_URL}${blogPath(slug)}`;
+  const title = post.metaTitle ?? post.title;
 
   return {
-    title: post.title,
+    title,
     description: post.metaDescription,
     alternates: { canonical: url },
     openGraph: {
@@ -49,7 +50,7 @@ export async function generateMetadata({
       locale: "pl_PL",
       url,
       siteName: tSite("name"),
-      title: post.title,
+      title,
       description: post.metaDescription,
       publishedTime: post.publishedAt,
       ...(post.updatedAt && { modifiedTime: post.updatedAt }),
@@ -62,7 +63,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title,
       description: post.metaDescription,
       ...(post.image && { images: [post.image] }),
     },
@@ -99,24 +100,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
+    "@type": "BlogPosting",
+    // Tytul wpisu bez koncowki "| Smarteks Rolety".
+    headline: post.metaTitle ?? post.title,
     description: post.metaDescription,
-    datePublished: post.publishedAt,
-    ...(post.updatedAt && { dateModified: post.updatedAt }),
-    // Autor i wydawca powiazani przez @id z firma z layoutu i spolka Smarteks.
-    author: BUSINESS_REF,
-    publisher: {
-      "@type": PARENT_ORGANIZATION["@type"],
-      "@id": PARENT_ORGANIZATION["@id"],
-      name: PARENT_ORGANIZATION.name,
-      url: PARENT_ORGANIZATION.url,
-    },
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
     ...(post.image && { image: `${SITE_URL}${post.image}` }),
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: "Smarteks Sp. z o.o.",
+      url: `${SITE_URL}/`,
+    },
+    // Wydawca = firma z layoutu (dane pod @id "#firma").
+    publisher: { "@id": BUSINESS_ID },
+    mainEntityOfPage: url,
     // Bez "keywords" - z tego samego powodu co meta keywords (zdradza frazy).
     inLanguage: "pl-PL",
-    isAccessibleForFree: true,
   };
 
   // Bez FAQPage - Google pokazuje takie wyniki tylko stronom rzadowym i medycznym.

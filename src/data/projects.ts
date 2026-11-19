@@ -10,7 +10,7 @@ import type { Project, ProjectCategory } from "@/types";
 export const PROJECT_CATEGORY_LABELS: Record<ProjectCategory, string> = {
   rc2: "Rolety RC2",
   rc3: "Rolety RC3",
-  adaptive: "Rolety adaptacyjne",
+  adaptive: "Rolety z regulacją światła",
   recessed: "Rolety podtynkowe",
   rollerGates: "Bramy rolowane",
 };
@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
     year: 2026,
     buildingType: "Willa",
     summary:
-      "Najwyższa klasa odporności na przeszkleniach parteru, z kontrolą położenia pancerza raportowaną do centrali alarmowej.",
+      "Rolety RC3 na przeszkleniach parteru, z kontrolą położenia pancerza raportowaną do centrali alarmowej.",
     description: [
       "Willa stoi na dużej, zadrzewionej działce, osłonięta od ulicy - sytuacja, w której włamywacz ma komfort pracy. Ubezpieczyciel przy tej sumie ubezpieczenia wymagał zabezpieczeń klasy RC3.",
       "Największym wyzwaniem były dwa przeszklenia tarasowe o szerokości ponad trzech metrów. Zastosowaliśmy pancerze ekstrudowane ze wzmocnioną listwą dolną i napędami o podwyższonym momencie, a prowadnice zakotwiliśmy bezpośrednio w konstrukcji nośnej, z pominięciem warstwy ocieplenia.",
@@ -103,7 +103,8 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "apartament-mokotow-rolety-adaptacyjne",
-    title: "Apartament z roletami adaptacyjnymi od południa",
+    title: "Apartament z roletami regulującymi światło od południa",
+    metaTitle: "Apartament na Mokotowie: regulacja światła",
     category: "adaptive",
     location: "Warszawa, Mokotów",
     year: 2025,
@@ -112,18 +113,18 @@ export const PROJECTS: Project[] = [
       "Przeszklenia południowo-zachodnie z regulacją prześwitu pancerza i automatyką słoneczną - koniec z wyborem między upałem a ciemnością.",
     description: [
       "Salon z przeszkleniem na południowy zachód nagrzewał się latem do granic wytrzymałości, a klasyczne rolety zewnętrzne oznaczały pracę przy sztucznym świetle przez pół dnia.",
-      "Zamontowaliśmy rolety adaptacyjne z profilem 80 mm. Po opuszczeniu pancerza profile odchylają się o zadany kąt: światło wpada do wnętrza, powietrze przepływa, a z zewnątrz nie widać, co dzieje się w mieszkaniu.",
+      "Zamontowaliśmy rolety z regulacją światła z profilem 80 mm. Po opuszczeniu pancerza profile odchylają się o zadany kąt: światło wpada do wnętrza, powietrze przepływa, a z zewnątrz nie widać, co dzieje się w mieszkaniu.",
       "Automatyka steruje osłonami bez udziału mieszkańców - czujnik nasłonecznienia przymyka profile, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz przed nadejściem silniejszych podmuchów.",
     ],
     scope: [
       "Analiza nasłonecznienia elewacji i dobór wysokości profilu",
-      "Montaż 5 rolet adaptacyjnych, w tym osłony tarasowej 3,2 m",
+      "Montaż 5 rolet z regulacją światła, w tym osłony tarasowej 3,2 m",
       "Instalacja czujników nasłonecznienia i wiatru",
       "Zaprogramowanie scen dziennych i wieczornych",
       "Instruktaż obsługi aplikacji i pilota",
     ],
     specs: [
-      { label: "Liczba osłon", value: "5 rolet adaptacyjnych" },
+      { label: "Liczba osłon", value: "5 rolet z regulacją światła" },
       { label: "Profil pancerza", value: "80 mm, kąt do 70°" },
       { label: "Największa osłona", value: "3,2 m szerokości" },
       { label: "Automatyka", value: "Czujnik słońca i wiatru" },
@@ -136,6 +137,10 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Temperatura w salonie w szczycie upałów spadła o kilka stopni, a klimatyzacja pracuje wyraźnie krócej w ciągu dnia.",
+    solutionLink: {
+      label: "Jak działają rolety z regulacją światła",
+      href: blogPath("rolety-adaptacyjne-swiatlo-i-prywatnosc"),
+    },
   },
   {
     slug: "dom-piaseczno-rolety-podtynkowe",
@@ -214,27 +219,28 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "biuro-wola-rolety-adaptacyjne",
-    title: "Biuro na Woli - rolety adaptacyjne z automatyką słoneczną",
+    title: "Biuro na Woli - rolety z regulacją światła i automatyką słoneczną",
+    metaTitle: "Biuro na Woli: rolety z regulacją światła",
     category: "adaptive",
     location: "Warszawa, Wola",
     year: 2025,
     buildingType: "Lokal biurowy",
     summary:
-      "Dwadzieścia dwie osłony adaptacyjne sterowane grupowo, z harmonogramem dopasowanym do godzin pracy zespołu.",
+      "Dwadzieścia dwie rolety z regulacją światła sterowane grupowo, z harmonogramem dopasowanym do godzin pracy zespołu.",
     description: [
       "Open space z przeszkleniami na dwie strony świata oznaczał codzienną wojnę o rolety - jedni chcieli światła, inni uciekali przed odblaskiem na monitorach.",
-      "Rolety adaptacyjne rozwiązały spór technicznie: uchylone profile przepuszczają światło dzienne, jednocześnie odcinając bezpośrednie promieniowanie. Sterowanie podzieliliśmy na strefy odpowiadające układowi stanowisk.",
+      "Rolety z regulacją światła rozwiązały spór technicznie: uchylone profile przepuszczają światło dzienne, jednocześnie odcinając bezpośrednie promieniowanie. Sterowanie podzieliliśmy na strefy odpowiadające układowi stanowisk.",
       "Harmonogram uruchamia osłony przed przyjściem zespołu i otwiera je po godzinach pracy, żeby serwis sprzątający miał pełne światło dzienne.",
     ],
     scope: [
       "Projekt stref sterowania dopasowany do układu biura",
-      "Montaż 22 rolet adaptacyjnych na dwóch elewacjach",
+      "Montaż 22 rolet z regulacją światła na dwóch elewacjach",
       "Sterowanie grupowe z panelami w strefach",
       "Harmonogramy tygodniowe i scenariusze pogodowe",
       "Szkolenie administratora biura z obsługi systemu",
     ],
     specs: [
-      { label: "Liczba osłon", value: "22 rolety adaptacyjne" },
+      { label: "Liczba osłon", value: "22 rolety z regulacją światła" },
       { label: "Elewacje", value: "Południowa i zachodnia" },
       { label: "Sterowanie", value: "Strefowe, panele + harmonogram" },
       { label: "Automatyka", value: "Czujniki słońca i wiatru" },
@@ -249,6 +255,10 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Zespół przestał ręcznie regulować osłony, a pomiary wykazały niższe zużycie energii na chłodzenie w miesiącach letnich.",
+    solutionLink: {
+      label: "Jak działają rolety z regulacją światła",
+      href: blogPath("rolety-adaptacyjne-swiatlo-i-prywatnosc"),
+    },
   },
   {
     slug: "dom-jozefow-rc2-podtynkowe",

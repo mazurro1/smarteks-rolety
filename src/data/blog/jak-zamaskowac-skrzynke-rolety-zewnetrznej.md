@@ -2,6 +2,7 @@
 title: "Jak zamaskować skrzynkę rolety zewnętrznej? 5 sposobów"
 metaDescription: "Jak ukryć skrzynkę rolety zewnętrznej w gotowym domu, przy docieplaniu i na budowie. 5 sposobów, błędy, których lepiej uniknąć, i przykłady z montaży."
 publishedAt: "2026-11-16"
+updatedAt: "2026-11-19"
 excerpt: "Jak ukryć skrzynkę rolety zewnętrznej w gotowym domu, przy docieplaniu i na budowie. 5 sposobów, błędy, których lepiej uniknąć, i przykłady z montaży."
 category: "Poradnik"
 image: "/images/blog/jak-zamaskowac-skrzynke-rolety/skrzynka-rolety-widoczna-i-ukryta-pod-tynkiem.jpg"

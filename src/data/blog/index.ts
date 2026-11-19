@@ -5,7 +5,10 @@ import type { FaqItem } from "@/types";
 
 export interface BlogPostMeta {
   slug: string;
+  /** Naglowek H1 wpisu i tytul na kartach. */
   title: string;
+  /** Tytul w <title>, og:title i danych strukturalnych, gdy inny niz H1. */
+  metaTitle?: string;
   metaDescription: string;
   publishedAt: string;
   updatedAt?: string;
@@ -38,6 +41,7 @@ const toMeta = (
 ): BlogPostMeta => ({
   slug,
   title: data.title as string,
+  metaTitle: data.metaTitle as string | undefined,
   metaDescription: data.metaDescription as string,
   publishedAt: data.publishedAt as string,
   updatedAt: data.updatedAt as string | undefined,

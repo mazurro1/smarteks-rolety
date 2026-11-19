@@ -1,7 +1,8 @@
 ---
 title: "Rolety RC2 czy RC3? Jak wybrać klasę odporności na włamanie"
-metaDescription: "Czym różnią się rolety antywłamaniowe RC2 od RC3, ile realnie dają czasu i kiedy dopłata do wyższej klasy ma sens. Praktyczny przewodnik po PN-EN 1627."
-publishedAt: "2026-09-02"
+metaDescription: "Czym różnią się rolety RC2 od RC3, ile minut dają, czy zwykła roleta chroni przed włamaniem i kiedy dopłata do RC3 ma sens. Poradnik wg PN-EN 1627."
+publishedAt: "2026-09-21"
+updatedAt: "2026-11-19"
 excerpt: "RC2 wytrzymuje trzy minuty, RC3 - pięć. Brzmi jak drobiazg, ale różnica decyduje o tym, czy włamywacz zrezygnuje. Sprawdź, która klasa pasuje do Twojego domu."
 category: "Bezpieczeństwo"
 keywords:
@@ -35,14 +36,20 @@ Klasy odporności na włamanie definiuje norma PN-EN 1627. Badanie polega na tym
 
 Trzy minuty brzmią niepozornie, dopóki nie zestawi się ich z realiami. Włamywacz działający w zabudowie mieszkaniowej liczy się z tym, że po kilkudziesięciu sekundach hałasu ktoś zajrzy przez okno. Statystyki firm ubezpieczeniowych są w tej kwestii zgodne: zdecydowana większość prób przerywana jest w pierwszych minutach.
 
+## Czy zwykłe rolety chronią przed włamaniem?
+
+Zwykła roleta zewnętrzna zasłania okno, ale jej ochrona przed włamaniem jest symboliczna: nie ma żadnej normy włamaniowej, więc nikt nie sprawdził, ile wytrzyma. Rolety antywłamaniowe mają blokady, które dociskają pancerz i nie pozwalają podnieść go od zewnątrz, a ich klasę RC2 albo RC3 potwierdzają badania według normy PN-EN 1627 w akredytowanych laboratoriach.
+
 ## Gdzie leży realna różnica konstrukcyjna
 
 Różnica między RC2 a RC3 nie polega na grubszej farbie. To inna konstrukcja pancerza:
 
-- **RC2** - profile aluminiowe wypełnione twardą pianką poliuretanową. Pianka usztywnia profil i tłumi dźwięk, ale sam profil jest stosunkowo lekki.
-- **RC3** - profile ekstrudowane, czyli pełne profile aluminiowe o ściance dochodzącej do 3 mm, bez rdzenia z pianki. Pancerz waży nawet trzy razy więcej i jest nieporównanie sztywniejszy.
+- **RC2** - pełne profile aluminiowe ekstrudowane, bez pianki – w systemie, który montujemy, profil PE 41 o wysokości 41 mm i grubości 8,5 mm. Metr kwadratowy pancerza waży ok. 7,4 kg.
+- **RC3** - wyższe i grubsze profile ekstrudowane – w systemie, który montujemy, profil PE 55 o wysokości 55 mm i grubości 14 mm. Metr kwadratowy pancerza waży ok. 8,7 kg, a pancerz jest wyraźnie sztywniejszy.
 
 Za tym idą kolejne elementy: w RC3 prowadnice mają większy przekrój i muszą być kotwione bezpośrednio w konstrukcji nośnej, ryglowanie jest wielopunktowe, a listwa dolna dostaje stalowy wkład. Każdy z tych elementów jest częścią certyfikatu.
+
+![Porównanie profili pancerza RC2 i RC3: wysokość, grubość, masa, maksymalna powierzchnia i czas oporu](/images/blog/rolety-rc2-czy-rc3/porownanie-profili-pancerza-rc2-i-rc3.png)
 
 ## Pięć rzeczy, które decydują o klasie
 
@@ -67,6 +74,8 @@ RC2 jest rozsądnym wyborem, gdy:
 
 W takiej sytuacji dopłata do RC3 jest kosztem, który nie przekłada się na realne bezpieczeństwo. Lepiej te pieniądze przeznaczyć na objęcie ochroną **wszystkich** dostępnych okien, niż na wyższą klasę dla połowy z nich.
 
+Parametry i wersje znajdziesz na stronie [rolety antywłamaniowe RC2](/oferta/rolety-antywlamaniowe-rc2).
+
 ## Kiedy warto dopłacić do RC3
 
 RC3 ma sens, gdy:
@@ -77,6 +86,8 @@ RC3 ma sens, gdy:
 - okna parteru są łatwo dostępne z tarasu, dachu garażu lub ogrodzenia.
 
 Warto też pamiętać o rozwiązaniu mieszanym: RC3 na najbardziej narażonych przeszkleniach parteru i RC2 na pozostałych oknach. To częsty kompromis między budżetem a realnym poziomem ryzyka.
+
+Szczegóły: [rolety antywłamaniowe RC3](/oferta/rolety-antywlamaniowe-rc3).
 
 ## Czego nie załatwią same rolety
 
@@ -89,3 +100,5 @@ Dobrą praktyką jest też podłączenie styków kontrolnych położenia pancerz
 Dla większości domów jednorodzinnych RC2 jest właściwym punktem startu - pod warunkiem, że mówimy o certyfikowanym zestawie zamontowanym zgodnie z dokumentacją, a nie o „rolecie wzmocnionej" bez papierów. RC3 to rozwiązanie dla sytuacji, w których włamywacz ma czas i spokój: osłonięte działki, wartościowe wyposażenie, wymagania ubezpieczyciela.
 
 Jeśli nie masz pewności, która klasa odpowiada Twojej sytuacji, najprościej umówić bezpłatny pomiar. Na miejscu widać to, czego nie widać przez telefon: jak wygląda dostęp do okien, co zastaniemy w nadprożu i czy budynek w ogóle jest przygotowany pod cięższe pancerze.
+
+Nie wiesz, czy wystarczy RC2? Zadzwoń: [737 531 193](tel:+48737531193) (pn.–pt. 8–18) – doradzimy przy pomiarze w Warszawie i okolicach.

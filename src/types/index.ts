@@ -67,6 +67,13 @@ export interface OfferVariant {
   points: string[];
 }
 
+/** Sekcja tekstowa podstrony oferty: naglowek H2, lista i akapity. */
+export interface OfferSection {
+  title: string;
+  list?: string[];
+  paragraphs?: string[];
+}
+
 export interface FaqItem {
   q: string;
   a: string;
@@ -87,6 +94,10 @@ export interface OfferProduct {
   title: string;
   /** Naglowek H1 podstrony, gdy ma byc inny niz nazwa (np. z miastem). */
   heroTitle?: string;
+  /** Etykieta pod H1 podstrony, gdy inna niz w karcie; null = bez etykiety. */
+  heroEyebrow?: string | null;
+  /** Podtytul pod H1 podstrony, gdy inny niz "tagline"; null = bez podtytulu. */
+  heroLead?: string | null;
   /** Tytul w kartach na stronie glownej / w ofercie. */
   cardTitle: string;
   eyebrow: string;
@@ -100,7 +111,13 @@ export interface OfferProduct {
   intro: string[];
   features: OfferFeature[];
   specs: OfferSpec[];
+  /** Wiersze ramki "W skrocie", gdy inne niz poczatek "specs". */
+  quickFacts?: OfferSpec[];
+  /** Ile pierwszych wierszy "specs" trafia do ramki "W skrocie" (domyslnie 4). */
+  quickFactsCount?: number;
   variants: OfferVariant[];
+  /** Sekcje tekstowe (H2 + tresc) pod wstepem - linki w zapisie markdown. */
+  sections?: OfferSection[];
   installation: {
     lead: string;
     points: string[];
@@ -108,6 +125,8 @@ export interface OfferProduct {
   service: {
     lead: string;
     points: string[];
+    /** Zdanie pod lista - linki w zapisie markdown. */
+    note?: string;
   };
   faq: FaqItem[];
   /** Linki do poradnikow z bloga, pokazywane pod pytaniami. */
@@ -143,6 +162,8 @@ export interface Project {
   category: ProjectCategory;
   /** Dodatkowe kategorie do filtrowania (np. RC2 + podtynkowe). */
   extraCategories?: ProjectCategory[];
+  /** Tytul w <title> i og:title, gdy inny niz "tytul - miejscowosc". */
+  metaTitle?: string;
   location: string;
   year: number;
   buildingType: string;
@@ -159,6 +180,8 @@ export interface Project {
   outcome: string;
   /** Poradnik z bloga - drugi link w ramce pod parametrami realizacji. */
   guide?: NavLink;
+  /** Link w ramce "Rozwiazanie z oferty", gdy realizacja nie ma podstrony oferty. */
+  solutionLink?: NavLink;
 }
 
 // ── Contact form ──────────────────────────────────────────────────────────────

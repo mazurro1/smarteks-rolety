@@ -1,5 +1,5 @@
 import { CONTACT_INFO } from "@/constants/contact";
-import { OFFER_SLUGS, blogPath } from "@/constants/routes";
+import { OFFER_SLUGS, blogPath, offerPath, projectPath } from "@/constants/routes";
 import { SOMFY_IMAGES } from "@/data/media";
 import type { OfferProduct } from "@/types";
 
@@ -15,7 +15,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     heroTitle: "Rolety antywłamaniowe RC2 w Warszawie",
     cardTitle: "Rolety RC2",
     eyebrow: "Klasa odporności RC2",
-    badge: "Najczęściej wybierane",
+    badge: "Do domów na osiedlach",
     icon: "shield",
     image: { ...SOMFY_IMAGES.shuttersCornerRemote, position: "center 35%" },
     tagline: "Certyfikowana ochrona dla domów i mieszkań",
@@ -27,8 +27,8 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       "Akceptowane przez towarzystwa ubezpieczeniowe",
     ],
     intro: [
-      "Rolety antywłamaniowe klasy RC2 to najczęściej wybierane zabezpieczenie okien w domach jednorodzinnych i mieszkaniach na parterze. Klasa RC2 oznacza, że konstrukcja przez co najmniej trzy minuty opiera się próbie sforsowania prostymi narzędziami - śrubokrętem, klinem czy niewielkim łomem. W praktyce to czas, po którym zdecydowana większość włamywaczy rezygnuje i szuka łatwiejszego celu.",
-      "Odporność nie bierze się z samego pancerza. Składa się na nią pięć elementów: profil wypełniony pianką o wysokiej gęstości, wzmocnione prowadnice z zagłębieniem bocznym, blokady antypodnoszeniowe uniemożliwiające ręczne podniesienie pancerza, sztywna listwa dolna oraz prawidłowe zakotwienie całego zestawu w murze. Pominięcie któregokolwiek z nich sprawia, że roleta traci deklarowaną klasę.",
+      "Rolety antywłamaniowe zewnętrzne klasy RC2 to zabezpieczenie okien w domach jednorodzinnych i mieszkaniach na parterze. Klasa RC2 oznacza, że konstrukcja przez co najmniej trzy minuty opiera się próbie sforsowania prostymi narzędziami - śrubokrętem, klinem czy niewielkim łomem. Przez ten czas hałas przy oknie może zwrócić uwagę sąsiadów.",
+      "Odporność nie bierze się z samego pancerza. Składa się na nią pięć elementów: profil ekstrudowany z pełnego aluminium, wzmocnione prowadnice z zagłębieniem bocznym, blokady antypodnoszeniowe uniemożliwiające ręczne podniesienie pancerza, sztywna listwa dolna oraz prawidłowe zakotwienie całego zestawu w murze. Pominięcie któregokolwiek z nich sprawia, że roleta traci deklarowaną klasę.",
       "Montujemy wyłącznie kompletne zestawy certyfikowane jako całość, wraz z protokołem montażu. To dokument, o który pyta ubezpieczyciel przy negocjowaniu składki i przy likwidacji szkody.",
     ],
     features: [
@@ -46,9 +46,9 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         icon: "layers",
-        title: "Profil wypełniony pianką",
+        title: "Profil ekstrudowany",
         description:
-          "Aluminiowe profile z rdzeniem z twardej pianki poliuretanowej: sztywność, tłumienie hałasu i izolacja termiczna.",
+          "Pełne profile aluminiowe PE 41 dają pancerzowi sztywność, której nie ma profil wypełniony pianką.",
       },
       {
         icon: "bolt",
@@ -70,15 +70,17 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     specs: [
+      { label: "System", value: "Aluprof Safety Plus" },
       { label: "Klasa odporności", value: "RC2 wg PN-EN 1627/1630" },
       { label: "Czas oporu", value: "min. 3 minuty (narzędzia kat. A2)" },
-      { label: "Profil pancerza", value: "Aluminium wypełnione pianką PU, 39-55 mm" },
+      { label: "Profil pancerza", value: "Aluminium ekstrudowane, profil PE 41 (41 mm)" },
       { label: "Prowadnice", value: "Wzmocnione, z uszczelką i głębokim zagłębieniem" },
       { label: "Blokady", value: "Antypodnoszeniowe, min. 2 na pancerz" },
       { label: "Napęd", value: "Silnik rurowy z hamulcem, sterowanie radiowe" },
       { label: "Zasilanie awaryjne", value: "Opcjonalne - korba lub akumulator" },
       { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
     ],
+    quickFactsCount: 5,
     variants: [
       {
         name: "RC2 nakładana",
@@ -134,7 +136,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     faq: [
       {
         q: "Czy rolety RC2 obniżają składkę ubezpieczenia?",
-        a: "W większości towarzystw tak - certyfikowane zabezpieczenia przeciwwłamaniowe są uwzględniane przy wyliczaniu składki i podnoszą limit odpowiedzialności za kradzież z włamaniem. Warunkiem jest przedstawienie protokołu montażu z numerem certyfikatu, który przekazujemy po zakończeniu prac.",
+        a: "O tym decyduje ubezpieczyciel. Sprawdź ogólne warunki swojej polisy albo zapytaj agenta, czy bierze pod uwagę rolety z certyfikatem klasy RC2.",
       },
       {
         q: "Czym różni się roleta RC2 od zwykłej rolety zewnętrznej?",
@@ -165,9 +167,9 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety antywłamaniowe RC2 - montaż i serwis Warszawa",
+      title: "Rolety antywłamaniowe zewnętrzne RC2",
       description:
-        "Certyfikowane rolety antywłamaniowe klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach.",
+        "Certyfikowane rolety antywłamaniowe zewnętrzne klasy RC2 wg PN-EN 1627. Montaż, serwis i przeglądy w Warszawie i okolicach.",
     },
     projectCategories: ["rc2"],
   },
@@ -177,10 +179,10 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     title: "Rolety antywłamaniowe RC3",
     cardTitle: "Rolety RC3",
     eyebrow: "Klasa odporności RC3",
-    badge: "Najwyższa ochrona",
+    badge: "Wyższa klasa ochrony",
     icon: "shieldCheck",
     image: { ...SOMFY_IMAGES.remoteShutterSlats, position: "center 30%" },
-    tagline: "Maksymalna klasa dla willi i obiektów o podwyższonym ryzyku",
+    tagline: "Dla domów wolnostojących w zacisznych miejscach",
     excerpt:
       "Pancerz z profili ekstrudowanych, podwójne ryglowanie i prowadnice kotwione w konstrukcji. Ochrona tam, gdzie RC2 to za mało.",
     highlights: [
@@ -232,22 +234,25 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     specs: [
+      { label: "System", value: "Aluprof Safety Premium" },
       { label: "Klasa odporności", value: "RC3 wg PN-EN 1627/1630" },
       { label: "Czas oporu", value: "min. 5 minut (narzędzia kat. A3)" },
       { label: "Profil pancerza", value: "Ekstrudowane aluminium, ścianka do 3 mm" },
-      { label: "Masa pancerza", value: "12-17 kg/m² zależnie od profilu" },
+      { label: "Masa pancerza", value: "8,7 kg/m² (profil Aluprof PE 55)" },
       { label: "Prowadnice", value: "Wzmocnione, kotwione w konstrukcji nośnej" },
       { label: "Ryglowanie", value: "Wielopunktowe, pancerz + listwa dolna" },
+      { label: "Napęd", value: "tylko elektryczny" },
       { label: "Maks. szerokość", value: "do 4,5 m w jednym pancerzu" },
       { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
     ],
+    quickFactsCount: 5,
     variants: [
       {
         name: "RC3 okienna",
         description:
           "Standardowe zastosowanie przy oknach parteru i kondygnacji dostępnych z poziomu terenu lub dachu garażu.",
         points: [
-          "Pancerz ekstrudowany 45 mm",
+          "Pancerz ekstrudowany 55 mm (PE 55)",
           "Blokady w obu prowadnicach",
           "Skrzynka nakładana lub podtynkowa",
         ],
@@ -323,7 +328,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety antywłamaniowe RC3 - Warszawa i okolice",
+      title: "Rolety antywłamaniowe RC3 dla domów",
       description:
         "Rolety antywłamaniowe klasy RC3 z profili ekstrudowanych. Certyfikat PN-EN 1627, ryglowanie wielopunktowe, montaż i serwis w Warszawie i okolicach.",
     },
@@ -333,147 +338,107 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     slug: OFFER_SLUGS.ADAPTIVE,
     navLabel: "Rolety adaptacyjne",
     title: "Rolety adaptacyjne",
+    heroTitle: "Rolety adaptacyjne (natynkowe)",
+    // Na podstronie bez etykiety i podtytulu pod H1 - opis jest we wstepie.
+    heroEyebrow: null,
+    heroLead: null,
     cardTitle: "Rolety adaptacyjne",
-    eyebrow: "Światło pod kontrolą",
+    eyebrow: "Do gotowych domów",
+    badge: "Do gotowych domów",
     icon: "sun",
     image: { ...SOMFY_IMAGES.shutterGarden, position: "center 30%" },
-    tagline: "Światło dzienne przy opuszczonej rolecie",
+    tagline:
+      "Rolety montowane do gotowych okien, bez kucia ścian. Skrzynka na ścianie nad oknem albo we wnęce, w kilku kształtach i wielu kolorach.",
     excerpt:
-      "Uchylne profile pancerza wpuszczają światło przy opuszczonej rolecie. Prywatność bez ciemności i bez rezygnacji z widoku.",
+      "Rolety montowane do gotowych okien, bez kucia ścian. Skrzynka na ścianie nad oknem albo we wnęce, w kilku kształtach i wielu kolorach.",
     highlights: [
-      "Płynna regulacja prześwitu pancerza",
-      "Światło dzienne przy zamkniętej rolecie",
-      "Automatyka pogodowa w standardzie",
+      "Bez wymiany okien",
+      "Skrzynka na ścianie lub we wnęce",
+      "Napęd elektryczny",
     ],
     intro: [
-      "Roleta adaptacyjna rozwiązuje problem, który ma każda klasyczna roleta zewnętrzna: opuszczona zasłania wszystko. Tutaj po osiągnięciu dolnego położenia pancerz rozsuwa się, a jego profile odchylają się o zadany kąt. Do wnętrza wpada rozproszone światło dzienne, powietrze swobodnie przepływa, a z zewnątrz nadal nie widać, co dzieje się w pomieszczeniu.",
-      "To rozwiązanie sprawdza się w domach z dużymi przeszkleniami od południa i zachodu, w biurach, w których liczy się komfort pracy przy monitorze, oraz wszędzie tam, gdzie przez pół roku trzeba wybierać między przegrzaniem a sztucznym światłem. Osłona zatrzymuje promieniowanie przed szybą, więc działa skuteczniej niż jakakolwiek roleta wewnętrzna.",
-      "Sterowanie prowadzimy automatyką pogodową: czujnik nasłonecznienia przymyka profile, gdy słońce operuje na elewację, a czujnik wiatru zwija pancerz, zanim podmuch stanie się niebezpieczny. Dzięki temu instalacja pracuje bez udziału domowników.",
+      "Rolety adaptacyjne, nazywane też natynkowymi, to rolety zewnętrzne montowane do gotowych okien – bez wymiany okien i bez kucia ścian. Skrzynkę montuje się na ścianie nad oknem albo we wnęce okiennej, przy ramie okna. Montujemy rolety adaptacyjne Aluprof w domach i mieszkaniach w Warszawie i okolicach.",
     ],
-    features: [
-      {
-        icon: "sun",
-        title: "Regulacja prześwitu",
-        description:
-          "Od pełnego zaciemnienia do prześwitu - ustawienie zapamiętywane i przywoływane jednym przyciskiem.",
-      },
-      {
-        icon: "thermometer",
-        title: "Ochrona przed przegrzewaniem",
-        description:
-          "Osłona po zewnętrznej stronie szyby odcina promieniowanie, zanim nagrzeje wnętrze. Realna ulga dla klimatyzacji.",
-      },
-      {
-        icon: "remote",
-        title: "Automatyka pogodowa",
-        description:
-          "Czujniki słońca, wiatru i temperatury sterują pancerzem bez udziału użytkownika, z priorytetem bezpieczeństwa.",
-      },
-      {
-        icon: "volume",
-        title: "Cicha praca",
-        description:
-          "Profile pracują w prowadnicach z uszczelkami - bez metalicznego klekotu przy zmianie położenia.",
-      },
-      {
-        icon: "layers",
-        title: "Smukły pancerz",
-        description:
-          "Profile o wysokości 65-90 mm zwijane w kompaktową skrzynkę, również w wersji ukrytej w elewacji.",
-      },
-      {
-        icon: "house",
-        title: "Dwie funkcje, jedna roleta",
-        description:
-          "Pełne zaciemnienie i regulacja światła w jednej osłonie. Jeden otwór montażowy, jeden napęd, jedno sterowanie.",
-      },
+    features: [],
+    specs: [],
+    quickFacts: [
+      { label: "Typ osłony", value: "Roleta zewnętrzna do gotowych okien" },
+      { label: "Skrzynka", value: "na elewacji lub we wnęce" },
+      { label: "Napęd", value: "elektryczny – pilot, przycisk albo telefon" },
+      { label: "Montaż", value: "w każdej chwili, także w gotowym domu" },
     ],
-    specs: [
-      { label: "Typ osłony", value: "Roleta zewnętrzna z uchylnymi profilami pancerza" },
-      { label: "Wysokość profilu", value: "65 / 80 / 90 mm" },
-      { label: "Kąt otwarcia", value: "Płynny, do ok. 70°" },
-      { label: "Maks. szerokość", value: "do 4 m w jednym pancerzu" },
-      { label: "Maks. powierzchnia", value: "do 12 m² na jedną osłonę" },
-      { label: "Odporność na wiatr", value: "Klasa 5 wg PN-EN 13659 (zależnie od wymiaru)" },
-      { label: "Sterowanie", value: "Radiowe, pilot, przycisk, automatyka pogodowa" },
-      { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
-    ],
-    variants: [
+    variants: [],
+    sections: [
       {
-        name: "Adaptacyjna standardowa",
-        description:
-          "Podstawowa wersja do okien pionowych w domach jednorodzinnych i mieszkaniach z balkonem.",
-        points: [
-          "Profil 65 mm",
-          "Skrzynka nakładana",
-          "Sterowanie radiowe z pilotem",
+        title: "Dla kogo są rolety adaptacyjne",
+        list: [
+          "Dom lub mieszkanie już stoi i nie chcesz kuć ścian ani wymieniać okien.",
+          "W nadprożu nie ma miejsca na ukrytą skrzynkę.",
+        ],
+        paragraphs: [
+          `Jeśli budujesz dom, rozważ [rolety podtynkowe](${offerPath(OFFER_SLUGS.RECESSED)}) – ich skrzynkę zabudowuje się w elewacji i przykrywa tynkiem.`,
         ],
       },
       {
-        name: "Adaptacyjna do dużych przeszkleń",
-        description:
-          "Wersja do okien tarasowych, witryn i elewacji biurowych, ze wzmocnionymi prowadnicami.",
-        points: [
-          "Profil 80-90 mm",
-          "Sterowanie grupowe całą elewacją",
-          "Czujniki nasłonecznienia i wiatru",
+        title: "Skrzynka na elewacji czy we wnęce",
+        paragraphs: [
+          "Skrzynka może być ścięta pod kątem 45°, półowalna albo owalna i jest dostępna w wielu kolorach. Kształt, kolor i miejsce – elewację albo wnękę – dobieramy do budynku przy pomiarze.",
         ],
       },
       {
-        name: "Adaptacyjna w wersji podtynkowej",
-        description:
-          "Skrzynka ukryta w warstwie ocieplenia - z zewnątrz widoczne pozostają tylko pancerz i prowadnice.",
-        points: [
-          "Planowana na etapie budowy",
-          "Rewizja od strony wnętrza",
-          "Brak mostków termicznych",
+        title: "Napęd i sterowanie",
+        paragraphs: [
+          "Montujemy wyłącznie rolety z napędem elektrycznym. Sterujesz nimi pilotem, przyciskiem na ścianie albo z telefonu. Do okien trzeba doprowadzić zasilanie; sposób ustalamy przy pomiarze.",
+        ],
+      },
+      {
+        title: "Wersja antywłamaniowa",
+        paragraphs: [
+          `Zwykła roleta adaptacyjna nie ma normy włamaniowej – jej ochrona przed włamaniem jest symboliczna. Jeśli na tym Ci zależy, wybierz zestaw z certyfikatem – [rolety antywłamaniowe RC2](${offerPath(OFFER_SLUGS.RC2)}) też montuje się na gotowym budynku.`,
+          `Szukasz rolet, które po zamknięciu przepuszczają światło? To inny produkt – rolety z regulacją światła. Jak działają, opisaliśmy w [poradniku](${blogPath("rolety-adaptacyjne-swiatlo-i-prywatnosc")}), a zamontowane zobaczysz [w apartamencie na Mokotowie](${projectPath("apartament-mokotow-rolety-adaptacyjne")}).`,
         ],
       },
     ],
     installation: {
       lead: "Efekt zależy od geometrii okna i strony świata. Podczas pomiaru ustalamy kąt pracy profili, a nie tylko wymiary.",
       points: [
-        "Analiza nasłonecznienia elewacji i dobór wysokości profilu",
+        "Ocena miejsca na skrzynkę: elewacja albo wnęka okienna",
         "Pomiar z uwzględnieniem głębokości wnęki i sposobu otwierania okna",
         "Montaż prowadnic z zachowaniem swobody pracy pancerza na całej wysokości",
-        "Uruchomienie napędu, zaprogramowanie pozycji pośrednich i scen",
-        "Kalibracja czujników wiatru i słońca oraz instruktaż obsługi",
+        "Uruchomienie napędu, programowanie krańcówek i scen",
+        "Instruktaż obsługi",
       ],
     },
     service: {
       lead: "Mechanizm uchylania profili wymaga innej obsługi niż zwykła roleta - serwisujemy go u każdego klienta, także po latach.",
       points: [
-        "Przegląd mechanizmu uchylania i stanu zawieszek pancerza",
-        "Kalibracja położeń pośrednich po wymianie napędu lub baterii w czujnikach",
+        "Przegląd pancerza, zawieszek i prowadnic",
         "Wymiana uszkodzonych profili bez demontażu całego pancerza",
-        "Regulacja czujników pogodowych i korekta scenariuszy automatyki",
+        "Korekta scen i harmonogramów sterowania",
         "Modernizacja starszych instalacji: dodanie automatyki do rolet sterowanych ręcznie",
       ],
     },
     faq: [
       {
-        q: "Czym roleta adaptacyjna różni się od zwykłej rolety zewnętrznej?",
-        a: "Zwija się tak samo - do skrzynki nad oknem - i tak samo zaciemnia. Różnica pojawia się w dolnym położeniu: profile pancerza uchylają się i wpuszczają rozproszone światło dzienne. Zwykła roleta daje tylko dwa stany - jasno albo ciemno.",
+        q: "Czym rolety adaptacyjne różnią się od podtynkowych?",
+        a: "W roletach adaptacyjnych skrzynkę widać i można je dołożyć do domu, który już stoi. W podtynkowych skrzynki nie widać, bo przykrywa ją tynk – dlatego trzeba je zaplanować już na etapie projektu.",
       },
       {
-        q: "Czy rolety adaptacyjne zaciemniają pomieszczenie?",
-        a: "Tak, po domknięciu profili uzyskujemy pełne zaciemnienie, porównywalne z klasyczną roletą zewnętrzną. Różnica polega na tym, że można je otworzyć stopniowo, bez podnoszenia całego pancerza.",
+        q: "Czy montaż wymaga kucia albo wymiany okien?",
+        a: "Nie. Skrzynkę i prowadnice przykręca się do ściany albo do ramy okna. Potrzebne jest tylko zasilanie do napędu.",
       },
       {
-        q: "Jak zachowują się przy silnym wietrze?",
-        a: "Czujnik wiatru automatycznie zwija pancerz po przekroczeniu ustawionego progu. Bez czujnika osłona pozostaje w miejscu do granicy odporności deklarowanej dla danego wymiaru - dlatego przy dużych powierzchniach montujemy czujnik standardowo.",
-      },
-      {
-        q: "Czy mogą zastąpić rolety antywłamaniowe?",
-        a: "Nie. Rolety adaptacyjne odpowiadają za komfort świetlny i termiczny, a nie za ochronę przed włamaniem. Jeśli potrzebne są obie funkcje, stosujemy rolety adaptacyjne na piętrze i rolety RC2 lub RC3 na kondygnacjach dostępnych z zewnątrz.",
+        q: "Jak sprawić, żeby skrzynka była mniej widoczna?",
+        a: `Dobierz kolor skrzynki do elewacji albo okien – przy pomiarze pokażemy dostępne kształty i kolory. Całkiem niewidoczna jest skrzynka rolety podtynkowej – w gotowym domu wymaga to jednak zmian w nadprożu. Więcej sposobów znajdziesz w poradniku [jak zamaskować skrzynkę rolety zewnętrznej](${blogPath("jak-zamaskowac-skrzynke-rolety-zewnetrznej")}).`,
       },
     ],
     meta: {
-      title: "Rolety adaptacyjne - montaż w gotowym domu, Warszawa",
+      title: "Rolety adaptacyjne (natynkowe) – Warszawa",
       description:
-        "Rolety adaptacyjne z uchylnymi profilami: światło dzienne przy zamkniętym pancerzu, ochrona przed przegrzewaniem, automatyka pogodowa. Montaż i serwis.",
+        "Rolety adaptacyjne (natynkowe) do gotowych domów i mieszkań: skrzynka na elewacji lub we wnęce, bez wymiany okien. Montaż i serwis w Warszawie i okolicach.",
     },
-    projectCategories: ["adaptive"],
+    // Realizacje z Mokotowa i Woli to rolety z regulacja swiatla - nie ta kategoria.
+    projectCategories: [],
   },
   {
     slug: OFFER_SLUGS.RECESSED,
@@ -495,7 +460,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     intro: [
       "Roleta podtynkowa to rozwiązanie dla inwestorów, którzy planują osłony na etapie budowy. Skrzynka trafia w warstwę ocieplenia lub w przygotowane nadproże, zanim położony zostanie tynk. Po zakończeniu prac elewacja pozostaje gładka - widoczne są tylko prowadnice przy ościeżu i listwa dolna pancerza.",
       "Poza estetyką liczy się energetyka. Skrzynka nakładana zawsze tworzy pewien mostek termiczny nad oknem. Wersja podtynkowa, poprawnie ocieplona i uszczelniona, tego problemu nie ma - izolacja przebiega nad nią bez przerwy, a rewizja otwierana jest od wewnątrz pomieszczenia, nie od strony elewacji.",
-      "Podtynkowo montujemy zarówno rolety standardowe, jak i pancerze antywłamaniowe RC2 oraz rolety adaptacyjne. Warunkiem jest wcześniejsze uzgodnienie wymiarów nadproża, bo skrzynka musi być wpisana w projekt, zanim powstanie stan surowy.",
+      "Podtynkowo montujemy zarówno rolety standardowe, jak i pancerze antywłamaniowe RC2 oraz rolety z regulacją światła. Warunkiem jest wcześniejsze uzgodnienie wymiarów nadproża, bo skrzynka musi być wpisana w projekt, zanim powstanie stan surowy. Montaż rolet podtynkowych prowadzimy w Warszawie i okolicach.",
     ],
     features: [
       {
@@ -540,7 +505,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       { label: "Wysokość skrzynki", value: "205 / 245 / 300 mm" },
       { label: "Materiał skrzynki", value: "Styropian EPS z wzmocnieniem, kompozyt" },
       { label: "Rewizja", value: "Od strony wnętrza, klapa w nadprożu" },
-      { label: "Dostępne pancerze", value: "Standardowy, RC2, adaptacyjny" },
+      { label: "Dostępne pancerze", value: "Standardowy, RC2, z regulacją światła" },
       { label: "Etap montażu", value: "Stan surowy - przed tynkowaniem" },
       { label: "Sterowanie", value: "Radiowe, przewodowe lub automatyka budynku" },
       { label: "Gwarancja", value: "5 lat na komponenty i montaż" },
@@ -627,7 +592,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Rolety podtynkowe - skrzynka ukryta w elewacji, Warszawa",
+      title: "Montaż rolet podtynkowych – Warszawa",
       description:
         "Rolety podtynkowe montowane w warstwie ocieplenia i nadprożu. Bez mostka termicznego, z rewizją od wewnątrz. Doradztwo na etapie budowy, montaż i serwis.",
     },
@@ -678,7 +643,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
         icon: "ruler",
         title: "Praca przy niskim nadprożu",
         description:
-          "Skrzynka wymaga zwykle 30-40 cm nad otworem - mniej niż prowadnice bramy segmentowej.",
+          "Skrzynkę montuje się pod nadprożem albo na zewnątrz, nad otworem – wtedy nie zabiera miejsca nad wjazdem w garażu.",
       },
       {
         icon: "remote",
@@ -696,8 +661,11 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     specs: [
       { label: "Typ", value: "Brama rolowana z napędem w wale" },
       { label: "Maks. szerokość", value: "do 6 m (wersje przemysłowe większe)" },
-      { label: "Wymagane nadproże", value: "od 30 cm zależnie od średnicy zwoju" },
-      { label: "Profil pancerza", value: "Aluminiowy wypełniony pianką lub ekstrudowany" },
+      {
+        label: "Wymagane nadproże",
+        value: "zależnie od średnicy zwoju; przy montażu skrzynki na zewnątrz – niepotrzebne",
+      },
+      { label: "Profil pancerza", value: "Aluminiowy wypełniony pianką (Aluprof PA 77 lub PA 52)" },
       {
         label: "Kolory i przeszklenia",
         value:
@@ -722,7 +690,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       {
         name: "Wzmocniona",
         description:
-          "Profile ekstrudowane i ryglowanie pancerza - tam, gdzie brama chroni magazyn lub wartościowe wyposażenie.",
+          "Sztywniejsze profile i ryglowanie pancerza - tam, gdzie brama chroni magazyn lub wartościowe wyposażenie.",
         points: [
           "Sztywniejszy pancerz",
           "Rygle boczne pancerza",
@@ -763,7 +731,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
     faq: [
       {
         q: "Ile miejsca nad wjazdem wymaga brama rolowana?",
-        a: "Zwykle od 30 do 40 cm, zależnie od wysokości otworu i średnicy zwiniętego pancerza. To mniej niż potrzebuje brama segmentowa z prowadnicami pod stropem, dlatego bramy rolowane są standardem w niskich garażach.",
+        a: "Zależy od wysokości bramy i sposobu montażu. Gdy skrzynka wisi na zewnątrz budynku, miejsce nad wjazdem w garażu zostaje wolne. Sprawdzamy to przy pomiarze.",
       },
       {
         q: "Co się stanie przy braku prądu?",
@@ -771,7 +739,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
       {
         q: "Czy brama rolowana zabezpiecza przed włamaniem?",
-        a: "Wersja standardowa jest przede wszystkim osłoną. Jeśli brama ma pełnić funkcję zabezpieczenia, stosujemy pancerz z profili ekstrudowanych i ryglowanie boczne, opcjonalnie z podłączeniem do systemu alarmowego.",
+        a: "Zamyka garaż pancerzem z profili aluminiowych i utrudnia wejście, ale nie ma certyfikowanej klasy odporności na włamanie według normy.",
       },
       {
         q: "Czy serwisujecie bramy zamontowane przez inną firmę?",
@@ -795,7 +763,7 @@ export const OFFER_PRODUCTS: OfferProduct[] = [
       },
     ],
     meta: {
-      title: "Bramy rolowane - montaż i serwis, Warszawa i okolice",
+      title: "Bramy rolowane Warszawa – montaż i serwis",
       description:
         "Bramy rolowane garażowe i obiektowe: praca przy niskim nadprożu, napęd z otwieraniem awaryjnym, fotokomórki i listwa krawędziowa. Montaż, serwis, naprawy.",
     },

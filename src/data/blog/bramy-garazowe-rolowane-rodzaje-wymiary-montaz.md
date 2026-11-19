@@ -2,6 +2,7 @@
 title: "Bramy garażowe rolowane – rodzaje, wymiary i montaż"
 metaDescription: "Bramy garażowe rolowane: jak działają, jakie mają wymiary i ile miejsca potrzebują nad wjazdem. Montaż wewnątrz i na zewnątrz, napęd, wady i zalety."
 publishedAt: "2026-11-16"
+updatedAt: "2026-11-19"
 excerpt: "Bramy garażowe rolowane: jak działają, jakie mają wymiary i ile miejsca potrzebują nad wjazdem. Montaż wewnątrz i na zewnątrz, napęd, wady i zalety."
 category: "Poradnik"
 image: "/images/blog/bramy-garazowe-rolowane/dom-z-brama-garazowa-rolowana.jpg"
@@ -83,7 +84,7 @@ Do wyboru są:
 - **Skrzynka i prowadnice** – w kolorze pancerza albo polakierowane na kolor z palety RAL, na przykład pod kolor elewacji.
 - **Profile przeszklone i wentylacyjne** – wstawia się je między zwykłe profile. Przeszklone wpuszczają do garażu światło dzienne, wentylacyjne zapewniają przepływ powietrza przy zamkniętej bramie.
 
-![Zbliżenie na pancerz bramy rolowanej i boczną prowadnice](/images/blog/bramy-garazowe-rolowane/pancerz-bramy-rolowanej-prowadnica.jpg)
+![Zbliżenie na pancerz bramy rolowanej i boczną prowadnicę](/images/blog/bramy-garazowe-rolowane/pancerz-bramy-rolowanej-prowadnica.jpg)
 
 ## Napęd, sterowanie i zabezpieczenia
 

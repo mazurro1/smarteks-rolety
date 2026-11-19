@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { NAMESPACES } from "@/constants/namespaces";
 import { SECTION_ANCHORS } from "@/constants/routes";
 import type { OfferProduct } from "@/types";
+import RichText from "@/ui/RichText";
 import SectionHeader from "@/ui/SectionHeader";
 import Icon from "@/ui/Icon";
 import styles from "./InstallService.module.css";
@@ -28,6 +29,7 @@ export async function InstallService({
       title: t("installationTitle"),
       lead: installation.lead,
       points: installation.points,
+      note: undefined as string | undefined,
     },
     {
       id: SECTION_ANCHORS.SERVICE,
@@ -36,6 +38,7 @@ export async function InstallService({
       title: t("serviceTitle"),
       lead: service.lead,
       points: service.points,
+      note: service.note,
     },
   ];
 
@@ -75,6 +78,12 @@ export async function InstallService({
                   </li>
                 ))}
               </ul>
+
+              {block.note && (
+                <p className={styles.note}>
+                  <RichText text={block.note} />
+                </p>
+              )}
             </article>
           ))}
         </div>

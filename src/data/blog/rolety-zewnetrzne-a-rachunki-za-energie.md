@@ -1,7 +1,8 @@
 ---
 title: "Rolety zewnętrzne a rachunki za energię - ile realnie dają"
 metaDescription: "Jak rolety zewnętrzne wpływają na zużycie energii latem i zimą, dlaczego osłona zewnętrzna bije wewnętrzną i czego nie obiecywać sobie na wyrost."
-publishedAt: "2026-03-10"
+publishedAt: "2026-09-21"
+updatedAt: "2026-11-19"
 excerpt: "Rolety bywają sprzedawane jako sposób na tanie ogrzewanie. Sprawdzamy, co faktycznie wynika z fizyki, a co jest tylko chwytem sprzedażowym."
 category: "Poradnik"
 keywords:
@@ -18,6 +19,8 @@ faq:
     a: "Latem, i to wyraźnie. Zatrzymanie promieniowania słonecznego przed szybą znacząco odciąża klimatyzację. Zimowy efekt izolacyjny jest realny, ale mniejszy i zależy od tego, czy rolety faktycznie są opuszczane na noc."
   - q: "Czy skrzynka rolety pogarsza izolacyjność nad oknem?"
     a: "Skrzynka nakładana zawsze tworzy pewne osłabienie izolacji nad oknem. Wersja podtynkowa, poprawnie osadzona w warstwie ocieplenia, pozwala prowadzić izolację bez przerwy i tego problemu nie ma."
+  - q: "Czy rolety zewnętrzne chronią przed zimnem?"
+    a: "Tak, jeśli opuszczasz je na noc – pancerz tworzy wtedy przed szybą warstwę powietrza, która ogranicza straty ciepła. Aluprof podaje, że rolety chronią wnętrze przed utratą ciepła zimą. Ile to da w Twoim domu, zależy od okien i ocieplenia – w nowym domu z oknami trzyszybowymi różnica będzie mniejsza."
 ---
 
 Rolety zewnętrzne regularnie pojawiają się w ofertach jako sposób na „nawet 30% oszczędności na ogrzewaniu". Takie liczby rzadko mają pokrycie w konkretnym budynku. Warto więc rozdzielić to, co wynika z fizyki, od tego, co wynika z działu marketingu.
@@ -53,7 +56,7 @@ Skrzynka rolety nakładanej tworzy osłabienie izolacji nad oknem. W starszych b
 
 Rozwiązania są dwa:
 
-- **skrzynka podtynkowa** osadzona w warstwie ocieplenia, z izolacją prowadzoną nad nią bez przerwy - rozwiązanie dla budynków w budowie lub docieplanych,
+- **[skrzynka podtynkowa](/oferta/rolety-podtynkowe)** osadzona w warstwie ocieplenia, z izolacją prowadzoną nad nią bez przerwy - rozwiązanie dla budynków w budowie lub docieplanych,
 - **staranne ocieplenie skrzynki nakładanej** przy montażu w budynku istniejącym.
 
 Pominięcie tego detalu potrafi skasować część zysku, po który sięgaliśmy, kupując rolety.
@@ -68,4 +71,4 @@ Użytkownicy pytani po roku o największą zmianę rzadko mówią o rachunkach. 
 
 Rolety zewnętrzne to realne, choć nie cudowne narzędzie: największy efekt dają latem, w budynkach z dużymi przeszkleniami od południa i zachodu, pod warunkiem, że są konsekwentnie używane - najlepiej automatycznie.
 
-Jeśli ktoś obiecuje konkretny procent oszczędności bez zajrzenia w projekt budynku, traktuj tę liczbę jako element oferty, a nie jako wynik obliczeń. My podczas pomiaru mówimy wprost, gdzie efekt będzie odczuwalny, a gdzie rolety kupujesz przede wszystkim dla komfortu i bezpieczeństwa.
+Jeśli ktoś obiecuje konkretny procent oszczędności bez zajrzenia w projekt budynku, traktuj tę liczbę jako element oferty, a nie jako wynik obliczeń. My podczas pomiaru mówimy wprost, gdzie efekt będzie odczuwalny, a gdzie rolety kupujesz przede wszystkim dla komfortu i bezpieczeństwa. Zadzwoń: [737 531 193](tel:+48737531193) (pn.–pt. 8–18) – umówimy bezpłatny pomiar w Warszawie i okolicach.

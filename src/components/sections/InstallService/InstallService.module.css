@@ -94,6 +94,13 @@
   color: var(--color-brand-accent);
 }
 
+.note {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
 @media (max-width: 899px) {
   .grid {
     grid-template-columns: 1fr;

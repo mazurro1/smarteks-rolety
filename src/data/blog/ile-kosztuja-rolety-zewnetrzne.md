@@ -1,7 +1,9 @@
 ---
 title: "Ile kosztują rolety zewnętrzne? Co realnie wpływa na cenę"
+metaTitle: "Rolety zewnętrzne – cena z montażem"
 metaDescription: "Od czego zależy cena rolet zewnętrznych: typ pancerza, wymiar, rodzaj skrzynki, napęd i montaż. Jak czytać wycenę i na czym nie warto oszczędzać."
-publishedAt: "2026-08-12"
+publishedAt: "2026-09-21"
+updatedAt: "2026-11-19"
 excerpt: "Cena rolety to nie jedna liczba, tylko suma pięciu decyzji. Pokazujemy, które z nich naprawdę podnoszą koszt, a które da się odpuścić bez straty."
 category: "Cennik"
 keywords:
@@ -27,11 +29,13 @@ faq:
 To największa pojedyncza pozycja w wycenie. Od najtańszego do najdroższego:
 
 - **Pancerz standardowy** - aluminium wypełnione pianką, funkcja przeciwsłoneczna i zaciemniająca.
-- **Pancerz RC2** - wzmocniony profil, blokady antypodnoszeniowe, certyfikat klasy odporności.
-- **Pancerz adaptacyjny** - uchylne profile, mechanizm regulacji kąta, więcej elementów ruchomych.
-- **Pancerz RC3** - pełne profile ekstrudowane, wielokrotnie większa masa i sztywność.
+- **[Pancerz RC2](/oferta/rolety-antywlamaniowe-rc2)** - wzmocniony profil, blokady antypodnoszeniowe, certyfikat klasy odporności.
+- **Pancerz z regulacją światła** - uchylne profile, mechanizm regulacji kąta, więcej elementów ruchomych.
+- **[Pancerz RC3](/oferta/rolety-antywlamaniowe-rc3)** - wyższe i grubsze profile ekstrudowane, większa masa i sztywność.
 
 Między pancerzem standardowym a RC3 różnica w cenie jednej osłony potrafi być kilkukrotna. Warto więc świadomie zdecydować, które okna faktycznie wymagają ochrony antywłamaniowej, a przy których wystarczy roleta standardowa.
+
+Cena rolet antywłamaniowych zależy od klasy odporności (RC2 albo RC3), wymiaru okna, koloru i rodzaju montażu.
 
 ## 2. Wymiar osłony
 
@@ -48,8 +52,8 @@ Dlatego jedna osłona tarasowa o szerokości 3,5 m bywa droższa niż trzy rolet
 
 Tu decyduje głównie etap, na którym jesteś:
 
-- **Skrzynka nakładana** - montowana na elewacji lub we wnęce okiennej, dostępna w każdym budynku, najtańsza w realizacji.
-- **Skrzynka podtynkowa** - ukryta w warstwie ocieplenia lub nadprożu, droższa, ale eliminuje mostek termiczny i nie zmienia wyglądu elewacji. Wymaga zaplanowania na etapie stanu surowego.
+- **[Skrzynka nakładana](/oferta/rolety-adaptacyjne)** - montowana na elewacji lub we wnęce okiennej, dostępna w każdym budynku, najtańsza w realizacji.
+- **[Skrzynka podtynkowa](/oferta/rolety-podtynkowe)** - ukryta w warstwie ocieplenia lub nadprożu, droższa, ale dobrze ocieplona ogranicza mostek termiczny i nie zmienia wyglądu elewacji. Wymaga zaplanowania na etapie stanu surowego.
 
 W budynku gotowym wersja podtynkowa zwykle nie wchodzi w grę bez docieplania elewacji - i to nie jest kwestia ceny, tylko fizycznej możliwości montażu.
 
@@ -60,12 +64,16 @@ Napęd elektryczny to dziś standard, a różnice w cenie wynikają raczej ze sp
 - pilot radiowy - podstawa, zwykle w komplecie,
 - przycisk ścienny - wygodny, gdy roleta ma jedno stałe miejsce obsługi,
 - sterowanie z telefonu - wymaga bramki lub modułu w instalacji,
-- automatyka pogodowa - czujniki wiatru i nasłonecznienia, obowiązkowe przy dużych osłonach adaptacyjnych,
+- automatyka pogodowa - czujniki wiatru i nasłonecznienia, obowiązkowe przy dużych osłonach z regulacją światła,
 - awaryjne otwieranie - korba lub akumulator na wypadek braku prądu.
 
 Rozsądna zasada: nie kupować sterowników „na zapas". Lepiej zacząć od pilota i przycisku, a rozbudowę zostawić na moment, gdy okaże się, że faktycznie jest potrzebna.
 
+Montujemy tylko rolety zewnętrzne elektryczne, więc napęd jest w każdej naszej wycenie.
+
 ## 5. Montaż
+
+![Pomiar szerokości otworu okiennego miarą zwijaną przed wyceną rolety zewnętrznej](/images/blog/ile-kosztuja-rolety-zewnetrzne/pomiar-otworu-okiennego-pod-rolete.jpg)
 
 Montaż to nie jest pozycja, którą warto wybierać po najniższej cenie - zwłaszcza w roletach antywłamaniowych, gdzie od sposobu kotwienia zależy, czy certyfikat ma jakąkolwiek wartość. Na koszt montażu wpływają:
 
@@ -96,4 +104,6 @@ Na co zwrócić uwagę:
 
 Najtańsza oferta bywa najdroższa - zwłaszcza gdy po dwóch latach trzeba wymienić napędy, a po pięciu okazuje się, że prowadnice były kotwione w ociepleniu. Porównuj wyceny pozycja po pozycji i pytaj o to, czego w nich nie widać: sposób kotwienia, numer certyfikatu i zakres gwarancji.
 
-Jeśli chcesz konkretną kwotę dla swojego budynku, umów bezpłatny pomiar. Wycena powstanie na podstawie tego, co faktycznie zastaniemy na miejscu.
+Jeśli chcesz konkretną kwotę dla swojego budynku, umów bezpłatny pomiar. Wycena powstanie na podstawie tego, co faktycznie zastaniemy na miejscu. Masz pytania o wycenę? Zadzwoń: [737 531 193](tel:+48737531193) (pn.–pt. 8–18).
+
+Zakup rolet z montażem możesz rozłożyć na raty. Kredytu udziela Santander Consumer Bank S.A., a Smarteks działa jako pośrednik kredytowy tego banku: informuje o możliwości skorzystania z kredytu i udostępnia wniosek. O przyznaniu kredytu i jego warunkach decyduje bank. Szczegóły: [zakupy na raty w Smarteks](https://smarteks.pl/zakupy-na-raty/).

@@ -1,7 +1,8 @@
 ---
 title: "Przegląd rolet zewnętrznych - co sprawdzić raz w roku"
-metaDescription: "Lista kontrolna przeglądu rolet zewnętrznych: prowadnice, naciąg pancerza, blokady, napęd i uszczelki. Co zrobisz sam, a co wymaga serwisu."
-publishedAt: "2026-04-14"
+metaDescription: "Lista kontrolna przeglądu rolet zewnętrznych: prowadnice, naciąg, blokady, napęd i uszczelki. Jak umyć rolety i co zostawić serwisowi."
+publishedAt: "2026-09-21"
+updatedAt: "2026-11-19"
 excerpt: "Większość awarii rolet nie bierze się z wady, tylko z zaniedbania. Piętnaście minut raz w roku potrafi przedłużyć życie instalacji o kilka lat."
 category: "Serwis"
 keywords:
@@ -47,6 +48,17 @@ Wgniecenia, pęknięcia i wysunięte profile to sygnał do interwencji. W roleta
 
 Popękana uszczelka przepuszcza wodę i hałas. Przewód zasilający napęd nie powinien być napięty, otarty ani wystawiony na bezpośrednie działanie słońca.
 
+## Jak umyć rolety zewnętrzne
+
+- Myj czystą, co najwyżej letnią wodą i miękką ściereczką. Jeśli chcesz użyć środka czyszczącego, najpierw sprawdź go na mało widocznym fragmencie.
+- Po umyciu od razu spłucz pancerz czystą, zimną wodą.
+- Nie używaj środków ściernych ani szorowania, rozpuszczalników, detergentów nieznanego pochodzenia ani strumienia pary.
+- Nie myj pancerza nagrzanego słońcem – podczas mycia nie powinien być cieplejszy niż temperatura w pokoju. Nie myj też w mróz.
+- W pobliżu rolet nie używaj soli ani środków do usuwania lodu.
+- Mycie niezgodne z tymi zasadami może skończyć się utratą gwarancji producenta.
+
+![Mycie opuszczonej rolety zewnętrznej miękką ściereczką i czystą wodą](/images/blog/przeglad-rolet/mycie-rolety-zewnetrznej-sciereczka.jpg)
+
 ## Co wymaga serwisu
 
 Te czynności zostaw osobie, która ma dostęp do wnętrza skrzynki i wie, jakie wartości są prawidłowe:
@@ -72,10 +84,10 @@ Te czynności zostaw osobie, która ma dostęp do wnętrza skrzynki i wie, jakie
 
 Wymiana napędu rurowego kosztuje wielokrotnie więcej niż przegląd. Wymiana pancerza uszkodzonego przez długotrwałą pracę w zanieczyszczonej prowadnicy - jeszcze więcej. Regularny przegląd to zwykle godzina pracy technika i wymiana drobnych elementów, zanim zdążą pociągnąć za sobą kolejne.
 
-W roletach antywłamaniowych dochodzi argument formalny: zaniedbana instalacja z niedziałającymi blokadami przestaje spełniać warunki, na podstawie których ubezpieczyciel uznał zabezpieczenia.
+Dochodzi też argument formalny: producent wymaga regularnej konserwacji rolet, a jej zaniedbanie może wyłączyć gwarancję.
 
 ## Podsumowanie
 
 Piętnaście minut własnych oględzin raz w roku i jeden przegląd serwisowy - to cały koszt utrzymania rolet w dobrej kondycji przez kilkanaście lat.
 
-Serwisujemy rolety w Warszawie i okolicach, również te zamontowane przez inne firmy. Jeśli Twoja roleta pracuje głośniej niż kiedyś albo zatrzymuje się w połowie, nie czekaj, aż stanie na dobre - na tym etapie naprawa jest zwykle drobna.
+[Serwisujemy rolety w Warszawie i okolicach](/oferta), również te zamontowane przez inne firmy. Jeśli Twoja roleta pracuje głośniej niż kiedyś albo zatrzymuje się w połowie, nie czekaj, aż stanie na dobre - na tym etapie naprawa jest zwykle drobna. Zadzwoń: [737 531 193](tel:+48737531193) (pn.–pt. 8–18) i opisz, co się dzieje z roletą.

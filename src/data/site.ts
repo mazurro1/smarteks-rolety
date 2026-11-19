@@ -1,5 +1,5 @@
 import { CONTACT_INFO } from "@/constants/contact";
-import { OFFER_SLUGS, offerPath } from "@/constants/routes";
+import { OFFER_SLUGS, blogPath, offerPath } from "@/constants/routes";
 import type { FaqItem, IconKey, ProcessStep, StatItem } from "@/types";
 
 /** Staz firmy - w statystykach i na zdjeciu w sekcji "Kim jestesmy". */
@@ -32,7 +32,7 @@ export const BENEFITS: Benefit[] = [
     icon: "shieldCheck",
     title: "Certyfikat, nie deklaracja",
     description:
-      "Montujemy zestawy badane jako całość wg PN-EN 1627. Po pracach zostaje protokół z numerem certyfikatu - dokument, o który pyta ubezpieczyciel.",
+      "Montujemy zestawy Aluprof badane jako całość wg PN-EN 1627. Po pracach zostaje protokół z numerem certyfikatu - dokument, o który pyta ubezpieczyciel.",
   },
   {
     icon: "ruler",
@@ -198,6 +198,7 @@ export const GENERIC_SERVICE = {
     "Serwis gwarancyjny na własny koszt przez cały okres gwarancji",
     "Serwis rolet i bram zamontowanych przez inne firmy",
   ],
+  note: `Co sprawdzić samemu, a co zostawić serwisowi, opisaliśmy w poradniku [przegląd rolet zewnętrznych – co sprawdzić raz w roku](${blogPath("przeglad-rolet-co-sprawdzic-raz-w-roku")}).`,
 };
 
 /** Skrocony opis firmy - sekcja na stronie glownej i dane do schema.org. */

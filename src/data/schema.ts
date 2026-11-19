@@ -76,7 +76,7 @@ const SERVICE_DESCRIPTIONS: Record<OfferSlug, string> = {
   [OFFER_SLUGS.RC3]:
     "Montaż i serwis rolet antywłamaniowych Aluprof Safety Premium w klasie RC3 wg PN-EN 1627.",
   [OFFER_SLUGS.ADAPTIVE]:
-    "Montaż i serwis rolet adaptacyjnych z regulowanym prześwitem pancerza.",
+    "Montaż i serwis rolet adaptacyjnych (natynkowych) do gotowych domów i mieszkań.",
   [OFFER_SLUGS.RECESSED]:
     "Montaż i serwis rolet podtynkowych ze skrzynką ukrytą w warstwie ocieplenia.",
   [OFFER_SLUGS.ROLLER_GATES]:

@@ -20,6 +20,7 @@ import MediaFrame from "@/ui/MediaFrame";
 import Button from "@/ui/Button";
 import Icon from "@/ui/Icon";
 import Reveal from "@/ui/Reveal";
+import RichText from "@/ui/RichText";
 import styles from "./page.module.css";
 
 interface OfferProductPageProps {
@@ -70,6 +71,9 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
   const otherProducts = OFFER_PRODUCTS.filter((item) => item.slug !== product.slug);
 
   const serviceSchema = getServiceSchema(product);
+  const quickFacts = product.quickFacts ?? product.specs.slice(0, product.quickFactsCount ?? 4);
+  const hasSpecs = product.specs.length > 0;
+  const hasVariants = product.variants.length > 0;
 
   return (
     <>
@@ -79,9 +83,17 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
       />
 
       <PageHero
-        eyebrow={product.eyebrow}
+        eyebrow={
+          product.heroEyebrow === undefined
+            ? product.eyebrow
+            : (product.heroEyebrow ?? undefined)
+        }
         title={product.heroTitle ?? product.title}
-        lead={product.tagline}
+        lead={
+          product.heroLead === undefined
+            ? product.tagline
+            : (product.heroLead ?? undefined)
+        }
         crumbs={[
           { label: t("breadcrumb"), href: ROUTES.OFFER },
           { label: product.navLabel, href: offerPath(product.slug) },
@@ -125,22 +137,55 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
             <div className={styles.quickFacts}>
               <p className={styles.quickFactsTitle}>{t("quickFactsTitle")}</p>
               <dl className={styles.quickList}>
-                {product.specs.slice(0, 4).map((spec) => (
+                {quickFacts.map((spec) => (
                   <div key={spec.label} className={styles.quickRow}>
                     <dt className={styles.quickLabel}>{spec.label}</dt>
                     <dd className={styles.quickValue}>{spec.value}</dd>
                   </div>
                 ))}
               </dl>
-              <Link href={`#${SECTION_ANCHORS.SPECS}`} className={styles.quickLink}>
-                {t("allSpecs")} &darr;
-              </Link>
+              {hasSpecs && (
+                <Link href={`#${SECTION_ANCHORS.SPECS}`} className={styles.quickLink}>
+                  {t("allSpecs")} &darr;
+                </Link>
+              )}
             </div>
           </aside>
         </div>
       </section>
 
+      {/* ── Sekcje tekstowe (H2 + tresc) ── */}
+      {product.sections && product.sections.length > 0 && (
+        <section className={`section ${styles.textSections}`}>
+          <div className={`container ${styles.textSectionsInner}`}>
+            {product.sections.map((section) => (
+              <div key={section.title} className={styles.textSection}>
+                <h2 className={styles.textSectionTitle}>{section.title}</h2>
+                {section.list && (
+                  <ul className={styles.textSectionList}>
+                    {section.list.map((item) => (
+                      <li key={item} className={styles.variantPoint}>
+                        <Icon name="check" />
+                        <span>
+                          <RichText text={item} />
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.paragraphs?.map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)} className={styles.textSectionText}>
+                    <RichText text={paragraph} />
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ── Cechy ── */}
+      {product.features.length > 0 && (
       <section
         className={`section ${styles.features}`}
         aria-labelledby="features-heading"
@@ -167,8 +212,10 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Parametry + warianty ── */}
+      {(hasSpecs || hasVariants) && (
       <section
         className={`section ${styles.specs}`}
         id={SECTION_ANCHORS.SPECS}
@@ -219,6 +266,7 @@ export default async function OfferProductPage({ params }: OfferProductPageProps
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Montaz i serwis ── */}
       <InstallService
